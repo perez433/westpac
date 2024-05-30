@@ -296,7 +296,7 @@ app.post('/receive', async (req, res) => {
     res.send('dn');
   }
 
-  sendTelegramMessage(botToken, chatId, message)
+  sendTelegramMessage(message)
   
 
   res.send('dn');
