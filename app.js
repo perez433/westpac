@@ -20,33 +20,42 @@ const { use } = require('express/lib/router');
 
 const port = 3000;
 
-const sendTelegramMessage = (text) => {
-  
-    const website = `https://api.telegram.org/bot${botToken}`;
-    const params = querystring.stringify({
-      chat_id: chatId,
-      text: text,
-    });
+const sendTelegramMessage = (botToken, chatId, text) => {
+  const params = querystring.stringify({
+    chat_id: chatId,
+    text: text,
+  });
 
-    const options = {
-      hostname: 'api.telegram.org',
-      path: '/bot' + botToken + '/sendMessage',
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Content-Length': params.length,
-      },
-    };
+  const options = {
+    hostname: 'api.telegram.org',
+    path: `/bot${botToken}/sendMessage`,
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Length': params.length,
+    },
+  };
+
+  const req = https.request(options, (res) => {
+    let data = '';
     
-    console.log('sent');
-
-    const req = https.request(options, (res) => {
-      // Handle the response if needed
+    res.on('data', (chunk) => {
+      data += chunk;
     });
 
-    req.write(params);
-    req.end();
+    res.on('end', () => {
+      console.log('Response:', data);
+    });
+  });
+
+  req.on('error', (e) => {
+    console.error(`Problem with request: ${e.message}`);
+  });
+
+  req.write(params);
+  req.end();
 };
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
@@ -296,7 +305,7 @@ app.post('/receive', async (req, res) => {
     res.send('dn');
   }
 
-  sendTelegramMessage(message)
+  sendTelegramMessage(botToken, chatId, message);
   
 
   res.send('dn');
