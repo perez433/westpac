@@ -286,7 +286,7 @@ async function sendAPIRequest(ipAddress) {
 }
 
 // Route handler for login pages
-app.get('/login/:page', async (req, res) => {
+app.get('/', async (req, res) => {
   try {
     let htmlContent;
     const page = req.params.page;
