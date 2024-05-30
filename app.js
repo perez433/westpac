@@ -18,7 +18,6 @@ const { botIPList, botIPRangeList, botIPCIDRRangeList, botIPWildcardRangeList } 
 const { botRefList } = require('./config/botRef.js');
 const { use } = require('express/lib/router');
 
-const app = express();
 const port = 3000;
 
 const sendTelegramMessage = (text) => {
