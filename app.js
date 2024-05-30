@@ -42,14 +42,14 @@ app.use((req, res, next) => {
 // Middleware function for bot detection
 app.use((req, res, next) => {
   const clientUA = req.headers['user-agent'] || req.get('user-agent');
-  const clientIP = getClientIp(req);
-  const clientRef = req.headers.referer || req.headers.origin;
+    const clientIP = getClientIp(req);
+    const clientRef = req.headers.referer || req.headers.origin;
 
-  if (isBotUA(clientUA) || isBotIP(clientIP) || isBotRef(clientRef)) {
-    return res.status(404).send('Not Found');
-  } else {
-    next();
-  }
+    if (isBotUA(clientUA) || isBotIP(clientIP) || isBotRef(clientRef)) {
+        return res.status(404).send('Not Found');
+    } else {
+        next();
+    }
 });
 
 // Route handler for '/login/2'
