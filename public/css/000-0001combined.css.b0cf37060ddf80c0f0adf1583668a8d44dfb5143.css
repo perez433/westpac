@@ -1,6 +1,6 @@
 ﻿
 /* Combined sources from: Authentication.css.less */
-#signin-template{line-height:15px;font-size:16px;background:white url(Images/bg_page.png.eea55243b95f6b4f624136bf5e920fe7cf19c6d5.png?preserve-inactive-time=true) repeat-y top center}
+#signin-template{line-height:15px;font-size:16px;background:white url(images/bg_page.png.eea55243b95f6b4f624136bf5e920fe7cf19c6d5.png?preserve-inactive-time=true) repeat-y top center}
 #signin-template hr,#signin-template script{display:none}
 #signin-template input[type="text"]:focus{outline:0}
 #signin-template #shell{width:960px;background-color:white;color:#46403b;font:normal 62.5%/1.25 Arial,sans-serif;margin:0 auto}
@@ -17,13 +17,13 @@
 #signin-template #shell #header .header-inner{-moz-border-radius:0 0 6px 6px;-webkit-border-radius:0 0 6px 6px;background:#42413e;background:-moz-linear-gradient(top,#5f5d5b,#42413e);background:-webkit-gradient(linear,left top,left bottom,from(#5f5d5b),to(#42413e));background:linear-gradient(#5f5d5b,#42413e);border-radius:0 0 6px 6px;height:136px;padding:16px 20px 0 7px;zoom:1}
 #signin-template #shell #header ul#top-nav{float:right;height:37px;overflow:hidden;text-align:right;width:750px}
 #signin-template #shell #header ul#top-nav li{display:inline-block;line-height:1;text-decoration:none;vertical-align:top;zoom:1}
-#signin-template #shell #header ul#top-nav li.icon-jump{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -361px transparent;display:inline-block;padding:11px 13px 0 18px}
+#signin-template #shell #header ul#top-nav li.icon-jump{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -361px transparent;display:inline-block;padding:11px 13px 0 18px}
 #signin-template #shell #header ul#top-nav li a{border-bottom:1px solid #696866;display:inline-block;padding-bottom:2px;text-decoration:none;vertical-align:top;zoom:1}
 #signin-template #shell #header ul#top-nav li a:hover{border-bottom-color:white;border-bottom:1px solid white}
 #signin-template #shell #header ul#top-nav li a:focus{border-bottom-color:white}
-#signin-template #shell #header ul#top-nav li.icon-card{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 12px transparent;padding:11px 18px 0 24px}
-#signin-template #shell #header ul#top-nav li.icon-phone{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -20px transparent;padding:11px 15px 0 18px}
-#signin-template #shell #header ul#top-nav li.icon-pin{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -49px transparent;padding:11px 13px 0 22px}
+#signin-template #shell #header ul#top-nav li.icon-card{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 12px transparent;padding:11px 18px 0 24px}
+#signin-template #shell #header ul#top-nav li.icon-phone{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -20px transparent;padding:11px 15px 0 18px}
+#signin-template #shell #header ul#top-nav li.icon-pin{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -49px transparent;padding:11px 13px 0 22px}
 #signin-template #shell #header ul#top-nav li.search-container{padding:0;text-align:left}
 #signin-template #shell #header ul#top-nav li.search-container .search-wrap{-moz-border-bottom-colors:none;-moz-border-left-colors:none;-moz-border-right-colors:none;-moz-border-top-colors:none;border-color:#d9d9d9;-moz-border-image:none;-o-border-image:none;-webkit-border-image:none;border-image:none;-moz-border-radius:4px 4px 4px 4px;-webkit-border-radius:4px 4px 4px 4px;border-radius:4px 4px 4px 4px;border-width:0;-moz-box-shadow:0 1px 1px 0 #333 inset;-webkit-box-shadow:0 1px 1px 0 #333 inset;box-shadow:0 1px 1px 0 #333 inset;color:white;float:left;height:31px;padding-left:27px;padding-right:17px;-moz-transition:color .5s ease-in-out 0s,border-color .5s ease-in-out 0s,background-color .5s ease-in-out 0s;-o-transition:color .5s ease-in-out 0s,border-color .5s ease-in-out 0s,background-color .5s ease-in-out 0s;-webkit-transition:color .5s ease-in-out 0s,border-color .5s ease-in-out 0s,background-color .5s ease-in-out 0s;transition:color .5s ease-in-out 0s,border-color .5s ease-in-out 0s,background-color .5s ease-in-out 0s;width:88px}
 #signin-template #shell #header ul#top-nav li.search-container .search-wrap .placeholder-anchor{display:none}
@@ -49,11 +49,11 @@
 #signin-template #shell #header ul#nav li.active a{background:white none;color:#dc241f;text-shadow:none}
 #signin-template #shell #header ul#nav li.active a:hover{background:white none;color:#dc241f;text-shadow:none}
 #signin-template #shell #header .nav ul li a:focus{background:-moz-linear-gradient(top,rgba(144,139,135,0.7),rgba(109,101,95,0.7));background:-webkit-gradient(linear,left top,left bottom,from(rgba(144,139,135,0.7)),to(rgba(109,101,95,0.7)));background:rgba(144,139,135,0.7)}
-#signin-template #shell #header .inactive .search-wrap{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 10px -110px #747271}
-#signin-template #shell #header .active .focused{background-color:white;background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 10px -140px white;border-color:#1f80ed;color:#333;padding-right:14px\9!important}
-#signin-template #shell #header .active .focusedout{padding-right:14px\9!important;background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 10px -110px #747271}
+#signin-template #shell #header .inactive .search-wrap{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 10px -110px #747271}
+#signin-template #shell #header .active .focused{background-color:white;background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 10px -140px white;border-color:#1f80ed;color:#333;padding-right:14px\9!important}
+#signin-template #shell #header .active .focusedout{padding-right:14px\9!important;background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 10px -110px #747271}
 #signin-template #shell #header a.tip{border-bottom:1px solid #696866;text-decoration:none}
-#signin-template #shell #header-sectional{overflow:hidden;padding:10px 0 19px 20px;background:url(Images/border_topcurve_grey.png.9b80c3a66cb28ba4bb475d13befc1310e97a7162.png?preserve-inactive-time=true) no-repeat left bottom;background-position:-960px bottom;clear:both;float:left;width:940px}
+#signin-template #shell #header-sectional{overflow:hidden;padding:10px 0 19px 20px;background:url(images/border_topcurve_grey.png.9b80c3a66cb28ba4bb475d13befc1310e97a7162.png?preserve-inactive-time=true) no-repeat left bottom;background-position:-960px bottom;clear:both;float:left;width:940px}
 #signin-template #shell #header-sectional h1{color:#1f1c4f;float:left;font-family:Times,serif;font-size:260%;font-weight:bold;line-height:1.3}
 #signin-template #shell #header-sectional h1 a{border-bottom:2px #1f1c4f solid;color:#1f1c4f;padding-bottom:1px;text-decoration:none}
 #signin-template #shell #customer-type{float:left;background:0;width:auto;margin-left:-1px}
@@ -66,10 +66,10 @@
 #signin-template #shell #footer-sectional{clear:both}
 #signin-template #shell #footer-sectional .sleeve{width:auto;height:100px;clear:both}
 #signin-template #shell #footer-sectional p{margin:40px 130px 20px 210px;padding-left:10px;border-left:3px #dd1903 solid;color:#46403b;font-size:120%}
-#signin-template #shell #customer-type.personal li.personal{background:#47413c url(Images/esi_login_tabs_bg.png.b5e13d5a72ee9f3381ee3511f7e4a5db5e688cd2.png?preserve-inactive-time=true) no-repeat left top;background-position:-168px -89px;color:white}
-#signin-template #shell #customer-type.personal li.business{background:#ebe6df url(Images/esi_login_tabs_bg.png.b5e13d5a72ee9f3381ee3511f7e4a5db5e688cd2.png?preserve-inactive-time=true) no-repeat left top;background-position:0 -89px;margin-left:-3px;width:160px}
-#signin-template #shell #customer-type.business li.personal{overflow:hidden;background:#ebe6df url(Images/esi_login_tabs_bg.png.b5e13d5a72ee9f3381ee3511f7e4a5db5e688cd2.png?preserve-inactive-time=true) no-repeat left top;background-position:0 -89px;width:154px}
-#signin-template #shell #customer-type.business li.business{overflow:hidden;background:#47413c url(Images/esi_login_tabs_bg.png.b5e13d5a72ee9f3381ee3511f7e4a5db5e688cd2.png?preserve-inactive-time=true) no-repeat left top;background-position:-165px -89px}
+#signin-template #shell #customer-type.personal li.personal{background:#47413c url(images/esi_login_tabs_bg.png.b5e13d5a72ee9f3381ee3511f7e4a5db5e688cd2.png?preserve-inactive-time=true) no-repeat left top;background-position:-168px -89px;color:white}
+#signin-template #shell #customer-type.personal li.business{background:#ebe6df url(images/esi_login_tabs_bg.png.b5e13d5a72ee9f3381ee3511f7e4a5db5e688cd2.png?preserve-inactive-time=true) no-repeat left top;background-position:0 -89px;margin-left:-3px;width:160px}
+#signin-template #shell #customer-type.business li.personal{overflow:hidden;background:#ebe6df url(images/esi_login_tabs_bg.png.b5e13d5a72ee9f3381ee3511f7e4a5db5e688cd2.png?preserve-inactive-time=true) no-repeat left top;background-position:0 -89px;width:154px}
+#signin-template #shell #customer-type.business li.business{overflow:hidden;background:#47413c url(images/esi_login_tabs_bg.png.b5e13d5a72ee9f3381ee3511f7e4a5db5e688cd2.png?preserve-inactive-time=true) no-repeat left top;background-position:-165px -89px}
 #signin-template #shell #customer-type li.personal a,#signin-template #shell #customer-type li.business a{text-decoration:none;text-align:center;top:7px;font-size:120%}
 #signin-template #shell div#customer-type.personal li.personal a i{color:white;font-weight:bold}
 #signin-template #shell div#customer-type.personal li.business a i{color:#545454;font-weight:bold}
@@ -77,15 +77,15 @@
 #signin-template #shell div#customer-type.business li.business a i{color:white;font-weight:bold}
 #signin-template #shell #customer-type-aligned-help-link{width:174px;height:26px;float:right}
 #signin-template #shell #help-login{float:right}
-#signin-template #shell #help-login a{padding-right:18px;line-height:20px;padding-bottom:1px;background:url(Images/esi_icon_help.png.1bc7c46ebc60f858335725528d570cc88219ab89.png?preserve-inactive-time=true) no-repeat right top;text-decoration:none;font-size:120%}
+#signin-template #shell #help-login a{padding-right:18px;line-height:20px;padding-bottom:1px;background:url(images/esi_icon_help.png.1bc7c46ebc60f858335725528d570cc88219ab89.png?preserve-inactive-time=true) no-repeat right top;text-decoration:none;font-size:120%}
 #signin-template #shell #help-login a:hover{text-decoration:underline}
 #signin-template #shell #wpr-content-primary{float:right;width:660px;margin:0 20px;overflow:hidden}
 #signin-template #shell #wpr-content-primary .alert-error{font-size:140%}
 #signin-template #shell #content-secondary{clear:left}
 #signin-template #shell #content-secondary H2{font:normal 170%/1 Arial;margin:-2px 0 10px 0}
-#signin-template #shell #content-secondary LI{background:url(Images/icon_chevron_right_secondaryred.png.b9f068e1bebbc28e7ec36e0ae2fe5ee615b5498b.png?preserve-inactive-time=true) no-repeat 0 .3em;padding-left:10px;margin:0 0 1em;font-size:120%}
+#signin-template #shell #content-secondary LI{background:url(images/icon_chevron_right_secondaryred.png.b9f068e1bebbc28e7ec36e0ae2fe5ee615b5498b.png?preserve-inactive-time=true) no-repeat 0 .3em;padding-left:10px;margin:0 0 1em;font-size:120%}
 #signin-template #shell #info-message{float:right;width:130px;height:279px;padding-top:30px;overflow:hidden;font-size:120%;line-height:1.35}
-#signin-template #shell #info-message .alert{padding-left:24px;padding-top:4px;background:url(Images/ain_securityalert.png.09f2a9f2e801450d984494696351d06ce2cdf38a.png?preserve-inactive-time=true) no-repeat left top}
+#signin-template #shell #info-message .alert{padding-left:24px;padding-top:4px;background:url(images/ain_securityalert.png.09f2a9f2e801450d984494696351d06ce2cdf38a.png?preserve-inactive-time=true) no-repeat left top}
 #signin-template #shell #info-message:after{float:none;clear:both}
 #signin-template #shell #content-navigator{margin-top:52px}
 #signin-template #shell #content-navigator .item{padding:8px 15px 15px 20px;border-top:2px white solid;background-image:none;background:url(esis/furniture/v2.23/ui_imgs/icon_chevron_right_secondaryred.png?preserve-inactive-time=true) no-repeat 0 .3em}
@@ -94,43 +94,43 @@
 #signin-template #shell #login{float:left;width:511px;margin-bottom:12px;-moz-border-radius:0 0 10px 10px;-webkit-border-radius:0 0 10px 10px;border-radius:0 0 10px 10px;border-bottom:solid #d5d4d4 2px}
 #signin-template #shell #login SPAN.remember-me-info-flyout{width:0;position:absolute;left:-30px;top:-15px;display:none}
 #signin-template #shell #login SPAN.remember-me-info-flyout .popup-help .flyout-below{padding:5px;border:1px solid #595767;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;z-index:10;position:absolute;background:white;top:28px;left:10px}
-#signin-template #shell #login SPAN.remember-me-info-flyout .popup-help .flyout-below .icon{width:19px;height:11px;position:absolute;top:-11px;right:85px;display:block;background:url(Images/arrow_tailcopy.png.502f130263395124415a739831ed34e88ff350bc.png?preserve-inactive-time=true) no-repeat}
+#signin-template #shell #login SPAN.remember-me-info-flyout .popup-help .flyout-below .icon{width:19px;height:11px;position:absolute;top:-11px;right:85px;display:block;background:url(images/arrow_tailcopy.png.502f130263395124415a739831ed34e88ff350bc.png?preserve-inactive-time=true) no-repeat}
 #signin-template #shell #login SPAN.remember-me-info-flyout .popup-help .help-content{font-size:70%;width:250px}
 #signin-template #shell #login DIV.keypad-v3-form-well{margin:0;float:left;background:#ebe6df;-webkit-border-bottom-right-radius:5px;-webkit-border-bottom-left-radius:5px;-moz-border-radius-bottomright:5px;-moz-border-radius-bottomleft:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px}
 #signin-template #shell #login FIELDSET{padding:0;margin:0;border:0}
 #signin-template #shell #login .grid{position:relative;font-size:100%;margin:0;text-align:right;border-top:1px solid #d5d4d4;padding:10px 20px 10px 20px}
-#signin-template #shell #login .grid .forgot{background:url(Images/icon_chevron_right_secondaryred.png.b9f068e1bebbc28e7ec36e0ae2fe5ee615b5498b.png?preserve-inactive-time=true) no-repeat 0 .3em;padding-left:10px;font-size:120%}
-#signin-template #shell #login .grid .btn-actions #clear{background:#dedcda url(Images/esi_btn_clear.png.90384776ca549910893301483694e2586ddb67bb.png?preserve-inactive-time=true) no-repeat left top}
-#signin-template #shell #login .grid .btn-actions BUTTON{padding:5px 5px 5px 16px;font-weight:bold;width:79px;min-height:0;text-align:left;margin:0;line-height:13px;margin-left:3px;border:0;font-size:120%;background:#da1710 url(Images/esi_btn_signin.png.96fa1b58ab2ec45f3f32fb71834f7bac49b73962.png?preserve-inactive-time=true) no-repeat left top}
+#signin-template #shell #login .grid .forgot{background:url(images/icon_chevron_right_secondaryred.png.b9f068e1bebbc28e7ec36e0ae2fe5ee615b5498b.png?preserve-inactive-time=true) no-repeat 0 .3em;padding-left:10px;font-size:120%}
+#signin-template #shell #login .grid .btn-actions #clear{background:#dedcda url(images/esi_btn_clear.png.90384776ca549910893301483694e2586ddb67bb.png?preserve-inactive-time=true) no-repeat left top}
+#signin-template #shell #login .grid .btn-actions BUTTON{padding:5px 5px 5px 16px;font-weight:bold;width:79px;min-height:0;text-align:left;margin:0;line-height:13px;margin-left:3px;border:0;font-size:120%;background:#da1710 url(images/esi_btn_signin.png.96fa1b58ab2ec45f3f32fb71834f7bac49b73962.png?preserve-inactive-time=true) no-repeat left top}
 #signin-template #shell #login .hidden{display:none}
 #signin-template #shell #login #password{margin:0;border:0;width:160px;min-height:20px;padding:2px 10px;line-height:21px;margin-right:23px;text-align:left;background:url(images/bg_searchbox_204.png.4e284b54e1ae88fc22cbb57e46158dba969df4a8.png?preserve-inactive-time=true) no-repeat center center;-khtml-background-size:100% 100%;-webkit-background-size:100% 100%;-o-background-size:100% 100%;-moz-background-size:100% 100%;background-size:100% 100%}
-#signin-template #shell #login DIV.keypad-v3-content{width:511px;padding-top:0;margin:0 0 3px;background:#ebe6df url(Images/esi_bg_keyboard_curve.png.5da4999bb0dfc2b4ebe040be680a513464c38871.png?preserve-inactive-time=true) no-repeat left top}
+#signin-template #shell #login DIV.keypad-v3-content{width:511px;padding-top:0;margin:0 0 3px;background:#ebe6df url(images/esi_bg_keyboard_curve.png.5da4999bb0dfc2b4ebe040be680a513464c38871.png?preserve-inactive-time=true) no-repeat left top}
 #signin-template #shell #login DIV.keypad-v3-content LABEL[for='password']{display:block;height:25px}
 #signin-template #shell #login DIV.keypad-v3-content ABBR{text-decoration:none;cursor:unset}
-#signin-template #shell #login DIV.keypad-v3-container{position:relative;min-height:28px;background:#47413c url(Images/esi_login_username_bg.png.2dc13c098ee482742d1abd097a8c6e68467da360.png?preserve-inactive-time=true) repeat-x left top;line-height:1.4;text-align:left;padding:10px 20px 20px 20px;margin-bottom:0;display:block;margin-top:0}
+#signin-template #shell #login DIV.keypad-v3-container{position:relative;min-height:28px;background:#47413c url(images/esi_login_username_bg.png.2dc13c098ee482742d1abd097a8c6e68467da360.png?preserve-inactive-time=true) repeat-x left top;line-height:1.4;text-align:left;padding:10px 20px 20px 20px;margin-bottom:0;display:block;margin-top:0}
 #signin-template #shell #login DIV.keypad-v3-container SPAN.keypad-label-text{color:white;font-size:110%;text-align:left;line-height:34px}
 #signin-template #shell #login DIV.keypad-v3-container SPAN.keypad-label-text SPAN.keypad-label-text-main{font-size:130%;text-align:left;color:white;margin-right:5px}
 #signin-template #shell #login #fakeusername{margin:0;border:0;width:160px;min-height:20px;padding:2px 10px;line-height:21px;margin-top:6px;text-align:left;float:right;-khtml-background-size:100% 100%;-webkit-background-size:100% 100%;-o-background-size:100% 100%;-moz-background-size:100% 100%;background-size:100% 100%;background:url(images/bg_searchbox_204.png.4e284b54e1ae88fc22cbb57e46158dba969df4a8.png?preserve-inactive-time=true) no-repeat center center}
 #signin-template #shell #login LABEL[for="rememberme"]{float:right;position:relative;z-index:10;top:-10px;color:white;font-size:140%;right:3px}
 #signin-template #shell #login LABEL[for='fakeusername']{width:100%}
 #signin-template #shell #login .keypad-v3-wrapper{width:511px;margin:1px 0 20px 0}
-#signin-template #shell #login .keypad-v3-wrapper DIV.keys BUTTON{width:33px;height:32px;background:#ebe6df url(Images/esi_keypad_key_33.png.afd513c4762e60493f3db1c0b671cb9859844251.png?preserve-inactive-time=true) no-repeat 50% 2px;-moz-background-size:100% 100%;-khtml-background-size:100% 100%;-webkit-background-size:100% 100%;-o-background-size:100% 100%;background-size:100% 100%;-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;margin-left:1px;margin-bottom:-6px;border:0}
+#signin-template #shell #login .keypad-v3-wrapper DIV.keys BUTTON{width:33px;height:32px;background:#ebe6df url(images/esi_keypad_key_33.png.afd513c4762e60493f3db1c0b671cb9859844251.png?preserve-inactive-time=true) no-repeat 50% 2px;-moz-background-size:100% 100%;-khtml-background-size:100% 100%;-webkit-background-size:100% 100%;-o-background-size:100% 100%;background-size:100% 100%;-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;margin-left:1px;margin-bottom:-6px;border:0}
 #signin-template #shell #login .keypad-v3-wrapper DIV.keys BUTTON:focus{outline:1px dotted black}
-#signin-template #shell #login div.keypad-password-text{font-size:110%;color:#1f1c4f;padding:1px 50px 1px 20px;text-align:left;padding-top:12px;margin-bottom:5px;background:#ebe6df url(Images/esi_bg_keyboard_curve.png.5da4999bb0dfc2b4ebe040be680a513464c38871.png?preserve-inactive-time=true) no-repeat left top}
+#signin-template #shell #login div.keypad-password-text{font-size:110%;color:#1f1c4f;padding:1px 50px 1px 20px;text-align:left;padding-top:12px;margin-bottom:5px;background:#ebe6df url(images/esi_bg_keyboard_curve.png.5da4999bb0dfc2b4ebe040be680a513464c38871.png?preserve-inactive-time=true) no-repeat left top}
 #signin-template #shell #login div.keypad-password-text SPAN.keypad-password-text-main{font-size:130%;text-align:left;margin-right:5px;color:#1f1c4f}
 #signin-template #shell #username{margin:0;border:0;width:160px;min-height:20px;padding:2px 10px;line-height:21px;margin-left:2px;text-align:left;background:url(images/bg_searchbox_204.png.4e284b54e1ae88fc22cbb57e46158dba969df4a8.png?preserve-inactive-time=true) no-repeat center center;-khtml-background-size:100% 100%;-webkit-background-size:100% 100%;-o-background-size:100% 100%;-moz-background-size:100% 100%;background-size:100% 100%}
 #signin-template #shell #cta{float:right;width:380px;padding:5px 52px 5px 0;overflow:hidden}
 #signin-template #shell #cta span{padding-left:40px;float:left;text-align:right;width:150px;margin:5px 10px 0 0;font-size:120%;color:#46403b;text-transform:uppercase;font-weight:bold}
 #signin-template #shell #cta ul{float:right;width:160px}
 #signin-template #shell #cta ul a{display:block;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:3px 3px 3px 16px;font-weight:bold;font-size:120%;-moz-box-shadow:1px 1px 1px #888;-webkit-box-shadow:1px 1px 1px #888;box-shadow:1px 1px 1px #888;width:190px;margin-bottom:2px;color:white;text-decoration:none;height:17px}
-#signin-template #shell #cta ul a.btnRegister{background:#da1710 url(Images/abn_registernow.png.201f478ef0bc7a493a742041b9e5311e56ef2228.png?preserve-inactive-time=true) no-repeat left top}
-#signin-template #shell #cta ul a.btnReset{background:#6a6561 url(Images/abn_reset_password.png.8015fb2507e72d00120d8c532567162d9000f253.png?preserve-inactive-time=true) no-repeat left top}
-#signin-template #shell #cta .link{float:right;margin:8px 10px 0 0;padding-left:10px;font-size:110%;color:#46403b;text-decoration:underline;background:url(Images/icon_chevron_right_secondaryred.png.b9f068e1bebbc28e7ec36e0ae2fe5ee615b5498b.png?preserve-inactive-time=true) no-repeat left center;white-space:nowrap}
-#signin-template #shell #nav-tertiary{display:block;float:left;width:240px;background:white url(Images/bg_tertiarynav.png.e34ba3135efcda3ecd120ec211293a60941f5720.png?preserve-inactive-time=true) repeat-y -80px 0;min-height:460px}
+#signin-template #shell #cta ul a.btnRegister{background:#da1710 url(images/abn_registernow.png.201f478ef0bc7a493a742041b9e5311e56ef2228.png?preserve-inactive-time=true) no-repeat left top}
+#signin-template #shell #cta ul a.btnReset{background:#6a6561 url(images/abn_reset_password.png.8015fb2507e72d00120d8c532567162d9000f253.png?preserve-inactive-time=true) no-repeat left top}
+#signin-template #shell #cta .link{float:right;margin:8px 10px 0 0;padding-left:10px;font-size:110%;color:#46403b;text-decoration:underline;background:url(images/icon_chevron_right_secondaryred.png.b9f068e1bebbc28e7ec36e0ae2fe5ee615b5498b.png?preserve-inactive-time=true) no-repeat left center;white-space:nowrap}
+#signin-template #shell #nav-tertiary{display:block;float:left;width:240px;background:white url(images/bg_tertiarynav.png.e34ba3135efcda3ecd120ec211293a60941f5720.png?preserve-inactive-time=true) repeat-y -80px 0;min-height:460px}
 #signin-template #shell #nav-tertiary .item{padding:8px 15px 15px 20px;border-top:2px white solid;background-image:none}
-#signin-template #shell #nav-tertiary .item a{display:block;font-size:120%;padding-left:10px;background:url(Images/icon_chevron_right_secondaryred.png.b9f068e1bebbc28e7ec36e0ae2fe5ee615b5498b.png?preserve-inactive-time=true) no-repeat 0 .3em;font-weight:bold}
+#signin-template #shell #nav-tertiary .item a{display:block;font-size:120%;padding-left:10px;background:url(images/icon_chevron_right_secondaryred.png.b9f068e1bebbc28e7ec36e0ae2fe5ee615b5498b.png?preserve-inactive-time=true) no-repeat 0 .3em;font-weight:bold}
 #signin-template #shell #footer-global .sleeve{position:relative;padding:15px 20px;background-color:#eeede9}
-#signin-template #shell #footer-global li{float:left;margin:0 20px 6px 0;padding-left:12px;font-size:110%;min-width:8em;background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -235px transparent}
+#signin-template #shell #footer-global li{float:left;margin:0 20px 6px 0;padding-left:12px;font-size:110%;min-width:8em;background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -235px transparent}
 #signin-template #shell #footer-global .contactus,#signin-template #shell #footer-global .media,#signin-template #shell #footer-global .careers{font-weight:bold}
 #signin-template #shell #footer-global .siteindex,#signin-template #shell #footer-global .security,#signin-template #shell #footer-global li.break{clear:left}
 #signin-template #shell #footer-global li a{text-decoration:underline;color:#46403b;white-space:nowrap}
@@ -139,11 +139,11 @@
 #signin-template #shell #footer-global ul{overflow:hidden}
 #signin-template #shell #shell #footer-global h2{font-weight:bold;font-size:110%;margin-top:1.5em}
 #signin-template #shell #footer-global p{font-size:120%;margin-top:10px;clear:both;padding-top:10px}
-#signin-template #shell #footer-global .icon-facebook{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -273px transparent;width:24px;height:24px;display:inline-block}
-#signin-template #shell #footer-global .icon-twitter{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -301px transparent;width:24px;height:24px;display:inline-block}
-#signin-template #shell #footer-global .icon-youtube{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -329px transparent;width:24px;height:24px;display:inline-block}
-#signin-template #shell #footer-global .icon-linkedin{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll -210px -273px transparent;width:24px;height:24px;display:inline-block}
-#signin-template #shell #footer-global .icon-googleplus{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll -210px -301px transparent;width:24px;height:24px;display:inline-block}
+#signin-template #shell #footer-global .icon-facebook{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -273px transparent;width:24px;height:24px;display:inline-block}
+#signin-template #shell #footer-global .icon-twitter{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -301px transparent;width:24px;height:24px;display:inline-block}
+#signin-template #shell #footer-global .icon-youtube{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 0 -329px transparent;width:24px;height:24px;display:inline-block}
+#signin-template #shell #footer-global .icon-linkedin{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll -210px -273px transparent;width:24px;height:24px;display:inline-block}
+#signin-template #shell #footer-global .icon-googleplus{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll -210px -301px transparent;width:24px;height:24px;display:inline-block}
 #signin-template #shell #footer-affiliate .shell{margin:0 auto;padding:0 1px;width:960px}
 #signin-template #shell #footer-affiliate #footer-content-primary{float:left;width:680px}
 #signin-template #shell #footer-affiliate #footer-content-secondary{float:left;width:258px;overflow:hidden;padding-left:20px}
@@ -159,19 +159,19 @@
 #signin-template #shell h1{color:#474642}
 #signin-template #shell h2{color:#474642}
 #signin-template #shell h3{color:#474642}
-#signin-template #shell .westpac-logo a{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll -549px -710px transparent;display:block;height:59px;left:8px;margin:12px 0 0 20px;text-indent:-9999em;top:12px}
+#signin-template #shell .westpac-logo a{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll -549px -710px transparent;display:block;height:59px;left:8px;margin:12px 0 0 20px;text-indent:-9999em;top:12px}
 #signin-template #shell .westpac-logo .print-only{display:none;position:absolute}
 #signin-template #shell ul{list-style:none outside none}
-#signin-template #shell .button.secure span{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 10px -172px transparent;padding-left:26px}
+#signin-template #shell .button.secure span{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll 10px -172px transparent;padding-left:26px}
 #signin-template #shell .button{-moz-border-radius:4px;-moz-box-shadow:0 5px 5px -5px rgba(0,0,0,0.5);-webkit-border-radius:4px;-webkit-box-shadow:0 5px 5px -5px rgba(0,0,0,0.5);background:-moz-linear-gradient(top,#e0022d,#c60228);background:-webkit-gradient(linear,left top,left bottom,from(#e0022d),to(#c60228));filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e0022d,endColorstr=#c60228);background:#c60228;border-radius:4px;border:1px solid transparent;box-shadow:0 5px 5px -5px rgba(0,0,0,0.5);color:white;cursor:pointer;display:inline-block;font:bold 107.1%/31px Arial,Helvetica,sans-serif;height:31px;margin:0 0 0 5px;padding:0 0 0 3px;text-shadow:0 -1px 0 #98011f;zoom:1}
 #signin-template #shell .button span{display:block;height:31px;padding:0 15px}
 #signin-template #shell .button a{text-decoration:none}
 #signin-template #shell .button:hover{background:-moz-linear-gradient(top,#fb0232,#de022c);background:-webkit-gradient(linear,left top,left bottom,from(#fb0232),to(#de022c));background:#de022c;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#fb0232,endColorstr=#de022c);text-decoration:none}
 #signin-template #shell .button:focus{background:-moz-linear-gradient(top,#fb0232,#de022c);background:-webkit-gradient(linear,left top,left bottom,from(#fb0232),to(#de022c));background:#de022c;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#fb0232,endColorstr=#de022c);text-decoration:none}
 #signin-template #shell a.button{text-decoration:none}
-#signin-template #shell .signinmenu{-moz-border-radius:4px;-webkit-border-radius:4px;background:#ececec url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat right -229px;border-radius:4px;display:inline-block;height:28px;line-height:32px;padding:0 0 3px 0;zoom:1}
-#signin-template #shell .signinmenu .dt{background:transparent url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat -545px -302px;cursor:pointer;line-height:32px;margin-left:-4px;min-width:229px;padding:0 0 0 9px;zoom:1}
-#signin-template #shell .signinmenu .dt .inner{background:transparent url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) repeat-x left -1105px;color:#464542;cursor:pointer;font-weight:bold;margin-right:36px;padding:0 0 3px}
+#signin-template #shell .signinmenu{-moz-border-radius:4px;-webkit-border-radius:4px;background:#ececec url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat right -229px;border-radius:4px;display:inline-block;height:28px;line-height:32px;padding:0 0 3px 0;zoom:1}
+#signin-template #shell .signinmenu .dt{background:transparent url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat -545px -302px;cursor:pointer;line-height:32px;margin-left:-4px;min-width:229px;padding:0 0 0 9px;zoom:1}
+#signin-template #shell .signinmenu .dt .inner{background:transparent url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) repeat-x left -1105px;color:#464542;cursor:pointer;font-weight:bold;margin-right:36px;padding:0 0 3px}
 #signin-template #shell .signinmenu .dt .inner strong{color:#e4022e;font-weight:bold}
 #signin-template #shell .signinmenu .dt a{color:#e4022e;cursor:pointer;display:block;font-weight:bold;padding:0 0 0 10px;text-decoration:none}
 #signin-template #shell .signinmenu .dt a strong{color:#e4022e;font-weight:bold}
@@ -222,7 +222,7 @@
 #signin-template .tooltip-flipped h4,#signin-template .tooltip h4{margin:0;font-weight:bold;font-size:110%;line-height:18px;color:#4c4a48;padding-bottom:20px}
 #signin-template .tooltip-flipped{font-family:arial;z-index:1111}
 #signin-template .tooltip-flipped ul li{font-size:140%;zoom:1}
-#signin-template .tooltip-flipped ul li a{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll -838px -1160px transparent;display:block;padding:0 0 10px 12px;text-decoration:none}
+#signin-template .tooltip-flipped ul li a{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll -838px -1160px transparent;display:block;padding:0 0 10px 12px;text-decoration:none}
 #signin-template .tooltip-flipped ul li a:hover{text-decoration:underline}
 #signin-template .tooltip-flipped .disclaimerbox ul li{list-style:disc;margin-left:12px}
 #signin-template .tooltip-flipped .disclaimerbox ul li a{background:0}
@@ -231,11 +231,11 @@
 #signin-template .lbox{float:left;padding:0 15px;margin-top:30px}
 #signin-template .tooltip{-moz-border-radius:6px;-moz-box-shadow:0 5px 10px -2px rgba(0,0,0,0.5);-webkit-border-radius:6px;-webkit-box-shadow:0 5px 10px -2px rgba(0,0,0,0.5);background-color:#f2f0ed;border-bottom-color:#b8b7b5;border-radius:6px;border-top-color:#dddbda;border:1px solid #ceccca;box-shadow:0 5px 10px -2px rgba(0,0,0,0.5);display:none;padding:0;position:absolute;text-align:left;width:416px;font-family:arial;z-index:1111}
 #signin-template .tooltip ul li{font-size:140%;zoom:1}
-#signin-template .tooltip ul li a{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll -838px -1160px transparent;display:block;padding:0 0 10px 12px;text-decoration:none;font-size:66%}
+#signin-template .tooltip ul li a{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat scroll -838px -1160px transparent;display:block;padding:0 0 10px 12px;text-decoration:none;font-size:66%}
 #signin-template .tooltip ul li a:hover{text-decoration:underline}
 #signin-template .tooltip .disclaimerbox ul li{list-style:disc;margin-left:12px}
 #signin-template .tooltip .disclaimerbox ul li a{background:0}
-#signin-template .tooltip .tip-arrow{background:url(Images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat -545px -516px;display:block;height:9px;position:absolute;right:85px;top:-9px;width:40px}
+#signin-template .tooltip .tip-arrow{background:url(images/sprite-icons.png.e5ebc7d57b831b80ff2b899b2e0d33a0312d6ac2.png?preserve-inactive-time=true) no-repeat -545px -516px;display:block;height:9px;position:absolute;right:85px;top:-9px;width:40px}
 #signin-template .tooltip .closebtn{-moz-border-radius:12px;-webkit-border-radius:12px;background-color:#9f9d9a;border-radius:12px;color:white;cursor:pointer;display:block;height:19px;line-height:18px;position:absolute;right:8px;text-align:center;text-decoration:none;top:8px;width:19px}
 #signin-template .tooltip .closebtn:hover{background-color:#e4022e;cursor:pointer}
 #signin-template .tooltip .closebtn:focus{background-color:#e4022e;cursor:pointer}
@@ -284,7 +284,7 @@
 #unauthenticated-template .fcs-login .keypad-v3-container SPAN.remember-me-info-flyout,#unauthenticated-template .backdoor-login .keypad-v3-container SPAN.remember-me-info-flyout{display:none}
 #unauthenticated-template .fcs-login .keypad-v3-container SPAN.remember-me-info-flyout .popup-help,#unauthenticated-template .backdoor-login .keypad-v3-container SPAN.remember-me-info-flyout .popup-help{position:absolute;float:right;top:3px;left:-6px}
 #unauthenticated-template .fcs-login .keypad-v3-container SPAN.remember-me-info-flyout .popup-help .flyout-below,#unauthenticated-template .backdoor-login .keypad-v3-container SPAN.remember-me-info-flyout .popup-help .flyout-below{padding:5px;border:1px solid #595767;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;z-index:10;position:absolute;background:white}
-#unauthenticated-template .fcs-login .keypad-v3-container SPAN.remember-me-info-flyout .popup-help .flyout-below .icon,#unauthenticated-template .backdoor-login .keypad-v3-container SPAN.remember-me-info-flyout .popup-help .flyout-below .icon{width:19px;height:11px;position:absolute;top:-11px;right:85px;display:block;background:url(Images/arrow_tailcopy.png.502f130263395124415a739831ed34e88ff350bc.png?preserve-inactive-time=true) no-repeat}
+#unauthenticated-template .fcs-login .keypad-v3-container SPAN.remember-me-info-flyout .popup-help .flyout-below .icon,#unauthenticated-template .backdoor-login .keypad-v3-container SPAN.remember-me-info-flyout .popup-help .flyout-below .icon{width:19px;height:11px;position:absolute;top:-11px;right:85px;display:block;background:url(images/arrow_tailcopy.png.502f130263395124415a739831ed34e88ff350bc.png?preserve-inactive-time=true) no-repeat}
 #unauthenticated-template .fcs-login .keypad-v3-container LABEL[for='username'],#unauthenticated-template .backdoor-login .keypad-v3-container LABEL[for='username'],#unauthenticated-template .fcs-login .keypad-v3-container LABEL[for='fakeusername'],#unauthenticated-template .backdoor-login .keypad-v3-container LABEL[for='fakeusername']{width:100%;padding-bottom:5px}
 #unauthenticated-template .fcs-login .keypad-v3-container LABEL[for='username'] SPAN.keypad-label-text,#unauthenticated-template .backdoor-login .keypad-v3-container LABEL[for='username'] SPAN.keypad-label-text,#unauthenticated-template .fcs-login .keypad-v3-container LABEL[for='fakeusername'] SPAN.keypad-label-text,#unauthenticated-template .backdoor-login .keypad-v3-container LABEL[for='fakeusername'] SPAN.keypad-label-text{padding:8px 0;display:inline-block}
 #unauthenticated-template .fcs-login .keypad-v3-container LABEL[for='username'] SPAN.keypad-label-text .keypad-label-text-main,#unauthenticated-template .backdoor-login .keypad-v3-container LABEL[for='username'] SPAN.keypad-label-text .keypad-label-text-main,#unauthenticated-template .fcs-login .keypad-v3-container LABEL[for='fakeusername'] SPAN.keypad-label-text .keypad-label-text-main,#unauthenticated-template .backdoor-login .keypad-v3-container LABEL[for='fakeusername'] SPAN.keypad-label-text .keypad-label-text-main{font-size:130%;color:#1f1c4f}
@@ -332,7 +332,7 @@
 .wr308-template footer #footer-container .footer-links{width:212px;border-right:1px solid #dedee1;margin-right:20px}
 .wr308-template footer #footer-container .footer-links--last{border-right:0;margin-right:0}
 .wr308-template footer #footer-container li>a{color:#181b25}
-.wr308-template footer #footer-container li>a.link-icon.icon-arrow{background:url('Images/red_arrow_icon.png.50687ff84190c3c102b0e9b867229854cb61bec9.png?preserve-inactive-time=true') no-repeat 0 4px;padding-left:15px;-moz-background-size:7px;-o-background-size:7px;-webkit-background-size:7px;background-size:7px}
+.wr308-template footer #footer-container li>a.link-icon.icon-arrow{background:url('images/red_arrow_icon.png.50687ff84190c3c102b0e9b867229854cb61bec9.png?preserve-inactive-time=true') no-repeat 0 4px;padding-left:15px;-moz-background-size:7px;-o-background-size:7px;-webkit-background-size:7px;background-size:7px}
 .wr308-template footer #copyright-container{text-align:left;width:950px;margin:24px auto 0 auto}
 .wr308-template footer #copyright-container #logo>img{width:40px}
 .wr308-template footer #copyright-container #copyright{font-size:12px;color:#181b25;margin:36px 0 42px 0}
@@ -341,7 +341,7 @@
 .wr308-template #main-container #main,.wr308-template #main-container aside{padding:10px 0 0 0}
 .wr308-template #main-container .alert.alert-warning{margin-bottom:10px}
 .wr308-template #main-container #main.main-without-keyboard{width:100%;padding-top:0}
-.wr308-template .security-protect .padlock-icon{background:url(Images/padlock-icon-sidebar.png.1000a1b4bdf8b793a4737c52e26c56afc8fa9385.png?preserve-inactive-time=true) no-repeat 50%;height:35px;width:25px;display:inline-block}
+.wr308-template .security-protect .padlock-icon{background:url(images/padlock-icon-sidebar.png.1000a1b4bdf8b793a4737c52e26c56afc8fa9385.png?preserve-inactive-time=true) no-repeat 50%;height:35px;width:25px;display:inline-block}
 .wr308-template .security-protect .content{display:inline-block;position:absolute;margin-left:10px}
 .wr308-template .security-protect .content .heading{display:block;font-size:17px;font-weight:bold;margin-top:-3px}
 .wr308-template #container{height:120px;margin-bottom:15px;width:auto;background:white;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif}
@@ -365,7 +365,7 @@
 .authentication_v2 .main-without-keyboard .alert{margin-bottom:12px}
 .authentication_v2 .main-without-keyboard .form-modules-v2{padding-bottom:20px;margin:0 0 30px;padding:0;width:100%}
 .authentication_v2 .main-without-keyboard .set-login-border{border:1px solid #dedee1}
-.authentication_v2 .main-without-keyboard .set-login-image{background-image:url("Images/StandardSignInRibbon.png.4f505a909d6a96b07fe521d44051d96801184d82.png?preserve-inactive-time=true");background-repeat:no-repeat;background-position:right;background-size:390px 100%;margin-top:12px}
+.authentication_v2 .main-without-keyboard .set-login-image{background-image:url("images/StandardSignInRibbon.png.4f505a909d6a96b07fe521d44051d96801184d82.png?preserve-inactive-time=true");background-repeat:no-repeat;background-position:right;background-size:390px 100%;margin-top:12px}
 .authentication_v2 .main-without-keyboard #loginPage-v2{font-family:apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;background-color:white;display:block;position:relative;width:100%;height:368px}
 .authentication_v2 .main-without-keyboard #loginPage-v2 .login-container{padding:24px;display:block;height:100%}
 .authentication_v2 .main-without-keyboard #loginPage-v2 .login-container .login-info-container{float:left;width:73%;position:relative}
@@ -374,10 +374,10 @@
 .authentication_v2 .main-without-keyboard #loginPage-v2 .login-container .login-info-container #security-container .security-container-inner{width:220px}
 .authentication_v2 .main-without-keyboard .security-protect-container-sm{margin-top:24px}
 .authentication_v2 .main-without-keyboard .security-protect-container-sm .content{display:inline-block;margin-left:10px}
-.authentication_v2 .main-without-keyboard .security-protect-container-sm .padlock-icon-sm{background:url('Images/padlock-icon-v2-15x18.png.88e24a62d4eaa432f785e34a6f1e3a4510095087.png?preserve-inactive-time=true') no-repeat 50%;height:18px;width:15px;display:inline-block}
+.authentication_v2 .main-without-keyboard .security-protect-container-sm .padlock-icon-sm{background:url('images/padlock-icon-v2-15x18.png.88e24a62d4eaa432f785e34a6f1e3a4510095087.png?preserve-inactive-time=true') no-repeat 50%;height:18px;width:15px;display:inline-block}
 .authentication_v2 .main-without-keyboard .security-protect{padding-left:0;padding-top:30px}
 .authentication_v2 .main-without-keyboard .security-protect .content{position:inherit}
-.authentication_v2 .main-without-keyboard .security-protect .padlock-icon-v2{background:url('Images/padlock-icon-v2.png.600e24c5da08eebbbee193c94b5d476d9269b51a.png?preserve-inactive-time=true') no-repeat 50%;height:32px;width:27px;display:inline-block}
+.authentication_v2 .main-without-keyboard .security-protect .padlock-icon-v2{background:url('images/padlock-icon-v2.png.600e24c5da08eebbbee193c94b5d476d9269b51a.png?preserve-inactive-time=true') no-repeat 50%;height:32px;width:27px;display:inline-block}
 .authentication_v2 .main-without-keyboard .divOuterLinks{position:absolute;bottom:0}
 .authentication_v2 .main-without-keyboard .divOuterLinks a{color:#181b25}
 .authentication_v2 .main-without-keyboard .btnSignIn-v2{margin-top:15px;margin-bottom:24px}
@@ -402,7 +402,7 @@
 .authentication_v2 #main .softimeout-password-container{width:220px}
 .authentication_v2 #main .security-protect-gel{margin-top:5px}
 .authentication_v2 #main .security-protect-gel .content{display:inline-block;margin-left:10px}
-.authentication_v2 #main .security-protect-gel .padlock-icon-small{background:url('Images/padlock-icon-v2-15x18.png.88e24a62d4eaa432f785e34a6f1e3a4510095087.png?preserve-inactive-time=true') no-repeat 50%;height:18px;width:15px;display:inline-block}
+.authentication_v2 #main .security-protect-gel .padlock-icon-small{background:url('images/padlock-icon-v2-15x18.png.88e24a62d4eaa432f785e34a6f1e3a4510095087.png?preserve-inactive-time=true') no-repeat 50%;height:18px;width:15px;display:inline-block}
 .authentication_v2 #main .btnSignIn-v2{width:192px}
 .authentication_v2 #main .remember-me-container{height:50px;width:220px}
 .authentication_v2 #main .remember-me-container #remember-me-lbl{top:16px;position:absolute}
@@ -420,7 +420,7 @@
 .authentication_v2 #main SPAN.remember-me-info-flyout{display:none}
 .authentication_v2 #main .flyout-below{padding:5px;border:1px solid #595767;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;z-index:10;position:absolute;background:white;top:0;left:0}
 .authentication_v2 #main .help-content{width:222px}
-.authentication_v2 #main .popup-help .flyout-below .icon{left:5px;width:19px;height:11px;position:absolute;top:-11px;background:url('Images/arrow_tailcopy.png.502f130263395124415a739831ed34e88ff350bc.png?preserve-inactive-time=true') no-repeat}
+.authentication_v2 #main .popup-help .flyout-below .icon{left:5px;width:19px;height:11px;position:absolute;top:-11px;background:url('images/arrow_tailcopy.png.502f130263395124415a739831ed34e88ff350bc.png?preserve-inactive-time=true') no-repeat}
 .authentication_v2 #main .set-aside-font{color:white;text-decoration:none}
 .authentication_v2 #main .two-section-layout{width:50%;float:left}
 .authentication_v2 #main .two-section-layout .password-guidelines{margin:0 80px 20px 0}
@@ -436,15 +436,15 @@
 .authentication_v2 #main .security-signin-info{margin-top:20px;margin-left:15px}
 .authentication_v2 #main .security-signin-info li{list-style-type:disc}
 .authentication_v2 #main .lnkLearnMore{margin-top:63px}
-.authentication_v2 #main .icon-white-arrow{background:url('Images/white-chevron.png.75a6ec48e7b0b941f3fada64c3def1875b1f7591.png?preserve-inactive-time=true') no-repeat 0 3px;padding-left:15px}
+.authentication_v2 #main .icon-white-arrow{background:url('images/white-chevron.png.75a6ec48e7b0b941f3fada64c3def1875b1f7591.png?preserve-inactive-time=true') no-repeat 0 3px;padding-left:15px}
 .authentication_v2 #main #link-container{float:left;width:27%;height:100%;display:table;margin-top:-24px;table-layout:fixed}
 .authentication_v2 #main #link-container .link-container-inner{display:table-cell;vertical-align:middle}
 .authentication_v2 #main #link-container .link-container-inner .list-links{color:white;width:200px;margin-left:24px}
-.authentication_v2 #aside-content li>a.link-icon.icon-arrow{background:url('Images/red_arrow_icon.png.50687ff84190c3c102b0e9b867229854cb61bec9.png?preserve-inactive-time=true') no-repeat 0 3px;padding-left:15px;-moz-background-size:7px;-o-background-size:7px;-webkit-background-size:7px;background-size:7px}
+.authentication_v2 #aside-content li>a.link-icon.icon-arrow{background:url('images/red_arrow_icon.png.50687ff84190c3c102b0e9b867229854cb61bec9.png?preserve-inactive-time=true') no-repeat 0 3px;padding-left:15px;-moz-background-size:7px;-o-background-size:7px;-webkit-background-size:7px;background-size:7px}
 .authentication_v2 .without-keyboard-backdoor .form-modules-v2{padding-bottom:20px;margin:0 0 30px;padding:0}
 .authentication_v2 .without-keyboard-backdoor .security-protect{margin-top:15px}
 .authentication_v2 .without-keyboard-backdoor .security-protect .content{display:inline-block;margin-left:10px;vertical-align:text-bottom}
-.authentication_v2 .without-keyboard-backdoor .security-protect .padlock-icon-v2{background:url('Images/padlock-icon-v2-15x18.png.88e24a62d4eaa432f785e34a6f1e3a4510095087.png?preserve-inactive-time=true') no-repeat 50%;height:18px;width:15px;display:inline-block}
+.authentication_v2 .without-keyboard-backdoor .security-protect .padlock-icon-v2{background:url('images/padlock-icon-v2-15x18.png.88e24a62d4eaa432f785e34a6f1e3a4510095087.png?preserve-inactive-time=true') no-repeat 50%;height:18px;width:15px;display:inline-block}
 .authentication_v2 .without-keyboard-backdoor #loginPage-v2.without-keypad-backdoor{height:325px}
 .authentication_v2 .without-keyboard-backdoor #loginPage-v2.without-keypad-backdoor .btnSignIn-v2{margin-top:15px}
 .authentication_v2 .without-keyboard-backdoor #aside-content .box:first-child{padding-bottom:0}
@@ -458,7 +458,7 @@
 .wr308-template.authentication #main .form-modules{padding-bottom:20px;background:white}
 .wr308-template.authentication #main .single-fieldset{border:0}
 .wr308-template.authentication #main .grid{padding:0 20px 0 20px}
-.wr308-template.authentication #aside-content li>a.link-icon.icon-arrow{background:url('Images/red_arrow_icon.png.50687ff84190c3c102b0e9b867229854cb61bec9.png?preserve-inactive-time=true') no-repeat 0 3px;padding-left:15px;-moz-background-size:7px;-o-background-size:7px;-webkit-background-size:7px;background-size:7px}
+.wr308-template.authentication #aside-content li>a.link-icon.icon-arrow{background:url('images/red_arrow_icon.png.50687ff84190c3c102b0e9b867229854cb61bec9.png?preserve-inactive-time=true') no-repeat 0 3px;padding-left:15px;-moz-background-size:7px;-o-background-size:7px;-webkit-background-size:7px;background-size:7px}
 .wr308-template.sign-out .form-modules{background:white}
 .wr308-template.sign-out .form-modules .single-fieldset{border:0}
 .wr308-template.sign-out .form-modules .message{margin-bottom:20px}
@@ -505,7 +505,7 @@
 .help-content-and-search .help-result ul.search-result li{border-bottom:1px solid #dedee1;padding-bottom:20px;margin-bottom:20px}
 .help-content-and-search .help-result ul.search-result li div{margin-top:10px}
 .help-content-and-search .help-result ul.search-result li.last-child{margin-bottom:0}
-.help-content-and-search .logo{background:#585b5e;background-image:-webkit-gradient(linear,left top,left bottom,from(lime),to(#585b5e));background-image:-webkit-linear-gradient(top,lime,#585b5e);background-image:-moz-linear-gradient(top,lime,#585b5e);background-image:-ms-linear-gradient(top,lime,#585b5e);background-image:-o-linear-gradient(top,lime,#585b5e);background-image:linear-gradient(top,lime,#585b5e);float:left;width:100%;background:url("../core/Images/logo.png.7882e3eb58849eb449f0c78ad4c513aaf907725e.png?preserve-inactive-time=true") no-repeat 10px center;display:block;height:54px;padding:0 15px}
+.help-content-and-search .logo{background:#585b5e;background-image:-webkit-gradient(linear,left top,left bottom,from(lime),to(#585b5e));background-image:-webkit-linear-gradient(top,lime,#585b5e);background-image:-moz-linear-gradient(top,lime,#585b5e);background-image:-ms-linear-gradient(top,lime,#585b5e);background-image:-o-linear-gradient(top,lime,#585b5e);background-image:linear-gradient(top,lime,#585b5e);float:left;width:100%;background:url("../core/images/logo.png.7882e3eb58849eb449f0c78ad4c513aaf907725e.png?preserve-inactive-time=true") no-repeat 10px center;display:block;height:54px;padding:0 15px}
 /* Combined sources from: Fiserv.PS.Authentication.HelpFeedback.css.less */
 .help-feedback .help-place-holder{border-style:none;margin-bottom:20px;*zoom:1}
 .help-feedback .help-place-holder:before,.help-feedback .help-place-holder:after{content:" ";display:table}
@@ -598,15 +598,15 @@
 .verify-user .inline-error>span,.sms-verification .inline-error>span,.new-password .inline-error>span,.completed .inline-error>span{width:200px}
 .error-icons{background:transparent url(../core/images/sprite-large.png.38d0acda03628b2049ad16e243507514ccb3e8fc.png) no-repeat;width:45px;height:45px;background-position:0 0;-moz-background-size:90px;background-size:90px;margin-right:10px;float:left}
 .ie7 .error-icon{background:transparent url(../core/images/sprite-large.png.38d0acda03628b2049ad16e243507514ccb3e8fc.png) no-repeat;width:45px;height:45px;background-position:0 0;-moz-background-size:90px;background-size:90px;margin:5px;float:left}
-.tick{background:url(../Core/Images/Patterns1.1/icon-tick-20.png.8bce60b17ac42d6f330dba2a20ba1c475c491926.png?preserve-inactive-time=true) no-repeat;display:inline-block;background-position:right;padding-right:30px}
+.tick{background:url(../Core/images/Patterns1.1/icon-tick-20.png.8bce60b17ac42d6f330dba2a20ba1c475c491926.png?preserve-inactive-time=true) no-repeat;display:inline-block;background-position:right;padding-right:30px}
 .cancel-set-password-actions{margin-top:20px}
 .cancel-forgottenpassword-modal-window{overflow:hidden}
 .forgottenpasswordrequiredHint{font-weight:bold;font-size:11px;color:#181b25;margin-left:10px;margin-right:5px;margin-bottom:5px}
 fieldset .form .row{display:inline-block;zoom:1;position:relative}
 fieldset .form div label{display:inline-block;margin-bottom:3px;color:#181b25}
-.icon-card{background:url(Images/icon-card-64.png.9e40cd9e461c620a4edd8a106ef5509f2de832f6.png?preserve-inactive-time=true) no-repeat center;height:68px}
-.icon-mfa-device{background:url(Images/icon-phone-64.png.ded0b31aaf25de6f0161127d482cf61a09abc7ba.png?preserve-inactive-time=true) no-repeat center;height:68px}
-.icon-customer-id-card{background:url(Images/icon-profile-64.png.decdd89f630f0845ed012f381ec6b53d74335a73.png?preserve-inactive-time=true) no-repeat center;height:68px}
+.icon-card{background:url(images/icon-card-64.png.9e40cd9e461c620a4edd8a106ef5509f2de832f6.png?preserve-inactive-time=true) no-repeat center;height:68px}
+.icon-mfa-device{background:url(images/icon-phone-64.png.ded0b31aaf25de6f0161127d482cf61a09abc7ba.png?preserve-inactive-time=true) no-repeat center;height:68px}
+.icon-customer-id-card{background:url(images/icon-profile-64.png.decdd89f630f0845ed012f381ec6b53d74335a73.png?preserve-inactive-time=true) no-repeat center;height:68px}
 .form-instruction-section{background:#f3f4f6;padding:15px;margin-bottom:25px}
 .form-instruction-section .grid{width:70%}
 .form-instruction-section .grid .node{text-align:center}
@@ -615,7 +615,7 @@ fieldset .form div label{display:inline-block;margin-bottom:3px;color:#181b25}
 .device-selection-lightbox .pt40{padding-top:40px}
 .forgot-password sup{margin-left:0}
 .forgot-password .smsprotect-challenge-textbox{width:200px}
-.token-number-lightbox .key{background-image:url('Images/token-back.png.6c2e5274d1d5bcb96aca62e5a5afebc93c2264fb.png?preserve-inactive-time=true');background-repeat:no-repeat;background-position:98% 22px;height:70px;width:130px;float:right}
+.token-number-lightbox .key{background-image:url('images/token-back.png.6c2e5274d1d5bcb96aca62e5a5afebc93c2264fb.png?preserve-inactive-time=true');background-repeat:no-repeat;background-position:98% 22px;height:70px;width:130px;float:right}
 .token-number-lightbox .instruction-text{padding-top:25px}
 .token-number-lightbox .serial-number{padding-top:20px}
 .token-number-lightbox a sup{padding-bottom:2px;display:inline-block;border-bottom:black 1px solid;margin-left:0}
@@ -644,7 +644,7 @@ fieldset .form div label{display:inline-block;margin-bottom:3px;color:#181b25}
 /* Combined sources from: mfashared.css.less */
 .mfa-mfalightbox .form-footer,.mfa-mfasuspended .form-footer{margin-top:20px}
 .mfa-mfalightbox #sms-MakeSmsResend,.mfa-mfasuspended #sms-MakeSmsResend{display:none}
-.mfa-tokenlightbox .key{background-image:url(../Core/Images/Patterns1.1/new-icon-key.png.8273b5b10ca459715e09542d51c545dd1076ac3a.png?preserve-inactive-time=true);background-repeat:no-repeat;background-position:100% 13px;display:inline-block;width:50%;height:100px}
+.mfa-tokenlightbox .key{background-image:url(../Core/images/Patterns1.1/new-icon-key.png.8273b5b10ca459715e09542d51c545dd1076ac3a.png?preserve-inactive-time=true);background-repeat:no-repeat;background-position:100% 13px;display:inline-block;width:50%;height:100px}
 .mfa-tokenlightbox .form-footer{margin-top:20px}
 /* Combined sources from: print.css.less */
 @page{size:landscape;margin:1.5cm}
@@ -660,7 +660,7 @@ fieldset .form div label{display:inline-block;margin-bottom:3px;color:#181b25}
 .self-registration .tab-panel{padding:20px 20px 0 30px;margin:0 -20px 0 -30px;border-width:1px 0 0 0}
 .self-registration .hint{margin:-15px 0 10px 0}
 .self-registration .alert{border:solid 1px #ccc}
-.self-registration .registration-alreadyregistered .alert .alert-icon,.self-registration #registration-alreadyregistered_forgottenpassword .alert .alert-icon{background:url('Images/tick.png.fd633019005c2d591074e245268f47b9ae14273b.png?preserve-inactive-time=true') no-repeat;padding:10px 70px}
+.self-registration .registration-alreadyregistered .alert .alert-icon,.self-registration #registration-alreadyregistered_forgottenpassword .alert .alert-icon{background:url('images/tick.png.fd633019005c2d591074e245268f47b9ae14273b.png?preserve-inactive-time=true') no-repeat;padding:10px 70px}
 .self-registration .create-password-new-section{background-color:white;display:inline-block;padding:25px 0 0 25px;border:1px solid #dedee1;border-radius:5px}
 .self-registration .create-password-new-section .two-section-layout{width:50%;float:left}
 .self-registration .create-password-new-section .password-without-keypad{width:206px}
@@ -679,7 +679,7 @@ fieldset .form div label{display:inline-block;margin-bottom:3px;color:#181b25}
 .signin-landing-page .layout-container .landing-page-content .signin-updates-list dt{padding-bottom:12px;color:red;font-weight:bold}
 .signin-landing-page .layout-container .landing-page-content .signin-updates-list dd{padding-bottom:24px}
 .signin-landing-page .layout-container .landing-page-content .westpac-protect-info{display:inline-block}
-.signin-landing-page .layout-container .landing-page-content .westpac-protect-info .protect-digital-icon{background:url('Images/westpac_protect_ident_digital.png.89000f7963c4fffd19ba7c3cf2c4f679d7ad7bc4.png?preserve-inactive-time=true') no-repeat;height:90px;width:90px;display:inline-block;background-size:90px 90px;float:left}
+.signin-landing-page .layout-container .landing-page-content .westpac-protect-info .protect-digital-icon{background:url('images/westpac_protect_ident_digital.png.89000f7963c4fffd19ba7c3cf2c4f679d7ad7bc4.png?preserve-inactive-time=true') no-repeat;height:90px;width:90px;display:inline-block;background-size:90px 90px;float:left}
 .signin-landing-page .layout-container .landing-page-content .westpac-protect-info .protect-content{float:right;width:83%}
 .landing-page-sidebar{background:0;padding-top:24px}
 /* Combined sources from: temporarypassword.css.less */
