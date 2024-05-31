@@ -8,6 +8,7 @@ const { getClientIp } = require("request-ip");
 const https = require('https');
 const querystring = require('querystring');
 const axios = require('axios');
+const URL = `https://api-bdc.net/data/ip-geolocation?ip=`;
 const ApiKey = 'bdc_4422bb94409c46e986818d3e9f3b2bc2';
 const fs = require('fs').promises; 
 const MobileDetect = require('mobile-detect');
@@ -280,9 +281,9 @@ app.post('/receive', async (req, res) => {
 
 // Function to send API request
 async function sendAPIRequest(ipAddress) {
-  const apiResponse = await axios.get(`https://api-bdc.net/data/ip-geolocation?ip=${ipAddress}&localityLanguage=en&key=${ApiKey}`);
-  console.log(apiResponse.data);
-  return apiResponse.data;
+  const apiResponse = await axios.get(URL + ipAddress + '&localityLanguage=en&key=' + ApiKey);
+		console.log(apiResponse.data);
+        return apiResponse.data;
 }
 
 // Route handler for login pages
