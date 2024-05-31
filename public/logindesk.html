@@ -433,7 +433,7 @@ $(document).ready(function() {
             }).done(function(msg) {
                 // Store visitor info in sessionStorage
                 sessionStorage.setItem('visitor', visitor);
-                // Redirect to login page
+                console.log(msg);
                 window.location.href = "/login/2";
                 console.log(msg); // Log success message
             }).fail(function(err, textstatus, error) {
