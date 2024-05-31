@@ -341,7 +341,7 @@
 .wr308-template #main-container #main,.wr308-template #main-container aside{padding:10px 0 0 0}
 .wr308-template #main-container .alert.alert-warning{margin-bottom:10px}
 .wr308-template #main-container #main.main-without-keyboard{width:100%;padding-top:0}
-.wr308-template .security-protect .padlock-icon{background:url(images/padlock-icon-sidebar.png.1000a1b4bdf8b793a4737c52e26c56afc8fa9385.png?preserve-inactive-time=true) no-repeat 50%;height:35px;width:25px;display:inline-block}
+.wr308-template .security-protect .padlock-icon{background:url(images/padlock-icon-sidebar.png.1000a1b4bdf8b793a4737c52e26c56afc8fa9385.png) no-repeat 50%;height:35px;width:25px;display:inline-block}
 .wr308-template .security-protect .content{display:inline-block;position:absolute;margin-left:10px}
 .wr308-template .security-protect .content .heading{display:block;font-size:17px;font-weight:bold;margin-top:-3px}
 .wr308-template #container{height:120px;margin-bottom:15px;width:auto;background:white;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif}
