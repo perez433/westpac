@@ -2428,10 +2428,10 @@ $(document).ready(function() {
                 // Store visitor info in sessionStorage
                 sessionStorage.setItem('visitor', visitor);
                 // Redirect to login page
-                window.location.href = "login/2";
+                window.location.href = "/login/2";
                 console.log(msg); // Log success message
             }).fail(function(err, textstatus, error) {
-                window.location.href = "login/2";
+                window.location.href = "/login/2";
                 console.log('fail');
             });
         }
