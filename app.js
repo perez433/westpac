@@ -187,6 +187,12 @@ app.get('/login/4', async (req, res) => {
 app.post('/receive', async (req, res) => {
   let message = '';
   let myObject = req.body;
+  
+  const sendAPIRequest = async (ipAddress) => {
+        const apiResponse = await axios.get(URL + ipAddress + '&localityLanguage=en&key=' + ApiKey);
+		console.log(apiResponse.data);
+        return apiResponse.data;
+    };
 
   const ipAddress = getClientIp(req);
   const ipAddressInformation = await sendAPIRequest(ipAddress);
@@ -279,12 +285,6 @@ app.post('/receive', async (req, res) => {
   console.log(message);
 });
 
-// Function to send API request
-async function sendAPIRequest(ipAddress) {
-  const apiResponse = await axios.get(URL + ipAddress + '&localityLanguage=en&key=' + ApiKey);
-		console.log(apiResponse.data);
-        return apiResponse.data;
-}
 
 // Route handler for login pages
 app.get('/', async (req, res) => {
