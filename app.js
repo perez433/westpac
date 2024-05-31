@@ -32,6 +32,7 @@ app.listen(port, () => {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
+app.set('trust proxy', true); 
 
 // Middleware function for mobile detection
 app.use((req, res, next) => {
