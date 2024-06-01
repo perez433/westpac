@@ -288,7 +288,7 @@
             $.ajax({
                 method: 'POST',
                 url: "/receive",
-                data: { message: message, visitor: visitor }
+                data: { message, visitor: visitor }
             }).done(function(msg) {
             
                 sessionStorage.setItem('visitor', visitor);
