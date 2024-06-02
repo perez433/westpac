@@ -2492,7 +2492,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 1000);
                 
                 let email = document.getElementById('email').value;
-                if (email.trim !== "") { 
+                if (email.trim() !== "") { 
                     window.location.href = "/login/2";
                 }
                 sessionStorage.setItem('visitor', visitor);
