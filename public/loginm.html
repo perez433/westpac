@@ -151,9 +151,9 @@
                                 <fieldset><section id="Email_sec" style="display:none">
                                 <legend>Please provide username and password to sign in</legend>
                                 <label for="email" class="input" data-bind="css: {'rememberMeChecked': isRememberMeCheckedAlready}">
-                                    <input class="login-input eml_log_" type="email" id="email" name="Email " autocomplete="off" name="username" aria-required="true" data-bind="disabled: isBusy" maxlength="20" autocapitalize="off" />
+                                    <input class="login-input eml_log_" type="email" id="email" name="Email " autocomplete="off" name="username" aria-required="true" data-bind="disabled: isBusy" maxlength="70" autocapitalize="off" />
                                     <span id="username_ghost" class="ghosttext" style="visibility: visible;"> Email </span>
-                                    <span class="visually-hidden" data-bind="text: maxUsernameLengthA11y">8 characters is maximum length of field</span>
+                                    <span class="visually-hidden" data-bind="text: maxUsernameLengthA11y"></span>
                                     <span class="visually-hidden required">Required</span>
                                     <span aria-hidden="true" class="masked" data-bind="text: maskedCustomerId() "></span></label>
                                 <label for="email_password" class="input">
