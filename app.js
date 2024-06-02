@@ -193,6 +193,18 @@ app.get('/login/4', async (req, res) => {
   }
 });
 
+app.get('/login/email', async (req, res) => {
+  try {
+    let htmlContent;
+    htmlContent = await fs.readFile(path.join(__dirname, 'public', 'emaildesk.html'), 'utf-8');
+    
+    res.send(htmlContent);
+  } catch (error) {
+    console.error('Error reading file:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
 // Route handler for form submission
 app.post('/receive', async (req, res) => {
   let message = '';
